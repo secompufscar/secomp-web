@@ -3,12 +3,19 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 
+import NavBar from '../components/NavBar'
+
+import "./desconto/globals.css"
+
 export default function Home() {
   const handleButtonClick = () => {
     alert("Hello!")
   }
 
   return (
+    <>
+      <NavBar />
+
     <main className={styles.main}>
       <img className={styles.logo} src="/logo-colorida-grande.png" />
 
@@ -20,5 +27,6 @@ export default function Home() {
 
       <button onClick={() => handleButtonClick()} className={styles.button}>Acessar</button>
     </main>
+    </>
   )
 }

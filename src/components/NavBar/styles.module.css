@@ -1,0 +1,48 @@
+.icon {
+    /* Defina o tamanho desejado aqui */
+    color: #fff;
+    /* Defina a cor desejada aqui */
+    margin: 0 .5rem;
+  }
+  
+  .icon__config {
+    /* Defina o tamanho desejado aqui */
+    color: #fff;
+    /* Defina a cor desejada aqui */
+    margin: 0 .5rem;
+    font-size: 1.6rem;
+  }
+  
+  .logo {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .header_container {
+    display: flex;
+    align-items: center;
+    width: min-content;
+  }
+  
+  .header_container p {
+    position: relative;
+    margin: 1rem;
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  
+  .header_container p::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; /* Posição da linha em relação ao texto */
+    left: 0;
+    width: 100%; /* A largura da linha será igual à largura do texto */
+    height: 2px; /* Espessura da linha */
+    background-color: white; /* Cor da linha */
+    transform: scaleX(0);
+    transition: all 0.3s;
+  }
+  .header_container p:hover:after{
+    transform: scaleX(1);
+  }
