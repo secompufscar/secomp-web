@@ -1,0 +1,113 @@
+.icon {
+  /* Defina o tamanho desejado aqui */
+  color: #fff;
+  /* Defina a cor desejada aqui */
+  margin: 0 .5rem;
+}
+
+.icon__config {
+  /* Defina o tamanho desejado aqui */
+  color: #fff;
+  /* Defina a cor desejada aqui */
+  margin: 0 .5rem;
+  font-size: 1.6rem;
+}
+
+.logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+.header_container {
+  display: flex;
+  align-items: center;
+  width: min-content;
+}
+
+.header_container p {
+  position: relative;
+  margin: 1rem;
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.header_container p::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Posição da linha em relação ao texto */
+  left: 0;
+  width: 100%; /* A largura da linha será igual à largura do texto */
+  height: 2px; /* Espessura da linha */
+  background-color: white; /* Cor da linha */
+  transform: scaleX(0);
+  transition: all 0.3s;
+}
+.header_container p:hover:after{
+  transform: scaleX(1);
+}
+
+.imageWithText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 80%;
+  margin-bottom: 4rem;
+  min-width: 37rem;
+  background-image: linear-gradient(330deg, #008CB5 0%, #00CEA1 80%);
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all .3s;
+}
+
+.imageWithText:hover {
+  transform: translatey(-.5rem) scale(1.1);
+  box-shadow: 0rem 0 2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.imageContainer {
+  flex-shrink: 0;
+  /* A imagem não deve encolher */
+  width: 20rem;
+
+}
+
+.containerText {
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.containerText h2 {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+
+.text {
+  margin: 0;
+  font-size: 14px;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.obs {
+  font-size: 1.5rem;
+}
+
+.imageDescount {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 780px) {
+  .logo{
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
