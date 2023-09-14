@@ -1,36 +1,38 @@
+import axios from 'axios'
 import NavBar from '../../components/NavBar'
-
 import ImageWithText from './ImagewithText'; // Importe o novo componente
-
 import styles from './style.module.css'
 import './globals.css'
 
-export default function desconto() {
-  return (
-    <>
-      <NavBar />
+export const axiosClient=axios.create({
+  baseURL:'http://localhost:3333'
+})
 
-      <main className={styles.main}>
-        <ImageWithText imageUrl="/logo.png" altText="Image Alt Text"
-          title='Japa açai'
-          text="10% de desconto para os participantes no dia do evento" obs='(com apresentação de cracha)' />
-        <ImageWithText imageUrl="/coca-cola-Logo.png" altText="Image Alt Text"
-          title='Japa açai'
-          text="10% de desconto para os participantes no dia do evento" obs='(com apresentação de cracha)' />
-        <ImageWithText imageUrl="/coca-cola-Logo.png" altText="Image Alt Text"
-          title='Japa açai'
-          text="10% de desconto para os participantes no dia do evento" obs='(com apresentação de cracha)' />
-        <ImageWithText imageUrl="/coca-cola-Logo.png" altText="Image Alt Text"
-          title='Japa açai'
-          text="10% de desconto para os participantes no dia do evento" obs='(com apresentação de cracha)' />
-        <ImageWithText imageUrl="/coca-cola-Logo.png" altText="Image Alt Text"
-          title='Japa açai'
-          text="10% de desconto para os participantes no dia do evento" obs='(com apresentação de cracha)' />
-        <ImageWithText imageUrl="/coca-cola-Logo.png" altText="Image Alt Text"
-          title='Japa açai'
-          text="10% de desconto para os participantes no dia do evento" obs='(com apresentação de cracha)' />
-        <ImageWithText imageUrl="/coca-cola-Logo.png" altText="Image Alt Text" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
-      </main>
-    </>
-  )
+const data= async()=>{
+  const response= await axiosClient.get('/descontos')
+  return response.data
+}
+export default async function Desconto(){
+  const response= await data()
+  response.forEach(element => {
+    console.log(element.id)
+  });
+  
+    return(
+        <>
+        <NavBar />
+        <main className={styles.main}>
+            {response.map(element => (
+              <ImageWithText
+                key={element.id}
+                imageUrl={element.logo}
+                altText={element.descricao}
+                title={element.empresa}
+                text={element.descricao}
+                obs={element.descricao}
+              />
+            ))}
+        </main>
+        </>
+    )
 }

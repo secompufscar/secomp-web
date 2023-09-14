@@ -1,4 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
+const nextConfig = {
+    images: {
+      domains: ['upload.wikimedia.org'], // Adicione o hostname do domínio da imagem aqui
+    },
+  };
+  
+  module.exports = nextConfig;
