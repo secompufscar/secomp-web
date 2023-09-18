@@ -4,10 +4,12 @@ import styles from './style.module.css'
 
 
 const ImageWithText = ({ imageUrl, altText,title, text,obs }) => {
+  console.log("aqui")
+  console.log(imageUrl)
   return (
     <div className={styles.equipeMolde}>
       <div className={styles.imageContainer}>
-        <Image className={styles.imageMembro} src={imageUrl} alt={altText} width={40} height={40} />
+        <img className={styles.imageMembro} src={imageUrl} alt={altText} width={40} height={40} />
       </div>
       <div className={styles.containerText}>
         <h2>{title}</h2>
