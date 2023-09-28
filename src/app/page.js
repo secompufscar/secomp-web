@@ -1,7 +1,6 @@
 'use client'
 
-import Image from 'next/image'
-import styles from './page.module.css'
+// import styles from './page.module.css'
 
 import NavBar from '../components/NavBar'
 
@@ -16,16 +15,16 @@ export default function Home() {
     <>
       <NavBar />
 
-    <main className={styles.main}>
-      <img className={styles.logo} src="/logo-colorida-grande.png" />
+    <main className="columns-2">
+      <img src="/logo-colorida-grande.png" />
 
-      <h1 className={styles.title}>
+      <h1>
         Bem-vindo ao site da <br />
         <span>SECOMP</span>
         !
       </h1>
 
-      <button onClick={() => handleButtonClick()} className={styles.button}>Acessar</button>
+      <button onClick={() => handleButtonClick()}>Acessar</button>
     </main>
     </>
   )
