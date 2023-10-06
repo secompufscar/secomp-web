@@ -1,0 +1,67 @@
+.home-container {
+    background-color: #0a0a0a;
+}
+
+.gradient-container {
+    padding-bottom: 12rem;
+    background: url("../../public/assets/imgs/texture.png"),
+        radial-gradient(closest-corner at top 35% left 30%, rgba(81, 183, 149, 0.65), transparent 800px),
+        radial-gradient(closest-corner at bottom 30% right 35%, rgba(81, 183, 149, 0.35), transparent 1200px),
+        radial-gradient(farthest-corner at top 25% right 25%, rgba(88, 109, 178, 0.65), transparent 800px),
+        radial-gradient(farthest-corner at bottom 25% left 30%, rgba(88, 109, 178, 0.55), transparent 1000px);
+    background-size: cover;
+}
+
+.wave-img {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    transform: rotate(180deg);
+}
+
+.body-container {
+    background-color: #0a0a0a;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 32px 8px;
+}
+
+.info-container {
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.info-container h5,
+h6 {
+    line-height: 1.25;
+}
+
+.info-container * {
+    margin-top: 8px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 1.25rem;
+    background-color: #51b795;
+    padding: 1rem 3rem;
+    border-radius: 500rem;
+    color: #0a0a0a;
+    text-transform: uppercase;
+    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    backdrop-filter: blur(10px);
+}
