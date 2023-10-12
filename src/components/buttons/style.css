@@ -1,0 +1,9 @@
+.btn-inner-shadow {
+    box-shadow: inset 0px -2px 7px  rgba(0, 0, 0, 0.8); /* Sombra interna */
+    transition: all 0.3s; /* Transição da sombra */
+  }
+  
+  /* Define a classe para aumentar a sombra quando o botão é clicado */
+   .btn-inner-shadow:active {
+    box-shadow: inset 0px 3px 7px rgba(0, 0, 0, 0.7); /* Aumenta a sombra interna ao passar o mouse ou clicar */
+  }
