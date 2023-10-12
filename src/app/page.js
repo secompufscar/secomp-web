@@ -4,6 +4,8 @@
 
 import NavBar from '../components/NavBar'
 
+import Footer from '../components/Footer'
+
 import "./desconto/globals.css"
 
 export default function Home() {
@@ -26,6 +28,8 @@ export default function Home() {
 
       <button onClick={() => handleButtonClick()}>Acessar</button>
     </main>
+      
+        <Footer />
     </>
   )
 }
