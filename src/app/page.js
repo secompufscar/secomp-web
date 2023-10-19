@@ -1,35 +1,37 @@
-'use client'
+"use client";
 
-// import styles from './page.module.css'
-
-import NavBar from '../components/NavBar'
+import NavBar from "../components/NavBar";
+import Image from "next/image";
+import { montserrat, inter } from "@/utils/fonts";
 
 import Footer from '../components/Footer'
 
-import "./desconto/globals.css"
+import "./globals.css";
+import "./home.page.css";
 
 export default function Home() {
-  const handleButtonClick = () => {
-    alert("Hello!")
-  }
-
-  return (
-    <>
-      <NavBar />
-
-    <main className="columns-2">
-      <img src="/logo-colorida-grande.png" />
-
-      <h1>
-        Bem-vindo ao site da <br />
-        <span>SECOMP</span>
-        !
-      </h1>
-
-      <button onClick={() => handleButtonClick()}>Acessar</button>
-    </main>
-      
-        <Footer />
-    </>
-  )
+    return (
+        <>
+            <div className="home-container">
+                <div className="gradient-container">
+                    <NavBar />
+                    <div className="about-container">
+                        <div className={`info-container ${inter.className}`}>
+                            <h5>O aguardado retorno da Semana da Computação na UFSCar está chegando!</h5>
+                            <h6>27/11/2023 à 01/12/2023</h6>
+                            <div className="button-container">
+                                <button className={`${montserrat.className} btn`}>Saiba mais</button>
+                            </div>
+                        </div>
+                        <div className="logo-container">
+                            <Image src="/assets/imgs/secomp_logo.svg" alt="Secomp logo" width={779} height={332} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Image className="wave-img" src="/assets/imgs/wave_1.svg" width={900} height={100} />
+            <main></main>
+            <Footer />
+        </>
+    );
 }

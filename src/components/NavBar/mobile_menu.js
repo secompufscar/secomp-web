@@ -1,23 +1,26 @@
 import Image from "next/image";
-import styles from "./styles.module.css";
-import { montserrat } from "@/utils/fonts";
-import MobileMenu from "./mobile_menu";
+import { useState } from "react";
 
-import Link from "next/link";
+export default function MobileMenu() {
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-export default function NavBar() {
-    return (
-        <header className={`${montserrat.className} ${styles.header}`}>
-            <div className={styles.header_container}>
-                <Image
-                    src="/assets/icons/secomp_logotipo.svg"
-                    alt="Logo SECOMP"
-                    className={styles.logo}
-                    width={288}
-                    height={44}
-                />
+    function onClickButton() {
+        console.log("AAAAAA");
+    }
 
-                <div className={styles.nav_options}>
+    if (!menuIsOpen) {
+        return (
+            <button onClick={onClickButton}>
+                <Image src="/assets/icons/menu_icon.svg" alt="menu icon" width={32} height={32} />
+            </button>
+        );
+    } else {
+        return (
+            <>
+                <button>
+                    <Image src="/assets/icons/close_icon.svg" alt="close icon" width={32} height={32} />
+                </button>
+                <div className={styles.mobile_menu}>
                     <Link className={`${styles.nav_option} ${styles.active}`} href={""}>
                         HOME
                     </Link>
@@ -37,10 +40,7 @@ export default function NavBar() {
                         CONTATO
                     </Link>
                 </div>
-                <div>
-                    <MobileMenu />
-                </div>
-            </div>
-        </header>
-    );
+            </>
+        );
+    }
 }
