@@ -1,0 +1,17 @@
+.bg-deg-verde {
+    background: linear-gradient(to bottom, rgba(114, 255, 198, 0.2), rgba(81, 183, 149, 0.2));
+}
+
+.bg-deg-purple {
+    background: linear-gradient(to bottom, rgba(88, 109, 178, .2), rgba(88, 109, 178, .2));
+}
+
+.faq_p {
+    background-color: #B4C5FF;
+    color: black;
+}
+
+.faq_v {
+    background-color: #9affdd;
+    color: black;
+}

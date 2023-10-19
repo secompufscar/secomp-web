@@ -4,6 +4,8 @@ import NavBar from "../components/NavBar";
 import Image from "next/image";
 import { montserrat, inter } from "@/utils/fonts";
 
+import Footer from '../components/Footer'
+
 import "./globals.css";
 import "./home.page.css";
 
@@ -29,6 +31,7 @@ export default function Home() {
             </div>
             <Image className="wave-img" src="/assets/imgs/wave_1.svg" width={900} height={100} />
             <main></main>
+            <Footer />
         </>
     );
 }
