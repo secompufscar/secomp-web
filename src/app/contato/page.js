@@ -2,8 +2,11 @@
 import React, { useState } from 'react';
 import { BiDownArrow } from 'react-icons/bi';
 import './style.css';
+
 import FAQComponent from '../../components/FAQ/FaqComponent';
 import CustomButton from '../../components/buttons/buttons';
+import NavBar from '../../components/NavBar';
+import Footer from '../../components/Footer';
 
 export default function Desconto() {
   const [mensagem, setMensagem] = useState('');
@@ -48,6 +51,8 @@ export default function Desconto() {
   const inputClasses="rounded-full my-6 h-8 border-solid border-4  border-purple focus:outline-none glow px-4 py-7"
   return (
     <>
+      <NavBar />
+
       <main className="p-4 xl:px-12 black-bg bg-img ">
         <div className="bg_img w-full flex flex-col justify-center items-center py-32">
           <p className="text-center text-white text-lg">
@@ -135,6 +140,8 @@ export default function Desconto() {
         
         <div className='pb-20'></div>
       </main>
+
+      <Footer />
     </>
   );
 }

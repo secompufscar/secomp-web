@@ -1,11 +1,18 @@
-import React from "react";
+"use client";
+
+import Image from "next/image";
+
 import LogoSecomp from "../../assets/logo-secomp.svg";
 import LogoSecompOutline from "../../assets/logo-secomp-outline.svg";
-import Image from "next/image";
+
+import NavBar from "../../components/NavBar";
+import Footer from "../../components/Footer";
 
 export default function Patrocinadores(){
   return(
     <body className="bg-[#0A0A0A] w-full h-full px-[8%]">
+      <NavBar />
+
       <div className="mt-[15rem]">
         <div className="flex flex-col gap-y-1 ">
           <p className="text-4xl text-white font-montserrat">NOSSOS</p>
@@ -154,7 +161,7 @@ export default function Patrocinadores(){
           </div>
         </div>
 
-
+        <Footer />
       </div>
     </body>
   )

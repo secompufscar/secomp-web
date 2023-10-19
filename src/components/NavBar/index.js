@@ -18,25 +18,31 @@ export default function NavBar() {
                 />
 
                 <div className={styles.nav_options}>
-                    <Link className={`${styles.nav_option} ${styles.active}`} href={""}>
+                    <Link className={`${styles.nav_option} ${styles.active}`} href={"/"}>
                         HOME
                     </Link>
-                    <Link className={styles.nav_option} href={""}>
+
+                    <Link className={styles.nav_option} href={"/"}>
                         SOBRE
                     </Link>
-                    <Link className={styles.nav_option} href={""}>
+
+                    <Link className={styles.nav_option} href={"/"}>
                         CRONOGRAMA
                     </Link>
-                    <Link className={styles.nav_option} href={""}>
+
+                    <Link className={styles.nav_option} href={"/"}>
                         EQUIPE
                     </Link>
-                    <Link className={styles.nav_option} href={""}>
-                        DESCONTOS
+
+                    <Link className={styles.nav_option} href={"/patrocinadores"}>
+                        PATROCÍNIO
                     </Link>
-                    <Link className={styles.nav_option} href={""}>
+
+                    <Link className={styles.nav_option} href={"/contato"}>
                         CONTATO
                     </Link>
                 </div>
+
                 <div>
                     <MobileMenu />
                 </div>
