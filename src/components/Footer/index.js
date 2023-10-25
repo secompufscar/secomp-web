@@ -8,18 +8,19 @@ const Footer = () => {
 
 
     return (
-        <footer className=' backgroundStyle flex flex-row items-center fixed bottom-0'>
+        <footer className=' backgroundStyle flex flex-col md:flex-row items-center fixed bottom-0 '>
             
-                <div className="w-100 container mx-auto px-24">
+            
+                <div className="w-100 container mx-auto px-24 py-5">
                     <Image className="w-full h-auto" src="/secompUfscar.png" width={40} height={40}/>
                 </div>
-                <div className="w-45 container mx-auto px-4">
+                <div className="w-45 container mx-auto px-4 py-5">
                     <p className="text-white text-sm text-xl">
                         Realização:
                     </p>
                     <Image className="w-full h-auto" src="/ufscar_vector.png" width={40} height={40}/>
                 </div>
-                <div className="w-5 container mx-auto px-4">
+                <div className="w-5 container mx-auto px-4 py-5">
                     <p className="w-45 text-white text-sm text-xl">
                         <a href='https://site.dc.ufscar.br' class="underline"> Departamento de Computação (UFSCAR)</a>
                     </p>   
@@ -31,9 +32,9 @@ const Footer = () => {
                     </p>    
                 </div>
 
-                <div className="w-5 container mx-auto px-4">
+                <div className="w-5 container mx-auto px-4 py-5">
                 <Link href={"https://www.instagram.com/secompufscar/"} target='_blank'>
-                    < button class="inline-flex items-center justify-center py-2">
+                    < button class="inline-flex items-center justify-center ">
                         <svg
                         class="h-8 w-8"
                         fill="white"
@@ -66,7 +67,7 @@ const Footer = () => {
                     </button>
                 </Link>
                 </div>
-            
+           
         </footer>
     );
 };
