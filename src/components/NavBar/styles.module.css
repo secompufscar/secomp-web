@@ -1,48 +1,52 @@
-.icon {
-    /* Defina o tamanho desejado aqui */
-    color: #fff;
-    /* Defina a cor desejada aqui */
-    margin: 0 .5rem;
-  }
-  
-  .icon__config {
-    /* Defina o tamanho desejado aqui */
-    color: #fff;
-    /* Defina a cor desejada aqui */
-    margin: 0 .5rem;
-    font-size: 1.6rem;
-  }
-  
-  .logo {
-    width: 4rem;
-    height: 4rem;
-  }
-  
-  .header_container {
+.logo {
+    height: 3rem;
+    width: min-content;
+}
+
+.header {
+    background-color: #0a0a0a14;
+    display: flex;
+    flex-direction: column;
+}
+
+.header_container {
+    background-color: transparent;
     display: flex;
     align-items: center;
-    width: min-content;
-  }
-  
-  .header_container p {
-    position: relative;
-    margin: 1rem;
-    display: flex;
-    font-size: 1.6rem;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav_options {
+    display: none;
+}
+
+.nav_option {
+    margin: 0px 0.5rem;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.active {
     font-weight: bold;
-  }
-  
-  .header_container p::after {
-    content: "";
-    position: absolute;
-    bottom: -4px; /* Posição da linha em relação ao texto */
-    left: 0;
-    width: 100%; /* A largura da linha será igual à largura do texto */
-    height: 2px; /* Espessura da linha */
-    background-color: white; /* Cor da linha */
-    transform: scaleX(0);
-    transition: all 0.3s;
-  }
-  .header_container p:hover:after{
-    transform: scaleX(1);
-  }
+}
+
+.mobile_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .nav_options {
+        display: block;
+    }
+    .mobile_menu_button,
+    .mobile_menu {
+        display: none;
+    }
+}

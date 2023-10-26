@@ -1,8 +1,9 @@
+
 import React from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 
-import './styles.css'
+import "./styles.css";
 
 const Footer = () => {
 
@@ -67,7 +68,6 @@ const Footer = () => {
                     </button>
                 </Link>
                 </div>
-           
         </footer>
     );
 };
