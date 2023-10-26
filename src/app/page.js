@@ -1,10 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import { montserrat, inter } from "@/utils/fonts";
-
+import React from "react";
 import NavBar from "../components/NavBar";
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 
 import "./globals.css";
 import "./home.page.css";

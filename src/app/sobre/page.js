@@ -37,7 +37,7 @@ export default function Sobre() {
                         foram pensados ao longo do tempo em busca de um evento cada vez melhor.
                     </p>
 
-                    <Image className={styles.contentImageSobre} src={imageSobre} alt="Sobre secomp" />
+                    <Image className={styles.contentImageSobre} src={imageSobre} alt={"Sobre secomp"} />
                 </div>
                 <div className={styles.containerTitle}>
                     <h1 className={styles.title}>SOBRE A UFSCAR</h1>
@@ -91,7 +91,7 @@ export default function Sobre() {
                         </a>
                     </p>
                 </div>
-                <Image src={imageUfscar} alt="Imagem da Ufscar" className={styles.contentImageUfscar} />
+                <Image src={imageUfscar} alt={"Imagem da Ufscar"} className={styles.contentImageUfscar} />
                 <div className={styles.containerTitle}>
                     <h1 className={styles.title}>O DEPARTAMENTO DE COMPUTAÇÃO</h1>
                 </div>{" "}
@@ -112,16 +112,16 @@ export default function Sobre() {
                         </a>
                     </p>
 
-                    <Image className={styles.contentImageSobre} src={imageDc} alt="Sobre DC" />
+                    <Image className={styles.contentImageSobre} src={imageDc} alt={"Sobre DC"} />
                 </div>
                 <div className={styles.containerLogo}>
                     <p className={styles.textLogo}>Realização</p>
                     <div className={styles.containerImage}>
-                        <Image className={styles.contentImageLogo} src={logoSecomp} alt="Logo Secomp" />
+                        <Image className={styles.contentImageLogo} src={logoSecomp} alt={"Logo Secomp"} />
 
-                        <Image className={styles.contentImageLogo} src={logoDC} alt="Logo DC" />
+                        <Image className={styles.contentImageLogo} src={logoDC} alt={"Logo DC"} />
 
-                        <Image className={styles.contentImageLogo} src={logoUfscar} alt="Logo Ufscar" />
+                        <Image className={styles.contentImageLogo} src={logoUfscar} alt={"Logo Ufscar"} />
                     </div>
                 </div>
             </main>
