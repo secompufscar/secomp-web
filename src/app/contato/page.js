@@ -1,17 +1,16 @@
 'use client'
 import React, { useState } from 'react';
-import { BiDownArrow } from 'react-icons/bi';
 import './style.css';
 
 import FAQComponent from '../../components/FAQ/FaqComponent';
 import CustomButton from '../../components/buttons/buttons';
+import Line from './line';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
 
 export default function Desconto() {
   const [mensagem, setMensagem] = useState('');
   const [telefone, setTelefone] = useState('');
-  const [isGlow, setIsGlow] = useState(true);
 
   // Manipulador de evento para o textarea
   const handleMensagemChange = (event) => {
@@ -133,8 +132,7 @@ export default function Desconto() {
             <CustomButton text="Enviar" buttonType={0} />
           </form>
         </div>
-        <p className="mx-auto text-white my-20 border-b-6 border-white p-0 text-2xl w-11/12">FAQ</p>
-        
+        <Line text="FAQ" color="white" position="left"/>
 
         <FAQComponent faqData={faqData}/>
         
