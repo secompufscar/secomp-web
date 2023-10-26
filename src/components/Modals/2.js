@@ -1,21 +1,14 @@
-const Modal = ({ show, setShow, title,  text }) => {
-    if (!show) return <div />
+const Modal = ({ show, setShow, title, text }) => {
+    if (!show) return <div />;
 
     return (
         <div
             x-show="modalOpen"
             x-transition
-            class="fixed top-0 left-0 z-999999 flex h-full min-h-screen w-full items-center justify-center bg-black/90 px-4 py-5"
-        >
-            <div class="w-full max-w-142.5 rounded-lg bg-white py-12 px-8 text-center dark:bg-boxdark md:py-15 md:px-17.5">
-                <span class="mx-auto inline-block">
-                    <svg
-                        width="60"
-                        height="60"
-                        viewBox="0 0 60 60"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
+            className="fixed top-0 left-0 z-999999 flex h-full min-h-screen w-full items-center justify-center bg-black/90 px-4 py-5">
+            <div className="w-full max-w-142.5 rounded-lg bg-white py-12 px-8 text-center dark:bg-boxdark md:py-15 md:px-17.5">
+                <span className="mx-auto inline-block">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect opacity="0.1" width="60" height="60" rx="30" fill="#DC2626" />
 
                         <path
@@ -28,35 +21,28 @@ const Modal = ({ show, setShow, title,  text }) => {
                     </svg>
                 </span>
 
-                <h3 class="mt-5.5 pb-2 text-xl font-bold text-black dark:text-white sm:text-2xl">
-                    {title}
-                </h3>
+                <h3 className="mt-5.5 pb-2 text-xl font-bold text-black dark:text-white sm:text-2xl">{title}</h3>
 
-                <p class="mb-10 font-medium">
-                    {text}
-                </p>
+                <p className="mb-10 font-medium">{text}</p>
 
-                <div class="-mx-3 flex flex-wrap gap-y-4">
-                    <div class="w-full px-3 2xsm:w-1/2">
+                <div className="-mx-3 flex flex-wrap gap-y-4">
+                    <div className="w-full px-3 2xsm:w-1/2">
                         <button
                             onClick={() => setShow(false)}
-                            class="block w-full rounded border border-stroke bg-gray p-3 text-center font-medium text-black transition hover:border-meta-1 hover:bg-meta-1 hover:text-white dark:border-strokedark dark:bg-meta-4 dark:text-white dark:hover:border-meta-1 dark:hover:bg-meta-1"
-                        >
+                            className="block w-full rounded border border-stroke bg-gray p-3 text-center font-medium text-black transition hover:border-meta-1 hover:bg-meta-1 hover:text-white dark:border-strokedark dark:bg-meta-4 dark:text-white dark:hover:border-meta-1 dark:hover:bg-meta-1">
                             Cancelar
                         </button>
                     </div>
 
-                    <div class="w-full px-3 2xsm:w-1/2">
-                        <button
-                            class="block w-full rounded border border-meta-1 bg-meta-1 p-3 text-center font-medium text-white transition hover:bg-opacity-90"
-                        >
+                    <div className="w-full px-3 2xsm:w-1/2">
+                        <button className="block w-full rounded border border-meta-1 bg-meta-1 p-3 text-center font-medium text-white transition hover:bg-opacity-90">
                             Excluir
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Modal
+export default Modal;
