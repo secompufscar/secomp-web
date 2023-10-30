@@ -59,28 +59,43 @@ export default function Home() {
   }
   return (
     <>
-      <div className="home-container">
+      <div className="bg-black">
         <div className="gradient-container">
           <NavBar />
 
-          <div className="about-container">
-            <div className={`info-container ${inter.className}`}>
-              <h5>O aguardado retorno da Semana da Computação na UFSCar está chegando!</h5>
-              <h6>27/11/2023 à 01/12/2023</h6>
+          <div class="flex flex-col sm:flex-col-reverse md:flex-row-reverse items-center justify-evenly py-8 px-4">
+            <div className="flex flex-grow-4 justify-center items-center  ">
+              <Image className="w-1500" src="/assets/imgs/secomp_logo.svg" alt="Secomp logo" width={779} height={332} />
+            </div>
 
-              <div className="button-container">
-                <button className={`${montserrat.className} btn`}>Saiba mais</button>
+            <div className={`text-white text-4xl flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${inter.className}`}>
+              <h5>O aguardado retorno da Semana da Computação na UFSCar está chegando!</h5>
+              <h6 className="py-2 mt-4">27/11/2023 à 01/12/2023</h6>
+
+              <div className="justify-center mt-8">
+                {/* Pedir ajuda para trocar aqui */}
+                <button className={`${montserrat.className}`} style={{
+                  fontWeight: 'bold',
+                  fontSize: '1.25rem',
+                  backgroundColor: '#51b795',
+                  padding: '1rem 3rem',
+                  borderRadius: '500rem',
+                  color: '#0a0a0a',
+                  textTransform: 'uppercase',
+                  boxShadow: '0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset',
+                  backdropFilter: 'blur(10px)'
+                }}>
+                  Saiba mais
+                </button>
               </div>
             </div>
 
-            <div className="logo-container">
-              <Image src="/assets/imgs/secomp_logo.svg" alt="Secomp logo" width={779} height={332} />
-            </div>
+
           </div>
         </div>
       </div>
 
-      <Image className="wave-img" src="/assets/imgs/wave_1.svg" width={900} height={100} />
+      <Image className="w-full absolute bottom-0 transform -rotate-180" src="/assets/imgs/wave_1.svg" width={900} height={100} />
 
       <div className="bg-black py-40">
         <Line color='white' text='Sobre' position='left' textSize={"4xl"} />
@@ -105,7 +120,7 @@ export default function Home() {
         <div className="grid grid-cols-4 justify-evenly items-center w-10/12 md:w-9/12 h-max m-auto max-w-3xl md:max-w-none">
           {products.map((product, index) => (
             <div className="mb-8">
-              <Content product={product} number={index}/>
+              <Content product={product} number={index} />
             </div>
           ))}
         </div>
