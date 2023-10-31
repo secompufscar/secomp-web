@@ -1,24 +1,22 @@
-import React, { useState } from 'react';
-import './style.css'
 import { BiDownArrow } from 'react-icons/bi';
-
+import "./style.css"
 function FAQComponent({ faqData }) {
 
   const toggleClassPurple = (e) => {
     const elementClicked = e.target;
-    elementClicked.classList.toggle('faq_p')
+    elementClicked.classList.toggle('bg-[#B4C5FF]')
     elementClicked.classList.toggle('bg-deg-purple')
   }
   const toggleClassVerde= (e) => {
     console.log(e.target)
     const elementClicked = e.target;
-    elementClicked.classList.toggle('faq_v')
+    elementClicked.classList.toggle('bg-[#9affdd]')
     elementClicked.classList.toggle('bg-deg-verde')
   }
-  const divFaqClasses=`absolute top-0 mb-6 transition-height duration-300  z-0  relative rounded-3xl glow border-solid peer-checked:border-x-4 
-  peer-checked:border-4  h-0   overflow-hidden peer-checked:h-min  peer-checked:py-15`
-  const labelFaqClasses = ` z-20 translate-y-8 transition-all text-white relative rounded-full border-solid   
-  glow-2 border-4 font-bold tracking-[1px] h-[50px] flex items-center justify-center`;
+  const divFaqClasses=`  absolute top-0 mb-6 transition-height duration-300  z-0  relative rounded-3xl glow border-solid peer-checked:border-x-4 
+  peer-checked:border-4  h-0   overflow-hidden peer-checked:h-min  peer-checked:py-10`
+  const labelFaqClasses = `text-2xl z-20 translate-y-8 transition-all text-white relative rounded-full border-solid   
+  glow-2 border-4 font-bold tracking-[1px] h-[50px] flex items-center justify-center peer-checked:text-black`;
 
   return (
     <div className='flex justify-center items-center flex-col lg:w-full '>
@@ -39,7 +37,7 @@ function FAQComponent({ faqData }) {
               ${
                 index%2==0 ? 'bg-deg-verde' : 'bg-deg-purple'
               }
-              ${index%2==0 ? 'border-verde' : 'border-purple'}
+              ${index%2==0 ? 'border-[#9affdd]' : 'border-[#B4C5FF]'}
             `}
             htmlFor={`input${index}`}
           >
@@ -47,11 +45,11 @@ function FAQComponent({ faqData }) {
           </label>
           {/* Arrow */}
           <BiDownArrow
-            className={`z-20 none text-4xl xsm:text-[24px] text-white translate-y-8 absolute top-[13px] right-[12px] peer-checked:rotate-180 duration-200`}
+            className={`z-20 none text-4xl xsm:text-[24px] text-white translate-y-8 absolute top-[18px] xsm:top-[13px] right-[12px] peer-checked:rotate-180 duration-200`}
           />
           {/* texto */}
-          <div className={divFaqClasses.concat(index%2==0?' border-verde':' border-purple')}>
-            <p className='p-[20px] text-sm'>{item.texto}</p>
+          <div className={divFaqClasses.concat(index%2==0?' border-[#9affdd]':' border-[#B4C5FF]')}>
+            <p className='p-[20px] text-white text-2xl'>{item.texto}</p>
           </div>
         </div>
       ))}

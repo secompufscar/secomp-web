@@ -5,14 +5,14 @@ function CustomButton({ text_bold,text, buttonType }) {
     return (
       <button
         type="submit"
-        className=" bg-purple text-white px-4 py-2 w-min self-end rounded-2xl mt-4 hover:bg-white hover:text-purple hover:shadow-lg hover:transform hover:scale-105 transition duration-300"
+        className="text-2xl bg-[#586DB2] text-white px-4 py-2 w-min self-end rounded-2xl mt-4 hover:bg-white hover:text-[#586DB2] hover:shadow-lg hover:transform hover:scale-105 transition duration-300"
       >
         {text}
       </button>
     );
   } else if (buttonType === 1) {
     return (
-      <button className="text-xl text-black py-3 px-10 bg-verde btn-inner-shadow rounded-full mt-12">
+      <button className="text-2xl text-black py-3 px-10 bg-[#51B795] btn-inner-shadow rounded-full mt-12">
         <span className="font-bold">{text_bold}</span> {text}
       </button>
     );
