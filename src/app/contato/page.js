@@ -7,7 +7,7 @@ import CustomButton from '../../components/buttons/buttons';
 import Line from './line';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
-
+ 
 export default function Desconto() {
   const [mensagem, setMensagem] = useState('');
   const [telefone, setTelefone] = useState('');
@@ -60,6 +60,7 @@ export default function Desconto() {
             </p>
             <h1 className="text-6xl text-white mt-8">ENTRE EM CONTATO</h1>
             <CustomButton text_bold="Duvidas?" text="Acesse nosso FAQ" buttonType={1} />
+
 
           </div>
           <div className="p-8 mx-auto w-full max-w-screen-xl">
@@ -147,17 +148,121 @@ export default function Desconto() {
                     value={mensagem}
                     required
                   />
-                </div>
+               </div>
+
+      <main className="p-4 xl:px-12 bg-black bg-img ">
+        <div className="bg_img w-full flex flex-col justify-center items-center py-32">
+          <p className="text-center text-white text-lg">
+            Interessado em ajudar a <br />
+            construir a SECOMP XI Ufscar<br /> com a gente
+          </p>
+          <h1 className="text-4xl text-white mt-8">ENTRE EM CONTATO</h1>
+          <CustomButton text_bold="Duvidas?" text="Acesse nosso FAQ" buttonType={1} />
+
+        </div>
+        <div className="p-8 mx-auto">
+          <form
+            action="/processar-formulario"
+            method="POST"
+            className="flex flex-col w-full h-full justify-evenly md:px-12 "
+          >
+            <div className="flex flex-col w-full h-full justify-between md:flex-row ">
+              <div className="mx-auto flex flex-col justify-evenly " style={{width: '47%'}}>
+                <label htmlFor="nome" className="text-2xl text-white">
+                  Nome:
+                </label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  required
+                  className="rounded-full my-6 h-8 border-4 border-solid border-purple focus:outline-none px-4 py-7 whitespace-pre-wrap break-words items-top bg-black text-white "
+                  style={{
+                    boxShadow: '0px 0px 18px #586DB2 inset',
+                    borderColor: '#586DB2',
+                    borderRadius: '2rem'
+                  }}
+                />
+
+                <label htmlFor="email" className="text-2xl text-white">
+                  Email:
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="rounded-full my-6 h-8 border-4 border-solid border-purple focus:outline-none px-4 py-7 whitespace-pre-wrap break-words items-top bg-black text-white "
+                  style={{
+                    boxShadow: '0px 0px 18px #51B795 inset',
+                    borderColor: '#586DB2',
+                    borderRadius: '2rem'
+                  }}
+                />
+
+                <label htmlFor="telefone" className="text-2xl text-white">
+                  Telefone:
+                </label>
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  required
+                  placeholder="(XX)XXXXX-XXXX"
+                  pattern='\(\d{2}\)\d{4,5}-\d{4}'
+                  value={telefone}
+                  onChange={handleTelefoneChange}
+                  className="rounded-full my-6 h-8 border-4 border-solid  border-purple focus:outline-none px-4 py-7 whitespace-pre-wrap break-words items-top bg-black text-white "
+                  style={{
+                    boxShadow: '0px 0px 18px #51B795 inset',
+                    borderColor: '#586DB2',
+                    borderRadius: '2rem'
+                  }}
+                />
+
               </div>
               <CustomButton text="Enviar" buttonType={0} />
             </form>
           </div>
           <Line text="FAQ" color="white" position="left" />
 
+
           <FAQComponent faqData={faqData} />
 
           <div className='pb-20'></div>
         </main>
+
+              <div className="flex flex-col mx-auto" style={{width: '47%'}}>
+                <label htmlFor="mensagem" className="text-2xl text-white">
+                  Descreva aqui como podemos te ajudar:
+                </label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  required
+                  value={mensagem}
+                  onChange={handleMensagemChange}
+                  className=" my-6 h-80 md:h-full py-2 border-4 border-solid border-purple focus:outline-none  px-4 whitespace-pre-wrap break-words items-top bg-black text-white"
+                  style={{
+                    boxShadow: '0px 0px 18px #51B795 inset',
+                    borderColor: '#586DB2',
+                    borderRadius: '2rem'
+                  }}
+                />
+                {/* Input hidden para armazenar o texto */}
+                <input
+                  type="hidden"
+                  name="message"
+                  value={mensagem}
+                  required
+                />
+              </div>
+            </div>
+            <CustomButton text="Enviar" buttonType={0} />
+          </form>
+        </div>
+        <Line text="FAQ" color="white" position="left"/>
+
 
         <Footer />
       </body>

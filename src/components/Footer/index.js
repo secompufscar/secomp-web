@@ -21,14 +21,23 @@ const Footer = () => {
                     </p>
                     <Image className="w-full h-auto" src="/ufscar_vector.png" width={40} height={40}/>
                 </div>
+
                 <div className="w-min container mx-auto px-4 py-5 ">
                     <p className="w-max text-white text-xl">
+
+                <div className="w-5 container mx-auto px-4 py-5">
+                    <p className="w-45 text-white text-xl">
+
                         <a href='https://site.dc.ufscar.br' class="underline"> Departamento de Computação (UFSCAR)</a>
                     </p>   
                     <p className="w-65 text-white text-xl">
                         Rodovia Washington Luís-Km 235-SP-310-São Carlos-SP-CEP-13565-905
                     </p> 
+
                     <p className="w-40 text-white mt-5 text-xl">
+
+                    <p className="w-40 text-white mt-15 text-xl">
+
                         <a href='mailto: suporte@secompufscar.com.br' class="underline">Dúvidas ou sugestões?</a>
                     </p>    
                 </div>
