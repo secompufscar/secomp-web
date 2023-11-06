@@ -2,7 +2,6 @@ import { AiFillLock } from 'react-icons/ai'
 
 const h2Styles = (number) => {
     return {
-        fontSize: '32px',
         backgroundImage: (number % 2 === 1) ? 'linear-gradient(360deg, rgba(180, 197, 255, 1), rgba(180, 197, 255, 1), rgba(88, 109, 178, 1))' : 'linear-gradient(360deg, #72FFC680 , #72FFC6 )',
         WebkitBackgroundClip: 'text',
         color: (number % 2 === 0) ? 'transparent' : 'transparent',
@@ -14,7 +13,7 @@ const h2Styles = (number) => {
 export default function Component({ product, number }) {
     return (
         <div
-            className={`flex relative flex-col w-60 h-80 overflow-hidden rounded-[50px] border-4 lg:aspect-none group-hover:opacity-75 shadow-md ${number % 2 === 0 ? 'border-[#72FFC6]' : 'border-[#586DB2]'}`}
+            className={`  flex relative flex-col w-70 h-90 2xsm:w-65   overflow-hidden rounded-[35px] sm8:rounded-[45px]  border-4 lg:aspect-none group-hover:opacity-75  shadow-md ${number % 2 === 0 ? 'border-[#72FFC6]' : 'border-[#586DB2]'}`}
             style={{
 
                 boxShadow: (number % 2 === 0)
@@ -24,8 +23,8 @@ export default function Component({ product, number }) {
         >
             {product.bloqueio ? (
                 <>            
-                    <div className="flex items-end justify-center p-4" style={{ height: '40%' }}>
-                        <h2 className={`font-semibold font-montserrat text-center `} style={h2Styles(number)}>BLOQUEADO</h2>
+                    <div className="flex items-end justify-center py-4" style={{ height: '40%' }}>
+                        <h2 className={`font-semibold font-montserrat text-center text-4xl `} style={h2Styles(number)}>BLOQUEADO</h2>
                     </div>
 
                     <div className={`flex items-start justify-center p-4  ${(number % 2 == 0) ? 'text-[#72FFC6]' : 'text-[#586DB2]'}`} style={{ height: '60%' }}>
@@ -37,14 +36,14 @@ export default function Component({ product, number }) {
             ) : (
                 <>
 
-                    <div className="flex-1 flex items-center justify-center p-4 z-[1]">
-                        <h2 className={`font-semibold font-montserrat text-center `} style={h2Styles(number)}>
+                    <div className="flex-1 flex items-center justify-center py-4 z-[1]">
+                        <h2 className={`font-semibold font-montserrat text-center text-4xl `} style={h2Styles(number)}>
                             {product.curso}
                         </h2>
                     </div>
 
-                    <div className="flex-1 flex items-center justify-center p-4 text-[#fff] z-[1]">
-                        <p>{product.texto}</p>
+                    <div className="flex-1 flex items-center justify-center p-4  text-[#fff] z-[1]">
+                        <p className='text-2xl mx-4'>{product.texto}</p>
                     </div>
 
                     <div className='z-[0] self-center' style={{

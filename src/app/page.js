@@ -95,6 +95,7 @@ export default function Home() {
         </div>
       </div>
 
+
       <Image className="w-full absolute bottom-0 transform -rotate-180" src="/assets/imgs/wave_1.svg" width={900} height={100} />
 
       <div className="bg-black py-40">
@@ -117,8 +118,9 @@ export default function Home() {
       <div className="bg-black py-40">
         <Line color='white' text='Conteúdo' position='left' textSize={"4xl"} />
 
-        <div className="grid grid-cols-4 justify-evenly items-center w-10/12 md:w-9/12 h-max m-auto max-w-3xl md:max-w-none">
+        <div className="grid grid-cols-2   w-10/12 md:w-9/12 h-max m-auto max-w-3xl md:grid-cols-4 md:max-w-none">
           {products.map((product, index) => (
+            <div className="mb-8 w-full flex justify-evenly items-center">
             <div className="mb-8">
               <Content product={product} number={index} />
             </div>

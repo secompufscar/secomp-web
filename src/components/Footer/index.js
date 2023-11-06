@@ -9,7 +9,7 @@ const Footer = () => {
 
 
     return (
-        <footer className=' backgroundStyle flex flex-col md:flex-row items-center '>
+        <footer className=' backgroundStyle w-full h-[300px]  grid grid-cols-2 grid-rows-2 items-end md:flex md:flex-row md:items-center '>
             
             
                 <div className="w-100 container mx-auto px-24 py-5">
@@ -21,21 +21,30 @@ const Footer = () => {
                     </p>
                     <Image className="w-full h-auto" src="/ufscar_vector.png" width={40} height={40}/>
                 </div>
+
+                <div className="w-min container mx-auto px-4 py-5 ">
+                    <p className="w-max text-white text-xl">
+
                 <div className="w-5 container mx-auto px-4 py-5">
                     <p className="w-45 text-white text-xl">
+
                         <a href='https://site.dc.ufscar.br' class="underline"> Departamento de Computação (UFSCAR)</a>
                     </p>   
                     <p className="w-65 text-white text-xl">
                         Rodovia Washington Luís-Km 235-SP-310-São Carlos-SP-CEP-13565-905
                     </p> 
+
+                    <p className="w-40 text-white mt-5 text-xl">
+
                     <p className="w-40 text-white mt-15 text-xl">
+
                         <a href='mailto: suporte@secompufscar.com.br' class="underline">Dúvidas ou sugestões?</a>
                     </p>    
                 </div>
 
-                <div className="w-5 container mx-auto px-4 py-5">
+                <div className="w-full flex justify-center  self-center md:w-min md:flex-col container mx-auto px-4 py-5">
                 <Link href={"https://www.instagram.com/secompufscar/"} target='_blank'>
-                    < button class="inline-flex items-center justify-center ">
+                    < button class="inline-flex items-center justify-center mr-4 pt-2 ">
                         <svg
                         class="h-8 w-8"
                         fill="white"
@@ -46,7 +55,7 @@ const Footer = () => {
                     </button>
                 </Link>
                 <Link href={'https://www.facebook.com/secompufscar'} target='_blank'>
-                    < button class="inline-flex items-center justify-center py-2">
+                    < button class="inline-flex items-center justify-center py-2 mr-4">
                         <svg
                         class="h-8 w-8"
                         fill="white"
