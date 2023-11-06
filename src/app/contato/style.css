@@ -1,34 +1,15 @@
 /* Adicione este estilo ao seu arquivo CSS */
-.glow { 
-  white-space: pre-wrap; 
-  word-wrap: break-word; /* Permite que palavras sejam quebradas quando não couberem na largura */
-  overflow-wrap: break-word; 
-  align-items: top;
-  background-color: black;
-  color: white;
-  box-shadow: 0px 0px 18px #51B795 inset; 
-  }
-  .glow-2 { 
+
+  /* .glow-2 { 
     white-space: pre-wrap; 
-    word-wrap: break-word; /* Permite que palavras sejam quebradas quando não couberem na largura */
+    word-wrap: break-word;  Permite que palavras sejam quebradas quando não couberem na largura 
     overflow-wrap: break-word; 
     align-items: top;
     background-color: black;
     color: white;
     box-shadow: 0px -2px 12px #51B795 inset; 
-    }
+    } */
 /* Define a classe com a sombra interna e a transição */
-.border-4xl{
-  border-radius: 2rem;
-}
-
-
-.black-bg{
-  background-color: black;
-}
-.rounded-4xl{
-  border-radius: 2rem;
-}
 
 .bg-img{
   background-image: url('../../assets/Group3.png');
@@ -36,32 +17,4 @@
   
 }
 
-.w-45{
-  width: 47%;
-}
-@media (max-width: 1280px) {
-  html {
-    font-size: 13px;
-  }
-}
-@media (max-width: 767px) {
-  .w-45{
-    width: 70%;
-  }
-}
-@media (max-width: 560px) {
-  .w-45{
-    width: 90%;
-  }
-}
-@media (max-width: 425px) {
-  html{
-    font-size: 10px;
-  }
-}
-@media (max-width: 320px) {
-  .none{
-    display:none
-  }
-}
 

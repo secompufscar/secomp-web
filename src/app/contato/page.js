@@ -7,7 +7,7 @@ import CustomButton from '../../components/buttons/buttons';
 import Line from './line';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
-
+ 
 export default function Desconto() {
   const [mensagem, setMensagem] = useState('');
   const [telefone, setTelefone] = useState('');
@@ -47,12 +47,11 @@ export default function Desconto() {
     },
   ];
 
-  const inputClasses="rounded-full my-6 h-8 border-solid border-4  border-purple focus:outline-none glow px-4 py-7"
   return (
     <>
       <NavBar />
 
-      <main className="p-4 xl:px-12 black-bg bg-img ">
+      <main className="p-4 xl:px-12 bg-black bg-img ">
         <div className="bg_img w-full flex flex-col justify-center items-center py-32">
           <p className="text-center text-white text-lg">
             Interessado em ajudar a <br />
@@ -68,8 +67,8 @@ export default function Desconto() {
             method="POST"
             className="flex flex-col w-full h-full justify-evenly md:px-12 "
           >
-            <div className="flex flex-col w-full h-full justify-between w-full md:flex-row ">
-              <div className="mx-auto flex flex-col justify-evenly w-45">
+            <div className="flex flex-col w-full h-full justify-between md:flex-row ">
+              <div className="mx-auto flex flex-col justify-evenly " style={{width: '47%'}}>
                 <label htmlFor="nome" className="text-2xl text-white">
                   Nome:
                 </label>
@@ -78,7 +77,12 @@ export default function Desconto() {
                   id="nome"
                   name="nome"
                   required
-                  className={inputClasses}
+                  className="rounded-full my-6 h-8 border-4 border-solid border-purple focus:outline-none px-4 py-7 whitespace-pre-wrap break-words items-top bg-black text-white "
+                  style={{
+                    boxShadow: '0px 0px 18px #586DB2 inset',
+                    borderColor: '#586DB2',
+                    borderRadius: '2rem'
+                  }}
                 />
 
                 <label htmlFor="email" className="text-2xl text-white">
@@ -89,7 +93,12 @@ export default function Desconto() {
                   id="email"
                   name="email"
                   required
-                  className={inputClasses}
+                  className="rounded-full my-6 h-8 border-4 border-solid border-purple focus:outline-none px-4 py-7 whitespace-pre-wrap break-words items-top bg-black text-white "
+                  style={{
+                    boxShadow: '0px 0px 18px #51B795 inset',
+                    borderColor: '#586DB2',
+                    borderRadius: '2rem'
+                  }}
                 />
 
                 <label htmlFor="telefone" className="text-2xl text-white">
@@ -104,11 +113,16 @@ export default function Desconto() {
                   pattern='\(\d{2}\)\d{4,5}-\d{4}'
                   value={telefone}
                   onChange={handleTelefoneChange}
-                  className={inputClasses}
+                  className="rounded-full my-6 h-8 border-4 border-solid  border-purple focus:outline-none px-4 py-7 whitespace-pre-wrap break-words items-top bg-black text-white "
+                  style={{
+                    boxShadow: '0px 0px 18px #51B795 inset',
+                    borderColor: '#586DB2',
+                    borderRadius: '2rem'
+                  }}
                 />
               </div>
 
-              <div className="flex flex-col w-45 mx-auto">
+              <div className="flex flex-col mx-auto" style={{width: '47%'}}>
                 <label htmlFor="mensagem" className="text-2xl text-white">
                   Descreva aqui como podemos te ajudar:
                 </label>
@@ -118,7 +132,12 @@ export default function Desconto() {
                   required
                   value={mensagem}
                   onChange={handleMensagemChange}
-                  className=" rounded-4xl my-6 h-80 md:h-full py-2 border-solid border-4  border-purple focus:outline-none glow px-4 py-4"
+                  className=" my-6 h-80 md:h-full py-2 border-4 border-solid border-purple focus:outline-none  px-4 whitespace-pre-wrap break-words items-top bg-black text-white"
+                  style={{
+                    boxShadow: '0px 0px 18px #51B795 inset',
+                    borderColor: '#586DB2',
+                    borderRadius: '2rem'
+                  }}
                 />
                 {/* Input hidden para armazenar o texto */}
                 <input

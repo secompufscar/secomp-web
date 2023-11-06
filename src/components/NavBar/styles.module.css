@@ -1,35 +1,7 @@
-.logo {
-    height: 3rem;
-    width: min-content;
-}
 
-.header {
-    background-color: #0a0a0a14;
-    display: flex;
-    flex-direction: column;
-}
-
-.header_container {
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-}
 
 .nav_options {
     display: none;
-}
-
-.nav_option {
-    margin: 0px 0.5rem;
-    font-size: 1.5rem;
-    color: white;
-    text-transform: uppercase;
-}
-
-.active {
-    font-weight: bold;
 }
 
 .mobile_menu {
