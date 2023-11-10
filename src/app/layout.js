@@ -37,6 +37,10 @@ const keywords = [
   ];
 
 export const metadata = {
+    metadataBase: new URL('https://www.secompufscar.com.br'),
+    alternates: {
+      canonical: '/'
+    },
     title: "SECOMP UFSCar 2023",
     description: "A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar) surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica quanto de entusiastas.",
     url: 'https://www.secompufscar.com.br',
@@ -48,14 +52,14 @@ export const metadata = {
     openGraph: {
       title: "SECOMP UFSCar 2023",
       description: "A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar) surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica quanto de entusiastas.",
-      images: ['https://www.secompufscar.com.br/foto1.jpg', 'https://www.secompufscar.com.br/foto2.jpg', "https://www.secompufscar.com.br/foto3.jpg"],
+      images: ['/foto1.jpg', '/foto2.jpg', "/foto3.jpg"],
     },
     twitter: {
       card: 'summary_large_image',
       title: 'SECOMP UFSCar 2023',
       description: 'A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar) surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica quanto de entusiastas.',
       creator: '@secompufscar',
-      images: ['https://www.secompufscar.com.br/foto1.jpg', 'https://www.secompufscar.com.br/foto2.jpg', "https://www.secompufscar.com.br/foto3.jpg"],
+      images: ['/foto1.jpg', '/foto2.jpg', "/foto3.jpg"],
     },
 };
 
