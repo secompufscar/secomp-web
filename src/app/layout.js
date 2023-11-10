@@ -35,28 +35,33 @@ const keywords = [
     "Evento Anual",
     "Ciência da Computação"
   ];
+  
 export const metadata = {
-    metadataBase: new URL('https://acme.com'),
-    alternates: {
-      canonical: '/',
-      languages: {
-        'pt-BR': '/'
-      },
-    },
-    title: "SECOMP UFSCAR 2023",
+    title: "SECOMP UFSCar 2023",
     description: "A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar) surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica quanto de entusiastas.",
+    url: 'https://www.secompufscar.com.br',
+    siteName: 'SECOMP UFSCar 2023',
     icons: {
-        icon: '/favicon.png',
+      icon: '/favicon.png',
     },
     keywords: keywords,
     openGraph: {
-      images: '/foto1.jpg',
-    }
+      title: "SECOMP UFSCar 2023",
+      description: "A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar) surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica quanto de entusiastas.",
+      images: ['/foto1.jpg', '/foto2.jpg', "/foto3.jpg"],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'SECOMP UFSCar 2023',
+      description: 'A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar) surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica quanto de entusiastas.',
+      creator: '@secompufscar',
+      images: ['/foto1.jpg', '/foto2.jpg', "/foto3.jpg"],
+    },
 };
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en">
+        <html lang="pt-BR">
             <body>{children}</body>
         </html>
     );
