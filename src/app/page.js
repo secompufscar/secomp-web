@@ -1,130 +1,147 @@
+"use client"
+
 import Image from "next/image";
-import { montserrat, inter } from "@/utils/fonts";
-import React from "react";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import Content from "../components/content";
 
-import "./globals.css";
-import "./home.page.css";
-import Line from "./contato/line";
+import { useEffect } from 'react'
 
-const products =
-  [
-    {
-      curso: "Work Shop",
-      texto: "aulas curtas, para troca de conhecimento prático",
-      bloqueio: false
-    },
-    {
-      curso: "Work Shop",
-      texto: "aulas curtas, para troca de conhecimento prático",
-      bloqueio: false
-    },
-    {
-      curso: "Work Shop",
-      texto: "aulas curtas, para troca de conhecimento prático",
-      bloqueio: false
-    },
-    {
-      curso: "Work Shop",
-      texto: "aulas curtas, para troca de conhecimento prático",
-      bloqueio: false
-    },
-    {
-      curso: "Work Shop",
-      texto: "aulas curtas, para troca de conhecimento prático",
-      bloqueio: false
-    },
-    {
-      curso: "Work Shop",
-      texto: "aulas curtas, para troca de conhecimento prático",
-      bloqueio: false
-    },
-    {
-      curso: "Work Shop",
-      texto: "aulas curtas, para troca de conhecimento prático",
-      bloqueio: true
-    },
-    {
-      curso: "Work  Shop",
-      texto: "aulas curtas, para troca de conhecimento prático",
-      bloqueio: true
-    },
-  ]
+import { montserrat, inter } from "@/utils/fonts"
+import { MagicMotion } from "react-magic-motion";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
-export default function Home() {
-  function teste() {
-    console.log('eeeeeee')
-  }
+import NavBar from "../components/NavBar"
+import Footer from "../components/Footer"
+import Content from "../components/content"
+import FAQ from "../components/FAQ/FaqComponent"
+import Line from "../components/line"
+import Contato from "../components/contato/page"
+import Patrocinadores from "../components/patrocinadores/page"
+
+import products from "../data/products.json"
+import Link from "next/link";
+
+const faqData = [
+  {
+    titulo: 'Como faço para criar uma conta?',
+    texto: 'Para criar uma conta, clique no botão "Registrar" e siga as instruções.'
+  },
+  {
+    titulo: 'Como faço para redefinir minha senha?',
+    texto: 'Para redefinir sua senha, vá para a página de login e clique em "Esqueci minha senha".'
+  },
+  {
+    titulo: 'Como entro em contato com o suporte?',
+    texto: 'Você pode entrar em contato com nosso suporte técnico através do email support@example.com.'
+  },
+];
+
+export default function Page() {
   return (
     <>
-      <div className="bg-black">
-        <div className="gradient-container">
-          <NavBar />
 
-          <div class="flex flex-col sm:flex-col-reverse md:flex-row-reverse items-center justify-evenly py-8 px-4">
-            <div className="flex flex-grow-4 justify-center items-center  ">
-              <Image className="w-1500" src="/assets/imgs/secomp_logo.svg" alt="Secomp logo" width={779} height={332} />
-            </div>
+      <NavBar />
 
-            <div className={`text-white text-4xl flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${inter.className}`}>
-              <h5>O aguardado retorno da Semana da Computação na UFSCar está chegando!</h5>
-              <h6 className="py-2 mt-4">27/11/2023 à 01/12/2023</h6>
 
-              <div className="justify-center mt-8">
-                {/* Pedir ajuda para trocar aqui */}
-                <button className={`${montserrat.className}`} style={{
-                  fontWeight: 'bold',
-                  fontSize: '1.25rem',
-                  backgroundColor: '#51b795',
-                  padding: '1rem 3rem',
-                  borderRadius: '500rem',
-                  color: '#0a0a0a',
-                  textTransform: 'uppercase',
-                  boxShadow: '0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset',
-                  backdropFilter: 'blur(10px)'
-                }}>
-                  Saiba mais
-                </button>
+      <div id="home" className="pt-50" style={{ backgroundColor: "#000", backgroundImage: "url('/brilho.svg')", backgroundRepeat: "no-repeat", backgroundSize: "100% 100%", backgroundPosition: "center" }}>
+        <div className="w-10/12 m-auto">
+          <div>
+
+            <div style={{ height: "calc(100vh - 200px)" }} class="flex items-center justify-between h-full xl:flex-row flex-col">
+              <div className={`-mt-20 text-white text-5xl flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${inter.className}`}>
+                <h1 className="mt-16 leading-tight md:mt-0 font-extralight">O aguardado retorno da Semana da Computação na UFSCar está chegando!</h1>
+                <h6 className="py-2 mt-12 mb-12 text-4xl font-bold">27/11 à 01/12</h6>
+
+                <Link href="/inscricao">
+                  <button className={`${montserrat.className} font-bold mb-16`} style={{
+                    fontWeight: 'bold',
+                    fontSize: '1.25rem',
+                    backgroundColor: '#51b795',
+                    padding: '2rem 7rem',
+                    borderRadius: '500rem',
+                    color: '#0a0a0a',
+                    textTransform: 'uppercase',
+                    boxShadow: '0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset',
+                    backdropFilter: 'blur(10px)'
+                  }}>
+                    INSCREVER
+                  </button>
+                </Link>
               </div>
+
+              <img className="h-800 mb-64 md:mb-0 hidden md:block" src="/assets/imgs/secomp_logo.svg" alt="Secomp logo" />
             </div>
-
-
           </div>
         </div>
+
+        <img className="w-full" src="/main-wave.svg" />
       </div>
 
+      <div className="bg-black">
+        <div className="w-10/12 m-auto">
+          <div id="sobre" className="py-40 h-full">
+            <Line text='SOBRE' />
 
-      <Image className="w-full absolute bottom-0 transform -rotate-180" src="/assets/imgs/wave_1.svg" width={900} height={100} />
+            <div className="flex flex-col xl:flex-row justify-between items-center h-full w-full mt-50">
+              <p className="text-white text-4xl xl:mr-12 max-w-6xl mb-30 font-extralight leading-snug">A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar)
+                surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica
+                quanto de entusiastas. A cada ano, alunos da graduação dos cursos do Departamento de Computação
+                se mobilizam para realizar este grande evento, no qual pessoas de diferentes áreas relacionadas
+                são convidadas a apresentar, discutir e debater experiências e novidades que trarão informações,
+                conhecimentos e inovação aos participantes.</p>
 
-      <div className="bg-black py-40">
-        <Line color='white' text='Sobre' position='left' textSize={"4xl"} />
-
-        <div className="flex flex-col md:flex-row justify-evenly items-center w-10/12 md:w-9/12 h-max m-auto max-w-3xl md:max-w-none">
-          <div className="h-min w-11/12 mb-20 md:mb-0  xl:w-5/12">
-            <p className="text-white text-2xl mr-10">A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar)
-              surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica
-              quanto de entusiastas. A cada ano, alunos da graduação dos cursos do Departamento de Computação
-              se mobilizam para realizar este grande evento, no qual pessoas de diferentes áreas relacionadas
-              são convidadas a apresentar, discutir e debater experiências e novidades que trarão informações,
-              conhecimentos e inovação aos participantes.</p>
+              <Carousel showStatus={false} autoPlay infiniteLoop statusFormatter={(currentItem, total) => `${currentItem} de ${total}`}>
+                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto1.jpg" />
+                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto2.jpg" />
+                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto3.jpg" />
+              </Carousel>
+            </div>
           </div>
 
-          <div className="h-90 w-11/12  xl:w-5/12 bg-gray rounded-3xl"></div>
-        </div>
-      </div>
+          <div id="conteudo">
+            <Line isLeft={false} text='CONTEÚDO' />
 
-      <div className="bg-black py-40">
-        <Line color='white' text='Conteúdo' position='left' textSize={"4xl"} />
+            <div className="hidden md:block">
+              <div className="mt-50 mb-30 grid grid-cols-1 md:grid-cols-2 grid-cols-1 xl:md:grid-cols-4">
+                {products.map((product, index) => (
+                  <div className="mb-8 m-auto">
+                    <div className="mb-8">
+                      <Content product={product} number={index} />
+                    </div>
+                  </div>
+                ))}
+              </div>
 
-        <div className="grid grid-cols-2   w-10/12 md:w-9/12 h-max m-auto max-w-3xl md:grid-cols-4 md:max-w-none">
-          {products.map((product, index) => (
-            <div className="mb-8 w-full flex justify-evenly items-center">
-            <div className="mb-8">
-              <Content product={product} number={index} />
             </div>
-          ))}
+            <div className="mt-50 mb-30 block md:hidden">
+              <Carousel showStatus={false} showIndicators={false} centerMode centerSlidePercentage={80} autoPlay infiniteLoop statusFormatter={(currentItem, total) => `${currentItem} de ${total}`}>
+                {products.map((product, index) => (
+                  <div className="mb-8 m-auto">
+                    <div className="mb-8">
+                      <Content product={product} number={index} />
+                    </div>
+                  </div>
+                ))}
+              </Carousel>
+            </div>
+          </div>
+
+          <div className="mb-30" id="patrocinadores">
+            <Line text='PATROCINADORES' />
+
+            <Patrocinadores />
+          </div>
+
+          <div className="mb-30" id="contato">
+            <Line isLeft={false} text='CONTATO' />
+
+            <Contato />
+          </div>
+
+          <div id="faq">
+            <Line text='FAQ' />
+
+            <FAQ faqData={faqData} />
+          </div>
         </div>
       </div>
 

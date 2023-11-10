@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "axios": "^1.5.0",
     "next": "13.4.17",
     "prettier": "^3.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
+    "react-magic-motion": "^1.1.1",
+    "react-responsive-carousel": "^3.2.23",
+    "react-scroll": "^1.9.0",
     "sweetalert2": "^11.7.31"
   },
   "devDependencies": {

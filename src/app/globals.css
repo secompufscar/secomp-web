@@ -182,7 +182,14 @@ span.flatpickr-weekday,
 
 html {
     font-size: 10px;
+    scroll-padding-top: 85px;
+    scroll-behavior: smooth;
 }
+
+.swal2-popup {
+    font-size: 1.6rem !important;
+  }
+
 
 header {
     padding: 2rem;
@@ -191,41 +198,6 @@ header {
     justify-content: space-between;
 }
 
-@media (max-width: 940px) {
-    html {
-        font-size: 9px;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-@media (max-width: 780px) {
-    header {
-        flex-direction: column;
-        align-items: flex-end;
-        position: relative;
-    }
-}
-@media (max-width: 480px) {
-    html {
-        font-size: 8px;
-    }
-}
-@media (max-width: 450px) {
-    html {
-        font-size: 7px;
-    }
-}
-@media (max-width: 360px) {
-    html {
-        font-size: 6px;
-    }
-}
-@media (max-width: 280px) {
-    html {
-        font-size: 5px;
-    }
+body {
+    background-color: #0A0A0A;
 }

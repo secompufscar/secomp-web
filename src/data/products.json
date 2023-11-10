@@ -1,0 +1,42 @@
+[
+    {
+        "curso": "WORK SHOPS",
+        "texto": "Sessões interativas para aprender fazendo.",
+        "bloqueio": false
+    },
+    {
+        "curso": "INTERPRISE DAY",
+        "texto": "Dia de negócios e networking para empresas.",
+        "bloqueio": false
+    },
+    {
+        "curso": "MESA REDONDA",
+        "texto": "Discussão com especialistas sobre um tópico.",
+        "bloqueio": false
+    },
+    {
+        "curso": "DATATHON",
+        "texto": "Competição analítica de dados em equipes.",
+        "bloqueio": false
+    },
+    {
+        "curso": "MINICURSOS",
+        "texto": "Breves aulas práticas para aprendizado rápido.",
+        "bloqueio": false
+    },
+    {
+        "curso": "PALESTRAS",
+        "texto": "Apresentações informativas por especialistas.",
+        "bloqueio": false
+    },
+    {
+        "curso": "Work Shop",
+        "texto": "aulas curtas, para troca de conhecimento prático",
+        "bloqueio": true
+    },
+    {
+        "curso": "Work  Shop",
+        "texto": "aulas curtas, para troca de conhecimento prático",
+        "bloqueio": true
+    }
+]
