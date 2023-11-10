@@ -22,16 +22,20 @@ import Link from "next/link";
 
 const faqData = [
   {
-    titulo: 'Como faço para criar uma conta?',
-    texto: 'Para criar uma conta, clique no botão "Registrar" e siga as instruções.'
+    titulo: 'Como faço para me inscrever na SECOMP?',
+    texto: 'Para se inscrever na SECOMP, clique no botão "INSCREVER" na tela inicial "Home", onde será redirecionado para a página de inscrição. Após isso, basta clicar em "Nova Inscrição" e preencher o formulário com os dados solicitados.'
+  },
+  {
+    titulo: 'Como faço para acompanhar a minha inscrição?',
+    texto: 'Para acompanhar a sua inscrição na SECOMP, clique no botão "INSCREVER" na tela inicial "Home", onde será redirecionado para a página de inscrição. Após isso, basta clicar em "Acompanhar Inscrição" e digitar seu CPF e senha de acesso.'
   },
   {
     titulo: 'Como faço para redefinir minha senha?',
-    texto: 'Para redefinir sua senha, vá para a página de login e clique em "Esqueci minha senha".'
+    texto: 'Para redefinir a sua senha de acesso, clique no botão "INSCREVER" na tela inicial "Home", onde será redirecionado para a página de inscrição. Após isso, basta clicar em "Acompanhar Inscrição" e, logo abaixo do campo de digitar sua senha, haverá uma opção de clique "Esqueci minha senha". Após isso, basta informar seu email.'
   },
   {
-    titulo: 'Como entro em contato com o suporte?',
-    texto: 'Você pode entrar em contato com nosso suporte técnico através do email support@example.com.'
+    titulo: 'Não recebi meu meu email de confirmação ou recuperação de senha, o que fazer?',
+    texto: 'Primeiramente, verifique a caixa de SPAM do seu provedor de email, onde pode estar. Caso não esteja, use a opção CONTATO do site informando seus dados e retornaremos assim que possível.'
   },
 ];
 
@@ -51,7 +55,7 @@ export default function Page() {
                 <h1 className="mt-16 leading-tight md:mt-0 font-extralight">O aguardado retorno da Semana da Computação na UFSCar está chegando!</h1>
                 <h6 className="py-2 mt-12 mb-12 text-4xl font-bold">27/11 à 01/12</h6>
 
-                <Link href="/inscricao">
+                <Link href="https://secomp2023.faiufscar.com/pagina/7493-inscri%C3%A7%C3%B5es#/">
                   <button className={`${montserrat.className} font-bold mb-16`} style={{
                     fontWeight: 'bold',
                     fontSize: '1.25rem',
