@@ -68,6 +68,8 @@ export default function Desconto() {
       setEmail("")
       setTelefone("")
       setMensagem("")
+
+      router.push("/#home")
     } catch(error) {
       await SweetAlert.fire({
         title: "Erro!",

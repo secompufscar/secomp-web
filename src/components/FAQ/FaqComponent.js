@@ -19,7 +19,7 @@ function FAQComponent({ faqData }) {
   const divFaqClasses=`  absolute top-0 mb-6 transition-height duration-300  z-0  relative rounded-3xl glow border-solid peer-checked:border-x-4 
   peer-checked:border-4  h-0   overflow-hidden peer-checked:h-min  peer-checked:py-10`
   const labelFaqClasses = `text-2xl z-20 translate-y-8 transition-all text-white relative rounded-full border-solid   
-  glow-2 border-4 font-bold tracking-[1px] h-[60px] flex items-center justify-center peer-checked:text-black`;
+  glow-2 border-4 font-bold tracking-[1px] h-[70px] flex items-center justify-center peer-checked:text-black`;
 
   return (
     <div className='flex justify-center items-center flex-col lg:w-full mt-30 pb-50 '>
@@ -31,7 +31,7 @@ function FAQComponent({ faqData }) {
             type='checkbox'
             id={`input${index}`}
           />
-          <div className="z-10 translate-y-10 translate-x-2  h-[60px] w-full rounded-full absolute -left-2 -top-2  z-0 bg-black" /> {/* Adiciona uma div de fundo preta sem transparência */}
+          <div className="z-10 translate-y-10 translate-x-2  h-[70px] w-full rounded-full absolute -left-2 -top-2  z-0 bg-black" /> {/* Adiciona uma div de fundo preta sem transparência */}
 
           <label
             onClick={(e) => { index%2==0 ? toggleClassVerde(e) : toggleClassPurple(e) }}

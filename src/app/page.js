@@ -30,11 +30,11 @@ const faqData = [
     texto: 'Para acompanhar a sua inscrição na SECOMP, clique no botão "INSCREVER" na tela inicial "Home", onde será redirecionado para a página de inscrição. Após isso, basta clicar em "Acompanhar Inscrição" e digitar seu CPF e senha de acesso.'
   },
   {
-    titulo: 'Como faço para redefinir minha senha?',
+    titulo: 'Como faço para redefinir a minha senha?',
     texto: 'Para redefinir a sua senha de acesso, clique no botão "INSCREVER" na tela inicial "Home", onde será redirecionado para a página de inscrição. Após isso, basta clicar em "Acompanhar Inscrição" e, logo abaixo do campo de digitar sua senha, haverá uma opção de clique "Esqueci minha senha". Após isso, basta informar seu email.'
   },
   {
-    titulo: 'Não recebi meu meu email de confirmação ou recuperação de senha, o que fazer?',
+    titulo: 'O que fazer caso eu não receba o email?',
     texto: 'Primeiramente, verifique a caixa de SPAM do seu provedor de email, onde pode estar. Caso não esteja, use a opção CONTATO do site informando seus dados e retornaremos assim que possível.'
   },
 ];

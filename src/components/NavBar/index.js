@@ -18,13 +18,15 @@ export default function NavBar() {
         <MagicMotion>
             <header style={{ backgroundColor: "#000" }} className={`flex flex-col fixed z-50 w-full`}>
                 <div className="flex items-center w-full justify-between">
-                    <img
-                        src="/assets/icons/secomp_logotipo.svg"
-                        alt={"Logo SECOMP"}
-                        className="h-12 w-min-content"
-                        // width={288}
-                        // height={44}
-                    />
+                    <Link href={"#home"}>
+                        <img
+                            src="/assets/icons/secomp_logotipo.svg"
+                            alt={"Logo SECOMP"}
+                            className="h-12 w-min-content"
+                            // width={288}
+                            // height={44}
+                        />
+                    </Link>
 
                     <div className={styles.nav_options}>
                         <Link className="mx-8 text-2xl text-white uppercase" href={"#home"}>
@@ -67,37 +69,37 @@ export default function NavBar() {
                 {mobileMenuOpen && (
 
                     <div className={styles.mobile_menu}>
-                        <Link className="mx-2 text-2xl text-white uppercase font-bold" href={"#home"}>
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase font-bold" href={"#home"}>
                             HOME
                         </Link>
 
                         <hr style={{ backgroundColor: "#0a0a0a14", height: "2px", width: "100%" }} />
 
-                        <Link className="mx-2 text-2xl text-white uppercase " href={"#sobre"}>
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"#sobre"}>
                             SOBRE
                         </Link>
 
                         <hr style={{ backgroundColor: "#0a0a0a14", height: "2px", width: "100%" }} />
 
-                        <Link className="mx-2 text-2xl text-white uppercase " href={"#conteudo"}>
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"#conteudo"}>
                             CONTEÚDO
                         </Link>
 
                         <hr style={{ backgroundColor: "#0a0a0a14", height: "2px", width: "100%" }} />
 
-                        <Link className="mx-2 text-2xl text-white uppercase " href={"#patrocinio"}>
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"#patrocinio"}>
                             PATROCÍNIO
                         </Link>
 
                         <hr style={{ backgroundColor: "#0a0a0a14", height: "2px", width: "100%" }} />
 
-                        <Link className="mx-2 text-2xl text-white uppercase " href={"#contato"}>
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"#contato"}>
                             CONTATO
                         </Link>
 
                         <hr style={{ backgroundColor: "#0a0a0a14", height: "2px", width: "100%" }} />
 
-                        <Link className="mx-2 text-2xl text-white uppercase " href={"#faq"}>
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"#faq"}>
                             FAQ
                         </Link>
                     </div>
