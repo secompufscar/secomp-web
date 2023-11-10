@@ -22,15 +22,15 @@ class MyDocument extends Document {
           <meta property="og:type" content="page" />
           <meta property="og:url" content="https://www.secompufscar.com.br" />
           <meta property="og:title" content="SECOMP UFSCar" />
-          <meta property="og:image" content="https://www.secompufscar.com.br/foto1.jpg" />
+          <meta property="og:image" content="/foto1.jpg" />
           <meta property="og:description" content="A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar) surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica quanto de entusiastas." />
 
           <meta property="article:author" content="SECOMP UFSCar" />
 
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@https://twitter.com/secompufscar" />
+          <meta name="twitter:site" content="@secompufscar" />
           <meta name="twitter:title" content="SECOMP UFSCar" />
-          <meta name="twitter:creator" content="@https://twitter.com/secompufscar" />
+          <meta name="twitter:creator" content="@secompufscar" />
           <meta name="twitter:description" content="A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar) surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica quanto de entusiastas." />
 
         </Head>
