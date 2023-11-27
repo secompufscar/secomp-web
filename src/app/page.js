@@ -16,6 +16,7 @@ import FAQ from "../components/FAQ/FaqComponent"
 import Line from "../components/line"
 import Contato from "../components/contato/page"
 import Patrocinadores from "../components/patrocinadores/page"
+import Cronograma from "../assets/cronograma.svg";
 
 import products from "../data/products.json"
 import Link from "next/link";
@@ -127,6 +128,10 @@ export default function Page() {
                 ))}
               </Carousel>
             </div>
+          </div>
+
+          <div id="cronograma">
+            <Image src={Cronograma} alt="cronograma"/>
           </div>
 
           <div className="mb-30" id="patrocinadores">
