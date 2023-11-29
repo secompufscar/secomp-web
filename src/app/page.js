@@ -84,7 +84,7 @@ export default function Page() {
       <div className="bg-black">
         <div className="w-10/12 m-auto">
           <div id="sobre" className="py-40 h-full">
-            <Line text='SOBRE' />
+            <Line isLeft text='SOBRE' />
 
             <div className="flex flex-col xl:flex-row justify-between items-center h-full w-full mt-50">
               <p className="text-white text-4xl xl:mr-12 max-w-6xl mb-30 font-extralight leading-snug">A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar)
@@ -103,7 +103,7 @@ export default function Page() {
           </div>
 
           <div id="conteudo">
-            <Line isLeft={false} text='CONTEÚDO' />
+            <Line text='CONTEÚDO' />
 
             <div className="hidden md:block">
               <div className="mt-50 mb-30 grid grid-cols-1 md:grid-cols-2 grid-cols-1 xl:md:grid-cols-4">
@@ -135,7 +135,7 @@ export default function Page() {
           </div>
 
           <div className="mb-50" id="patrocinadores">
-            <Line text='PATROCINADORES' />
+            <Line isLeft text='PATROCINADORES' />
 
             <Patrocinadores />
           </div>
@@ -147,7 +147,7 @@ export default function Page() {
           </div>
 
           <div id="faq">
-            <Line text='FAQ' />
+            <Line isLeft text='FAQ' />
 
             <FAQ faqData={faqData} />
           </div>

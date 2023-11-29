@@ -111,6 +111,26 @@ export default function Patrocinadores() {
                             <div className="w-20 h-[5px] bg-[#51B795] blur-md " />
                         </div>
 
+                        <p className="font-normal text-3xl text-white font-montserrat ml-8 mr-8 text-center">APOIO PRATA</p>
+
+                        <div className="w-20 h-[5px] bg-[#51B795] shadow-md">
+                            <div className="w-20 h-[5px] bg-[#51B795] blur-md " />
+                        </div>
+                    </div>
+
+                    <div className="mt-22 flex flex-row justify-center gap-x-[5%] max-md:flex-col max-md:gap-y-7">
+                        <div className="flex flex-col items-center gap-y-12">
+                            <img className="w-80" alt={"Logo da empresa"} src={"/catijr.png"} />
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div className="flex justify-center items-center mb-20 mt-20">
+                        <div className="w-20 h-[5px] bg-[#51B795] shadow-md">
+                            <div className="w-20 h-[5px] bg-[#51B795] blur-md " />
+                        </div>
+
                         <p className="font-normal text-3xl text-white font-montserrat ml-8 mr-8 text-center">APOIADORES</p>
 
                         <div className="w-20 h-[5px] bg-[#51B795] shadow-md">

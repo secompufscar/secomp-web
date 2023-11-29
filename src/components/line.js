@@ -1,4 +1,4 @@
-function Line({ color, text, isLeft = true }) {
+function Line({ color, text, isLeft }) {
   const textPosition = `text-${isLeft ? "left" : "right"}`
 
   return (
