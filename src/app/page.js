@@ -130,11 +130,11 @@ export default function Page() {
             </div>
           </div>
 
-          <div id="cronograma">
+          <div  className="mb-50" id="cronograma">
             <Image src={Cronograma} alt="cronograma"/>
           </div>
 
-          <div className="mb-30" id="patrocinadores">
+          <div className="mb-50" id="patrocinadores">
             <Line text='PATROCINADORES' />
 
             <Patrocinadores />
