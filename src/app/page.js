@@ -53,10 +53,10 @@ export default function Page() {
 
             <div style={{ height: "calc(100vh - 200px)" }} class="flex items-center justify-between h-full xl:flex-row flex-col">
               <div className={`-mt-20 text-white text-5xl flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${inter.className}`}>
-                <h1 className="mt-16 leading-tight md:mt-0 font-extralight">O aguardado retorno da Semana da Computação na UFSCar está chegando!</h1>
-                <h6 className="py-2 mt-12 mb-12 text-4xl font-bold">27/11 à 01/12</h6>
+                <h1 className="mt-16 leading-tight md:mt-0 font-extralight">A primeira etapa do processo seletivo da Semana da Computação na UFSCar está disponível!</h1>
+                <h6 className="py-2 mt-12 mb-12 text-4xl font-bold">25/03 à 06/04</h6>
 
-                <Link href="https://secomp2023.faiufscar.com/pagina/7493-inscri%C3%A7%C3%B5es#/">
+                <Link target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScMIvT2QPPrK7PCNgYJLeWUSfokXpQLQWpQPuITVOXsj87iFg/viewform">
                   <button className={`${montserrat.className} font-bold mb-16`} style={{
                     fontWeight: 'bold',
                     fontSize: '1.25rem',
