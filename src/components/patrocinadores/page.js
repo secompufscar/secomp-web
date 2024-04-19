@@ -66,21 +66,7 @@ export default function Patrocinadores() {
 
                     <div className="flex flex-row justify-center gap-x-[5%] max-md:flex-col max-md:gap-y-7 items-center">
                         <Carousel showStatus={false} interval={1000} className="items-center flex" autoPlay infiniteLoop showThumbs={false} centerMode centerSlidePercentage={diamante} statusFormatter={(currentItem, total) => `${currentItem} de ${total}`}>
-                            <div className="flex flex-col items-center gap-y-12">
-                                <img className="w-80" alt={"Logo da empresa"} src={"/rocketseat.svg"} />
-                            </div>
 
-                            <div className="flex flex-col items-center gap-y-12">
-                                <img className="w-80" alt={"Logo da empresa"} src={"/SerasaExperian-TM_Portrait_RGB.svg.png"} />
-                            </div>
-
-                            <div className="flex flex-col items-center gap-y-12">
-                                <img className="w-80" alt={"Logo da empresa"} src={"/luizalabs-logo-1656CE2B2D-seeklogo.com.png"} />
-                            </div>
-
-                            <div className="flex flex-col items-center gap-y-12">
-                                <img className="w-80" alt={"Logo da empresa"} src={"/Logo_QI_Tech_RGB_versao_preferencial-1.png"} />
-                            </div>
                         </Carousel>
                     </div>
                 </div>
@@ -100,7 +86,7 @@ export default function Patrocinadores() {
 
                     <div className="mt-22 flex flex-row justify-center gap-x-[5%] max-md:flex-col max-md:gap-y-7">
                         <div className="flex flex-col items-center gap-y-12">
-                            <img className="w-80" alt={"Logo da empresa"} src={"/nic.br-logo-1.png"} />
+                           
                         </div>
                     </div>
                 </div>
@@ -120,7 +106,7 @@ export default function Patrocinadores() {
 
                     <div className="mt-22 flex flex-row justify-center gap-x-[5%] max-md:flex-col max-md:gap-y-7">
                         <div className="flex flex-col items-center gap-y-12">
-                            <img className="w-80" alt={"Logo da empresa"} src={"/catijr.png"} />
+                            
                         </div>
                     </div>
                 </div>
@@ -141,34 +127,6 @@ export default function Patrocinadores() {
                     <div className="mt-22 flex flex-row justify-center gap-x-[5%] max-md:flex-col max-md:gap-y-7 items-center">
                         <Carousel showStatus={false} interval={1000} autoPlay infiniteLoop showThumbs={false} centerMode centerSlidePercentage={apoiadores} statusFormatter={(currentItem, total) => `${currentItem} de ${total}`}>
 
-
-                            <div className="flex flex-col items-center gap-y-12 pr-10">
-                                <img className="w-40" alt={"Logo da empresa"} src={"/Logo Açai do Pé.webp"} />
-                            </div>
-
-                            <div className="flex flex-col items-center gap-y-12 pr-10">
-                                <img className="w-40" alt={"Logo da empresa"} src={"/logo-japaacai-350x325-1.png"} />
-                            </div>
-
-                            <div className="flex flex-col items-center gap-y-12 pr-10">
-                                <img className="w-40" alt={"Logo da empresa"} src={"/202005212316_TN1Q_i-removebg-preview.png"} />
-                            </div>
-
-                            <div className="flex flex-col items-center gap-y-12 pr-10">
-                                <img className="w-40" alt={"Logo da empresa"} src={"/ca54dd_e7276dc65c604e41901f55cc85d5223e~mv2_d_6746_8525_s_4_2.webp"} />
-                            </div>
-
-                            <div className="flex flex-col items-center gap-y-12 pr-10">
-                                <img className="w-40" alt={"Logo da empresa"} src={"/hBuT4anhSP28mgO6JgIM_LOGO_CREMOSO_png-removebg-preview.png"} />
-                            </div>
-
-                            <div className="flex flex-col items-center gap-y-12 pr-10">
-                                <img className="w-40" alt={"Logo da empresa"} src={"/sabordeminas.png"} />
-                            </div>
-
-                            <div className="flex flex-col items-center gap-y-12 pr-10">
-                                <img className="w-40" alt={"Logo da empresa"} src={"/302678682_614195893544336_2661744382861375878_n-removebg-preview.png"} />
-                            </div>
                         </Carousel>
                     </div>
                 </div>
