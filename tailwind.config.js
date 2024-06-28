@@ -52,6 +52,9 @@ module.exports = {
       success: "#219653",
       danger: "#D34053",
       warning: "#FFA70B",
+      blue: "#2E3578",
+      darkblue: "#0D1344",
+      lightgreen: "#69B9A1",
     },
     screens: {
       "2xsm": "375px",
@@ -156,6 +159,8 @@ module.exports = {
         203: "50.75rem",
         230: "57.5rem",
         242.5: "60.625rem",
+        292.5: "73.125rem",
+        320: "80rem",
       },
       maxWidth: {
         2.5: "0.625rem",

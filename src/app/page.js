@@ -16,7 +16,7 @@ import FAQ from "../components/FAQ/FaqComponent"
 import Line from "../components/line"
 import Contato from "../components/contato/page"
 import Patrocinadores from "../components/patrocinadores/page"
-import Cronograma from "../assets/cronograma.svg";
+import Cronograma from "../components/cronograma/page";
 
 import products from "../data/products.json"
 import Link from "next/link";
@@ -130,8 +130,11 @@ export default function Page() {
             </div>
           </div>
 
-          <div  className="mb-50" id="cronograma">
-            <Image src={Cronograma} alt="cronograma"/>
+          <div  className="my-50" id="cronograma">
+            <h1 className="text-white text-6xl font-montserrat pb-10 text-center">ACOMPANHE NOSSO CRONOGRAMA</h1>
+            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black"/>
+
+            <Cronograma />
           </div>
 
           <div className="mb-50" id="patrocinadores">
