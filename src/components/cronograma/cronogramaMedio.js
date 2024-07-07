@@ -8,7 +8,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 export default function CronogramaMedio() {
     return (
-        <Carousel showStatus={false} showIndicators={false} emulateTouch>
+        <Carousel showStatus={false} showIndicators={false} emulateTouch preventMovementUntilSwipeScrollTolerance={true} swipeScrollTolerance={50}>
             <div className='w-full h-auto px-6'>
                 <div className="w-full h-[5%] mb-16 flex items-center justify-around">
                     <p className="w-[18%] text-white text-4xl text-center font-montserrat font-light lg:text-3xl">SEGUNDA-FEIRA</p>
