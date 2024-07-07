@@ -16,7 +16,9 @@ import FAQ from "../components/FAQ/FaqComponent"
 import Line from "../components/line"
 import Contato from "../components/contato/page"
 import Patrocinadores from "../components/patrocinadores/page"
-import Cronograma from "../components/cronograma/page";
+import Cronograma from "../components/cronograma/cronogramaGrande";
+import CronogramaMedio from "../components/cronograma/cronogramaMedio";
+import CronogramaPequeno from "../components/cronograma/cronogramaPequeno";
 
 import products from "../data/products.json"
 import Link from "next/link";
@@ -134,7 +136,17 @@ export default function Page() {
             <h1 className="text-white text-6xl font-montserrat pb-10 text-center">ACOMPANHE NOSSO CRONOGRAMA</h1>
             <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black"/>
 
-            <Cronograma />
+            <div className="w-full h-320 block lg:hidden 2xl:hidden">
+              <CronogramaPequeno />
+            </div>
+
+            <div className="w-full h-320 hidden lg:block 2xl:hidden">
+              <CronogramaMedio />
+            </div>
+
+            <div className="w-full h-320 hidden 2xl:block">
+              <Cronograma />
+            </div>
           </div>
 
           <div className="mb-50" id="patrocinadores">
