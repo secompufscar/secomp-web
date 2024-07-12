@@ -62,20 +62,19 @@ export default function Page() {
                   <button className={`${montserrat.className} font-bold mb-16`} style={{
                     fontWeight: 'bold',
                     fontSize: '1.25rem',
-                    backgroundColor: '#51b795',
+                    backgroundColor: '#234B93',
                     padding: '2rem 7rem',
                     borderRadius: '500rem',
-                    color: '#0a0a0a',
+                    color: '#000000',
                     textTransform: 'uppercase',
                     boxShadow: '0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset',
                     backdropFilter: 'blur(10px)'
                   }}>
-                    INSCREVER
+                    INSCREVA-SE!
                   </button>
                 </Link>
               </div>
 
-              <img className="h-800 mb-64 md:mb-0 hidden md:block" src="/assets/imgs/secomp_logo.svg" alt="Secomp logo" />
             </div>
           </div>
         </div>
