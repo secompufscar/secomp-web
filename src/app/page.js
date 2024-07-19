@@ -126,12 +126,6 @@ export default function Page() {
             <Patrocinadores />
           </div>
 
-          <div className="mb-30" id="contato">
-          <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">CONTATO</h1>
-          <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
-
-          </div>
-
           <div id="faq">
             <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">FAQ</h1>
             <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
