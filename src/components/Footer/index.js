@@ -17,11 +17,11 @@ const Footer = () => {
 
             <div className='backgroundStyle pb-40'>
             <footer className='w-full h-full lg:h-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4'>
-                <img className="m-auto pt-30 w-80 md:w-100" src="/secompinha.png" />
+            <img className="max-w-full md:max-w-4xl rounded-3xl" src="/logo2024.png" />
 
 
                 <div className="m-auto pt-30">
-                    <p className="text-white text-2xl">
+                    <p className="text-white text-3xl font-bold">
                         Realização:
                     </p>
 
@@ -29,11 +29,11 @@ const Footer = () => {
                 </div>
 
                 <div className="m-auto pt-30">
-                    <p className="text-white text-2xl">
-                        <a href='https://site.dc.ufscar.br' class="underline"> Departamento de <br /> Computação (UFSCAR)</a> - <br /> Rod. Washington Luís-Km 235-SP-310-São <br /> Carlos-SP-CEP-13565-905
+                    <p className="text-white text-3xl font-bold">
+                        <a href='https://site.dc.ufscar.br' class="underline"> Departamento de computação (UFSCAR)</a> - <br /> Rod. Washington Luís-Km 235-SP-310-São <br /> Carlos-SP-CEP-13565-905
                     </p>
 
-                    <p className="text-white text-2xl mt-10">
+                    <p className="text-white text-3xl mt-10 font-bold">
                         Dúvidas ou sugestões? <br /> <a href='#contato' class="underline">Contate-nos</a>
                     </p>
                 </div>

@@ -4,8 +4,6 @@ import SweetAlert from "sweetalert2"
 import { useRouter } from 'next/navigation'
 
 import FAQComponent from '../../components/FAQ/FaqComponent';
-import CustomButton from '../../components/buttons/buttons';
-import Line from '../../components/line';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
 import emailjs from '@emailjs/browser';
@@ -85,17 +83,8 @@ export default function Desconto() {
     <>
 
       <main className="p-4 xl:px-12 ">
-        <div className="bg_img w-full flex flex-col justify-center items-center  mt-20 md:mt-50">
-          <p className="text-center text-white text-3xl">
-            Interessado em ajudar a <br />
-            construir a SECOMP XI Ufscar<br /> com a gente
-          </p>
-
-          <h1 className="text-6xl text-white mt-20 mb-10 text-center">ENTRE EM CONTATO</h1>
-
-          <CustomButton text_bold="Duvidas?" text="Acesse nosso FAQ" href="#faq" buttonType={1} />
+        <div className="bg_img w-full flex flex-col justify-center items-center  mt-10 md:mt-50">
         </div>
-
         <div className=" mt-20 md:mt-50 pt-8 pb-8 mx-auto w-full max-w-screen-xl">
           <form onSubmit={handleForm} method='POST' action='/'
             className="flex flex-col  m-auto h-full justify-evenly md:px-12 md:w-full "

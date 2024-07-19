@@ -49,91 +49,62 @@ export default function Page() {
       <NavBar />
 
 
-      <div id="home" className="pt-50" style={{ backgroundColor: "#000", backgroundImage: "url('/brilho.svg')", backgroundRepeat: "no-repeat", backgroundSize: "100% 100%", backgroundPosition: "center" }}>
+      <div id="home" className="pt-10" style={{ backgroundColor: "#000", backgroundImage: "url('/brilho.svg')", backgroundRepeat: "no-repeat", backgroundSize: "100% 100%", backgroundPosition: "center" }}>
         <div className="w-10/12 m-auto">
           <div>
 
             <div style={{ height: "calc(100vh - 200px)" }} class="flex items-center justify-between h-full xl:flex-row flex-col">
               <div className={`-mt-20 text-white text-5xl flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${inter.className}`}>
                 <h1 className="mt-16 leading-tight md:mt-0 font-extralight">Em 2024, teremos mais uma edição da Semana Acadêmica da Computação da UFSCar!</h1>
-                <h6 className="py-2 mt-12 mb-12 text-4xl font-bold">28/10 a 01/11</h6>
-
-                <Link target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScMIvT2QPPrK7PCNgYJLeWUSfokXpQLQWpQPuITVOXsj87iFg/viewform">
-                  <button className={`${montserrat.className} font-bold mb-16`} style={{
-                    fontWeight: 'bold',
-                    fontSize: '1.25rem',
-                    backgroundColor: '#234B93',
-                    padding: '2rem 7rem',
-                    borderRadius: '500rem',
-                    color: '#000000',
-                    textTransform: 'uppercase',
-                    boxShadow: '0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset',
-                    backdropFilter: 'blur(10px)'
-                  }}>
-                    INSCREVA-SE!
-                  </button>
-                </Link>
+                <h6 className="py-2 mt-12 mb-12 text-6xl font-bold">28/10 a 01/11</h6>
               </div>
-
             </div>
           </div>
         </div>
 
-        <img className="w-full" src="/main-wave.svg" />
+        
       </div>
 
       <div className="bg-black">
         <div className="w-10/12 m-auto">
           <div id="sobre" className="py-40 h-full">
-            <Line isLeft text='SOBRE' />
+          <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">SOBRE NÓS</h1>
+          <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
             <div className="flex flex-col xl:flex-row justify-between items-center h-full w-full mt-50">
-              <p className="text-white text-4xl xl:mr-12 max-w-6xl mb-30 font-extralight leading-snug">A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar)
+              <p className="text-white text-4xl xl:mr-12 max-w-6xl mb-30 font-extralight leading-snug text-justify">
+                A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar)
                 surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica
-                quanto de entusiastas. A cada ano, alunos da graduação dos cursos do Departamento de Computação
+                quanto de entusiastas. A cada ano, alunos da graduação dos cursos do Departamento de 
                 se mobilizam para realizar este grande evento, no qual pessoas de diferentes áreas relacionadas
                 são convidadas a apresentar, discutir e debater experiências e novidades que trarão informações,
-                conhecimentos e inovação aos participantes.</p>
+                conhecimentos e inovação aos participantes.
+              </p>
+
 
               <Carousel showStatus={false} autoPlay infiniteLoop statusFormatter={(currentItem, total) => `${currentItem} de ${total}`}>
                 <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto1.jpg" />
                 <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto2.jpg" />
                 <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto3.jpg" />
+                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto4.jpg" />
+                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto5.jpg" />
+                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto6.jpg" />
+                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto7.jpg" />
+                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto8.jpg" />
+                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto9.jpg" />
               </Carousel>
             </div>
           </div>
 
           <div id="conteudo">
-            <Line text='CONTEÚDO' />
+          <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">CONTEÚDO</h1>
+          <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
-            <div className="hidden md:block">
-              <div className="mt-50 mb-30 grid grid-cols-1 md:grid-cols-2 grid-cols-1 xl:md:grid-cols-4">
-                {products.map((product, index) => (
-                  <div className="mb-8 m-auto">
-                    <div className="mb-8">
-                      <Content product={product} number={index} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-            </div>
-            <div className="mt-50 mb-30 block md:hidden">
-              <Carousel showStatus={false} showIndicators={false} centerMode centerSlidePercentage={80} autoPlay infiniteLoop statusFormatter={(currentItem, total) => `${currentItem} de ${total}`}>
-                {products.map((product, index) => (
-                  <div className="mb-8 m-auto">
-                    <div className="mb-8">
-                      <Content product={product} number={index} />
-                    </div>
-                  </div>
-                ))}
-              </Carousel>
-            </div>
           </div>
 
-          <div  className="my-50" id="cronograma">
-            <h1 className="text-white text-6xl font-montserrat pb-10 text-center">ACOMPANHE NOSSO CRONOGRAMA</h1>
-            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black"/>
+          <div className="my-50" id="cronograma">
+            <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">ACOMPANHE NOSSO CRONOGRAMA</h1>
+            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
             <div className="w-full h-320 block lg:hidden 2xl:hidden">
               <CronogramaPequeno />
@@ -149,19 +120,21 @@ export default function Page() {
           </div>
 
           <div className="mb-50" id="patrocinadores">
-            <Line isLeft text='PATROCINADORES' />
-
+            <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">PATROCINADORES</h1>
+            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
+            
             <Patrocinadores />
           </div>
 
           <div className="mb-30" id="contato">
-            <Line isLeft={false} text='CONTATO' />
+          <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">CONTATO</h1>
+          <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
-            <Contato />
           </div>
 
           <div id="faq">
-            <Line isLeft text='FAQ' />
+            <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">FAQ</h1>
+            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
             <FAQ faqData={faqData} />
           </div>

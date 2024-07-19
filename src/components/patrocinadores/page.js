@@ -39,21 +39,14 @@ export default function Patrocinadores() {
     return (
         <div>
             <div className="bg_img w-full flex flex-col justify-center items-center mt-30 md:mt-50">
-                <p className="text-center text-white text-8xl font-extralight tracking-[.25em]">
-                    NOSSOS
-                </p>
-                <h1 className="text-9xl font-bold text-white mt-4 mb-10 text-center tracking-[.35em]">
-                    PATROCINADORES
-                </h1>
-                <p className="text-center text-white text-3xl font-extralight px-6 ml-12 mr-12 text-center">
+
+                <p className="text-center text-white text-5xl font-extralight px-6 ml-12 mr-12">
                     A SECOMP UFSCar acontece graças ao apoio dos nossos
-                    patrocinadores. Eles não apenas compartilham nossa paixão
-                    por disseminar conhecimento, mas também são essenciais para
-                    tornar o evento educativo, inovador e enriquecedor.
+                    patrocinadores.
                 </p>
 
                 <div className="p-4">
-                    <button className="font-bold text-4xl bg-[#234B93] py-8 px-20 mt-20 text-white shadow-mg">
+                    <button className="font-bold text-3xl bg-[#234B93] py-8 px-20 mt-20 text-white shadow-mg rounded-lg">
                         SEJA UM PATROCINADOR
                     </button>
                 </div>
