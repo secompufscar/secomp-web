@@ -29,27 +29,31 @@ export default function NavBar() {
                     </Link>
 
                     <div className={styles.nav_options}>
-                        <Link className="mx-8 text-2xl text-white uppercase" href={"#home"}>
+                        <Link className="mx-8 text-2xl text-white uppercase" href={"/"}>
                             HOME
                         </Link>
 
-                        <Link className="mx-8 text-2xl text-white uppercase " href={"#sobre"}>
+                        <Link className="mx-8 text-2xl text-white uppercase " href={"/#sobre"}>
                             SOBRE
                         </Link>
 
-                        <Link className="mx-8 text-2xl text-white uppercase " href={"#conteudo"}>
+                        <Link className="mx-8 text-2xl text-white uppercase " href={"/#conteudo"}>
                             CONTEÚDO
                         </Link>
 
-                        <Link className="mx-8 text-2xl text-white uppercase " href={"#patrocinadores"}>
+                        <Link className="mx-8 text-2xl text-white uppercase " href={"/#patrocinadores"}>
                             PATROCÍNIO
                         </Link>
 
-                        <Link className="mx-8 text-2xl text-white uppercase " href={"#contato"}>
+                        <Link className="mx-8 text-2xl text-white uppercase " href={"/equipe"}>
+                            EQUIPE
+                        </Link>
+
+                        <Link className="mx-8 text-2xl text-white uppercase " href={"/#contato"}>
                             CONTATO
                         </Link>
 
-                        <Link className="mx-8 text-2xl text-white uppercase " href={"#faq"}>
+                        <Link className="mx-8 text-2xl text-white uppercase " href={"/#faq"}>
                             FAQ
                         </Link>
                     </div>
@@ -69,37 +73,43 @@ export default function NavBar() {
                 {mobileMenuOpen && (
 
                     <div className={styles.mobile_menu}>
-                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase font-bold" href={"#home"}>
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase font-bold" href={"/"}>
                             HOME
                         </Link>
 
                         <hr style={{ backgroundColor: "#0a0a0a14", height: "2px", width: "100%" }} />
 
-                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"#sobre"}>
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"/#sobre"}>
                             SOBRE
                         </Link>
 
                         <hr style={{ backgroundColor: "#0a0a0a14", height: "2px", width: "100%" }} />
 
-                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"#conteudo"}>
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"/#conteudo"}>
                             CONTEÚDO
                         </Link>
 
                         <hr style={{ backgroundColor: "#0a0a0a14", height: "2px", width: "100%" }} />
 
-                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"#patrocinio"}>
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"/#patrocinio"}>
                             PATROCÍNIO
                         </Link>
 
                         <hr style={{ backgroundColor: "#0a0a0a14", height: "2px", width: "100%" }} />
 
-                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"#contato"}>
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"/equipe"}>
+                            EQUIPE
+                        </Link>
+
+                        <hr style={{ backgroundColor: "#0a0a0a14", height: "2px", width: "100%" }} />
+
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"/#contato"}>
                             CONTATO
                         </Link>
 
                         <hr style={{ backgroundColor: "#0a0a0a14", height: "2px", width: "100%" }} />
 
-                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"#faq"}>
+                        <Link onClick={onClickMenu} className="mx-2 text-2xl text-white uppercase " href={"/#faq"}>
                             FAQ
                         </Link>
                     </div>

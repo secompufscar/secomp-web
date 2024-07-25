@@ -54,6 +54,8 @@ module.exports = {
       warning: "#FFA70B",
       blue: "#2E3578",
       darkblue: "#0D1344",
+      lightblue: "#0075FF",
+      teamblue: "#151836",
       lightgreen: "#69B9A1",
     },
     screens: {
