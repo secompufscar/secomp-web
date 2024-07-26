@@ -161,7 +161,9 @@ export default function Page() {
           </div>
 
           <div id="faq">
-            <Line isLeft text='FAQ' />
+            <h1 className="text-white text-6xl font-montserrat pb-10 text-center">DÚVIDAS?</h1>
+            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black"/>
+
 
             <FAQ faqData={faqData} />
           </div>

@@ -1,10 +1,58 @@
 .bg-deg-verde {
-    background: linear-gradient(to bottom, rgba(114, 255, 198, 0.2), rgba(81, 183, 149, 0.2));
+    background-color: #254570;
+
 }
 
 .bg-deg-purple {
-    background: linear-gradient(to bottom, rgba(88, 109, 178, .2), rgba(88, 109, 178, .2));
+    background-color: #2C9BC4;
 }
+
+.custom-border-radius {
+    border-radius: 20px; /* Novo raio da borda */
+  }
+
+.bottom-border-radius {
+    border-bottom-left-radius: 20px; /* Raio da borda inferior esquerda */
+    border-bottom-right-radius: 20px; /* Raio da borda inferior direita */
+}
+
+
+.gradient-opacity {
+    background: linear-gradient(
+      to bottom, 
+      rgba(180, 197, 255, 0.1),  /* #B4C5FF com 10% de opacidade */
+      rgba(88, 109, 178, 0.1)    /* #586DB2 com 10% de opacidade */
+    );
+  ;
+  }
+
+  .arrow-icon {
+    color: white;
+    fill: white;
+    stroke: white;
+  }
+
+  input:checked ~ label ~ .arrow-icon {
+    color: black;
+    fill: black;
+    stroke: black;
+  }
+  
+  
+.inner-shadow {
+    box-shadow:     
+    inset 0px -4px 10px rgba(211, 211, 211, 0.37), /* Sombra interna na borda inferior */
+    inset 4px 0px 10px rgba(211, 211, 211, 0.37),  /* Sombra interna na borda esquerda */
+    inset -4px 0px 10px rgba(211, 211, 211, 0.37); /* Sombra interna na borda direita */
+
+  }
+  
+.background-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
+  }
+  
+  
 
     /* .faq_p {
         background-color: #B4C5FF;
