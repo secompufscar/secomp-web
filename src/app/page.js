@@ -11,10 +11,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
-import Content from "../components/content"
 import FAQ from "../components/FAQ/FaqComponent"
-import Line from "../components/line"
-import Contato from "../components/contato/page"
 import Patrocinadores from "../components/patrocinadores/page"
 import Cronograma from "../components/cronograma/cronogramaGrande";
 import CronogramaMedio from "../components/cronograma/cronogramaMedio";
@@ -42,6 +39,36 @@ const faqData = [
   },
 ];
 
+const ArrowPrev = (clickHandler, hasPrev, label) => 
+  hasPrev ? (
+    <button type="button" onClick={clickHandler} title={label} style={{ ...arrowStyles, left: 90}}>
+      &lt;
+    </button>
+  ) : null;
+
+const ArrowNext = (clickHandler, hasNext, label) =>
+  hasNext ? (
+    <button type="button" onClick={clickHandler} title={label} style={{ ...arrowStyles, right: 90 }}>
+      &gt;
+    </button>
+  ) : null;
+
+  const arrowStyles = {
+    position: 'absolute',
+    zIndex: 2,
+    top: 'calc(50% - 15px)',
+    height: 40,
+    border: 'none',
+    color: 'white',
+    display: 'flex',
+    cursor:'pointer',
+    fontSize: '22px',
+    alignItems: 'center',
+    justifyContent: 'between',
+    background: 'transparent', 
+  };
+  
+
 export default function Page() {
   return (
     <>
@@ -62,27 +89,34 @@ export default function Page() {
           </div>
         </div>
 
-        
+
       </div>
 
       <div className="bg-black">
         <div className="w-10/12 m-auto">
           <div id="sobre" className="py-40 h-full">
-          <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">SOBRE NÓS</h1>
-          <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
+            <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">SOBRE NÓS</h1>
+            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
             <div className="flex flex-col xl:flex-row justify-between items-center h-full w-full mt-50">
               <p className="text-white text-4xl xl:mr-12 max-w-6xl mb-30 font-extralight leading-snug text-justify">
                 A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar)
                 surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica
-                quanto de entusiastas. A cada ano, alunos da graduação dos cursos do Departamento de 
+                quanto de entusiastas. A cada ano, alunos da graduação dos cursos do Departamento de
                 se mobilizam para realizar este grande evento, no qual pessoas de diferentes áreas relacionadas
                 são convidadas a apresentar, discutir e debater experiências e novidades que trarão informações,
                 conhecimentos e inovação aos participantes.
               </p>
 
 
-              <Carousel showStatus={false} autoPlay infiniteLoop statusFormatter={(currentItem, total) => `${currentItem} de ${total}`}>
+              <Carousel
+                showStatus={false}
+                autoPlay
+                infiniteLoop
+                showThumbs={false} 
+                showArrows={false}
+                statusFormatter={(currentItem, total) => `${currentItem} de ${total}`}
+              >
                 <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto1.jpg" />
                 <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto2.jpg" />
                 <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto3.jpg" />
@@ -97,8 +131,8 @@ export default function Page() {
           </div>
 
           <div id="conteudo">
-          <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">CONTEÚDO</h1>
-          <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
+            <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">CONTEÚDO</h1>
+            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
           </div>
 
@@ -122,7 +156,7 @@ export default function Page() {
           <div className="mb-50" id="patrocinadores">
             <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">PATROCINADORES</h1>
             <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
-            
+
             <Patrocinadores />
           </div>
 
@@ -139,3 +173,4 @@ export default function Page() {
     </>
   );
 }
+

@@ -49,10 +49,6 @@ export default function NavBar() {
                             EQUIPE
                         </Link>
 
-                        <Link className="mx-8 text-2xl text-white uppercase " href={"/#contato"}>
-                            CONTATO
-                        </Link>
-
                         <Link className="mx-8 text-2xl text-white uppercase " href={"/#faq"}>
                             FAQ
                         </Link>

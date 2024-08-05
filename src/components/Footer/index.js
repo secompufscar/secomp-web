@@ -34,7 +34,7 @@ const Footer = () => {
                     </p>
 
                     <p className="text-white text-3xl mt-10 font-bold">
-                        Dúvidas ou sugestões? <br /> <a href='#contato' class="underline">Contate-nos</a>
+                        Dúvidas ou sugestões? <br /> <a href='#contato' class="underline">contato@secompufscar.com.br</a>
                     </p>
                 </div>
 
