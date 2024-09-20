@@ -1,11 +1,6 @@
 "use client"
 
-import Image from "next/image";
-
-import { useEffect } from 'react'
-
 import { montserrat, inter } from "@/utils/fonts"
-import { MagicMotion } from "react-magic-motion";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
@@ -39,43 +34,40 @@ const faqData = [
   },
 ];
 
-const ArrowPrev = (clickHandler, hasPrev, label) => 
-  hasPrev ? (
-    <button type="button" onClick={clickHandler} title={label} style={{ ...arrowStyles, left: 90}}>
-      &lt;
-    </button>
-  ) : null;
+// const ArrowPrev = (clickHandler, hasPrev, label) => 
+//   hasPrev ? (
+//     <button type="button" onClick={clickHandler} title={label} style={{ ...arrowStyles, left: 90}}>
+//       &lt;
+//     </button>
+//   ) : null;
 
-const ArrowNext = (clickHandler, hasNext, label) =>
-  hasNext ? (
-    <button type="button" onClick={clickHandler} title={label} style={{ ...arrowStyles, right: 90 }}>
-      &gt;
-    </button>
-  ) : null;
+// const ArrowNext = (clickHandler, hasNext, label) =>
+//   hasNext ? (
+//     <button type="button" onClick={clickHandler} title={label} style={{ ...arrowStyles, right: 90 }}>
+//       &gt;
+//     </button>
+//   ) : null;
 
-  const arrowStyles = {
-    position: 'absolute',
-    zIndex: 2,
-    top: 'calc(50% - 15px)',
-    height: 40,
-    border: 'none',
-    color: 'white',
-    display: 'flex',
-    cursor:'pointer',
-    fontSize: '22px',
-    alignItems: 'center',
-    justifyContent: 'between',
-    background: 'transparent', 
-  };
+//   const arrowStyles = {
+//     position: 'absolute',
+//     zIndex: 2,
+//     top: 'calc(50% - 15px)',
+//     height: 40,
+//     border: 'none',
+//     color: 'white',
+//     display: 'flex',
+//     cursor:'pointer',
+//     fontSize: '22px',
+//     alignItems: 'center',
+//     justifyContent: 'between',
+//     background: 'transparent', 
+//   };
   
 
 export default function Page() {
   return (
     <>
-
       <NavBar />
-
-
       <div id="home" className="pt-10" style={{ backgroundColor: "#000", backgroundImage: "url('/brilho.svg')", backgroundRepeat: "no-repeat", backgroundSize: "100% 100%", backgroundPosition: "center" }}>
         <div className="w-10/12 m-auto">
           <div>
@@ -88,8 +80,6 @@ export default function Page() {
             </div>
           </div>
         </div>
-
-
       </div>
 
       <div className="bg-black">
