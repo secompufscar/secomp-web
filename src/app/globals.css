@@ -191,12 +191,7 @@ html {
   }
 
 
-header {
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 
 body {
     background-color: #0A0A0A;
