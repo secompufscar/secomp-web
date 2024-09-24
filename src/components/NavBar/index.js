@@ -1,11 +1,9 @@
-import { montserrat } from "@/utils/fonts"
 
 import { MagicMotion } from "react-magic-motion";
 import { StickyNav } from "./StickyNav";
 import MobileNav from "./MobileNav";
 
 export default function NavBar() {
-   
 
     const navLinks = [
         {name: 'HOME', href: '/'},
@@ -18,11 +16,11 @@ export default function NavBar() {
     ]
 
     return (
-        <div className={montserrat.className}>
-            <StickyNav links={navLinks}/>
-            <MagicMotion transition={{ type: "spring", stiffness: 180, damping: 20, mass: 1.1 }}>
-                <MobileNav links={navLinks}/>
-            </MagicMotion>
-        </div>
+    <>
+        <StickyNav links={navLinks}/>
+        <MagicMotion transition={{ type: "spring", stiffness: 180, damping: 20, mass: 1.1 }}>
+            <MobileNav links={navLinks}/>
+        </MagicMotion>
+    </>
     );
 }

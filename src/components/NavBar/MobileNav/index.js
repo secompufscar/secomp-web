@@ -6,6 +6,8 @@ import Link from "next/link";
 import styles from "./styles.module.css";
 import Logo from '/public/logo-xii.svg';
 
+import { montserrat } from "@/utils/fonts";
+
 export default function MobileNav({ links }) {
     
     const [mobileMenuOpen, setMobileMenu] = useState(false);
@@ -15,7 +17,7 @@ export default function MobileNav({ links }) {
     }
 
     return(
-        <header style={{ backgroundColor: "#000" }} className={`flex sm:hidden flex-col fixed z-50 w-full p-8`}>
+        <header style={{ backgroundColor: "#000" }} className={`flex sm:hidden flex-col fixed z-50 w-full p-8 ${montserrat.className}`}>
         <div className="flex items-center w-full justify-between py-8">
                     <Link href={"#home"}>
                         <div className={styles['logo-container']}>

@@ -1,3 +1,5 @@
+import { montserrat } from "@/utils/fonts"
+
 import Image from "next/image"; 
 
 import Link from "next/link";
@@ -8,7 +10,7 @@ import Logo from '/public/logo-xii.svg';
 
 export function StickyNav({links}) {
     return (
-        <header className="hidden sm:block" >
+        <header className={`hidden sm:block top-0 ${montserrat.className} fixed z-50 top-0 w-full`} >
             <div className="flex flex-col items-center w-full justify-between">
                     <Link href={"#home"}>
                         <div className={styles['logo-container']}>
