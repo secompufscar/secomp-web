@@ -55,7 +55,7 @@ export default function Patrocinadores() {
             <div className=" mt-30 md:mt-50">
                 <div>
                     <div className="flex justify-center items-center mb-6 mt-20">
-                        <p className="font-extralight text-6xl text-white font-montserrat ml-8 mr-8 text-center">
+                        <p className="font-extralight text-5xl md:text-6xl text-white font-montserrat ml-8 mr-8 text-center">
                             APOIO DIAMANTE
                         </p>
                     </div>
@@ -101,7 +101,7 @@ export default function Patrocinadores() {
 
                 <div>
                     <div className="flex justify-center items-center mb-6 mt-20">
-                        <p className="font-extralight text-6xl text-white font-montserrat ml-8 mr-8 text-center">
+                        <p className="font-extralight text-5xl md:text-6xl text-white font-montserrat ml-8 mr-8 text-center">
                             APOIO OURO
                         </p>
                     </div>
@@ -115,7 +115,7 @@ export default function Patrocinadores() {
 
                 <div>
                     <div className="flex justify-center items-center mb-6 mt-20">
-                        <p className="font-extralight text-6xl text-white font-montserrat ml-8 mr-8 text-center">
+                        <p className="font-extralight text-5xl md:text-6xl text-white font-montserrat ml-8 mr-8 text-center">
                             APOIO PRATA
                         </p>
                     </div>
@@ -129,7 +129,7 @@ export default function Patrocinadores() {
 
                 <div>
                     <div className="flex justify-center items-center mb-6 mt-20">
-                        <p className="font-extralight text-6xl text-white font-montserrat ml-8 mr-8 text-center">
+                        <p className="font-extralight text-5xl md:text-6xl text-white font-montserrat ml-8 mr-8 text-center">
                             APOIADORES
                         </p>
                     </div>

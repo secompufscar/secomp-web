@@ -77,8 +77,8 @@ export default function Page() {
   
             <div className={`px-4 text-white text-[2.6rem] flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${inter.className}`}>
            
-              <h1 className="md:mt-16 leading-tight md:mt-0 md:text-5xl font-light">Em 2024, teremos mais uma edição de sucesso da</h1>
-              <h1 className="md:mt-6 leading-tight md:mt-0 md:text-5xl font-light">Semana Acadêmica da Computação da UFSCar!</h1>
+              <h1 className="leading-tight md:mt-0 md:text-5xl font-light">Em 2024, teremos mais uma edição de sucesso da</h1>
+              <h1 className="md:mt-6 md:mb-6 leading-tight md:mt-0 md:text-5xl font-light">Semana Acadêmica da Computação da UFSCar!</h1>
               <h6 className={`py-2 mt-12 md:text-[48px] lg:text-9xl font-semibold tracking-[.4em] ${montserrat.className}`}>28/10 à 01/11</h6>
               <Countdown />
             </div>
@@ -87,7 +87,7 @@ export default function Page() {
       <div className="bg-black">
         <div className="w-10/12 m-auto">
           <div id="sobre" className="py-40 h-full">
-            <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">SOBRE NÓS</h1>
+            <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">SOBRE NÓS</h1>
             <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
             <div className="flex flex-col xl:flex-row justify-between items-center h-full w-full mt-50">
@@ -123,13 +123,13 @@ export default function Page() {
           </div>
 
           <div id="conteudo">
-            <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">CONTEÚDO</h1>
+            <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">CONTEÚDO</h1>
             <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
           </div>
 
           <div className="my-50" id="cronograma">
-            <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">ACOMPANHE NOSSO CRONOGRAMA</h1>
+            <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">ACOMPANHE NOSSO CRONOGRAMA</h1>
             <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
             <div className="w-full h-320 block lg:hidden 2xl:hidden">
@@ -146,14 +146,14 @@ export default function Page() {
           </div>
 
           <div className="mb-50" id="patrocinadores">
-            <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">PATROCINADORES</h1>
+            <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">PATROCINADORES</h1>
             <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
             <Patrocinadores />
           </div>
 
           <div id="faq">
-            <h1 className="text-white text-6xl font-bold mt-4 mb-10 text-center">FAQ</h1>
+            <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">FAQ</h1>
             <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
             <FAQ faqData={faqData} />
