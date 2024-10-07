@@ -1,8 +1,0 @@
-.gradient-container {
-    background: url("../../public/assets/imgs/texture.png"),
-        radial-gradient(closest-corner at top 35% left 30%, rgba(81, 183, 149, 0.65), transparent 800px),
-        radial-gradient(closest-corner at bottom 30% right 35%, rgba(81, 183, 149, 0.35), transparent 1200px),
-        radial-gradient(farthest-corner at top 25% right 25%, rgba(88, 109, 178, 0.65), transparent 800px),
-        radial-gradient(farthest-corner at bottom 25% left 30%, rgba(88, 109, 178, 0.55), transparent 1000px);
-    background-size: cover;
-}

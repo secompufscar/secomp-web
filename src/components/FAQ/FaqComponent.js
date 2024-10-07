@@ -50,7 +50,7 @@ function FAQComponent({ faqData }) {
           </label>
           {/* Arrow */}
           <BiDownArrow
-            className={`z-20 mr-4 md:mr-8 none text-4xl xsm:text-[24px] text-white translate-y-8 absolute top-[18px] xsm:top-[13px] right-[12px] peer-checked:rotate-180 duration-200`}
+            className={`z-20 mr-4 md:mr-8 none text-4xl xsm:text-[24px] text-white translate-y-8 absolute top-[18px] xsm:top-[21px] right-[12px] peer-checked:rotate-180 duration-200`}
           />
           {/* texto */}
           <div className={divFaqClasses.concat(index%2==0?' border-[#234B93]':' border-[#234B93]')}>

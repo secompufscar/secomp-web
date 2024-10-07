@@ -1,0 +1,16 @@
+
+.logo-container {
+    width: 100%;
+    max-width: 150px;
+}
+
+.mobile_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    margin-bottom: -2rem;
+}
