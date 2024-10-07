@@ -72,7 +72,7 @@ export default function Page() {
   return (
     <>
      <NavBar />
-      <div style={{ height: "calc(100vh)" }} className={`${styles['gradient-container']} flex justify-center items-center `}> 
+      <div style={{ height: "100vh" }} className={`${styles['gradient-container']} flex justify-center items-center `}> 
           <div id="home" className={`${styles['info-container']} md:mt-40 xl:flex-row flex-col w-full`}>
   
             <div className={`px-4 text-white text-[2.6rem] flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${inter.className}`}>
