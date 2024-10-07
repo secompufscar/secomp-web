@@ -105,7 +105,7 @@ export default function Page() {
                 quanto de entusiastas. A cada ano, alunos da graduação dos cursos do Departamento de
                 se mobilizam para realizar este grande evento, no qual pessoas de diferentes áreas relacionadas
                 são convidadas a apresentar, discutir e debater experiências e novidades que trarão informações,
-                conhecimentos e inovação aos participantes.
+                conhecimentos e inovação aos participantes!
               </p>
 
 
