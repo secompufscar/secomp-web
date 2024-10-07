@@ -72,14 +72,14 @@ export default function Page() {
   return (
     <>
      <NavBar />
-      <div style={{ height: "100vh" }} className={`${styles['gradient-container']} flex justify-center items-center `}> 
-          <div id="home" className="md:mt-40 xl:flex-row flex-col w-full ">
+      <div style={{ height: "calc(100vh)" }} className={`${styles['gradient-container']} flex justify-center items-center `}> 
+          <div id="home" className={`${styles['info-container']} md:mt-40 xl:flex-row flex-col w-full`}>
   
             <div className={`px-4 text-white text-[2.6rem] flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${inter.className}`}>
            
               <h1 className="leading-tight md:mt-0 md:text-5xl font-light">Em 2024, teremos mais uma edição de sucesso da</h1>
-              <h1 className="md:mt-6 md:mb-6 leading-tight md:mt-0 md:text-5xl font-light">Semana Acadêmica da Computação da UFSCar!</h1>
-              <h6 className={`py-2 mt-12 md:text-[48px] lg:text-9xl font-semibold tracking-[.4em] ${montserrat.className}`}>28/10 à 01/11</h6>
+              <h1 className="md:mt-2 md:mb-6 leading-tight md:mt-0 md:text-5xl font-light">Semana Acadêmica da Computação da UFSCar!</h1>
+              <h6 className={`py-2 mt-12 md:text-[48px] lg:text-8xl font-semibold tracking-[.4em] ${montserrat.className}`}>28/10 à 01/11</h6>
               <Countdown />
             </div>
           </div>

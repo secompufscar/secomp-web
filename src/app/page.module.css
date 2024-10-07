@@ -17,3 +17,11 @@
   background-repeat: no-repeat;
 }
 
+@media only screen and (max-height: 768px) { 
+  .info-container {
+    margin-top: 16rem;
+  }
+
+}
+
+

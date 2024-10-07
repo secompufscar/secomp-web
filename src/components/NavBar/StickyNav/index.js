@@ -19,7 +19,7 @@ export function StickyNav({links}) {
             const scrollY = window.scrollY;
             setScrolled(scrollY > 0);
         }
-
+        handleScrool();
         window.addEventListener("scroll", handleScrool)
 
         return () => {
