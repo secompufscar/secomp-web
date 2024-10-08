@@ -6,7 +6,6 @@
 Novo site da Secomp
 </p>
 
-
 ---
 
 ### Requisitos
