@@ -1,4 +1,5 @@
 .gradient-container {
+  height: 100vh;
   position: relative;
   background: 35% url("../../public/assets/imgs/starry_sky.png"),
   radial-gradient(circle, rgba(4,18,57,1) 40%, rgba(7,7,28,1) 100%);
@@ -21,7 +22,11 @@
   .info-container {
     margin-top: 16rem;
   }
-
 }
 
+@media only screen and (height: 600px) { 
+  .gradient-container {
+    height: calc(100vh + 102px);
+  }
 
+}
