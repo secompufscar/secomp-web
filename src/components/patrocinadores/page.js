@@ -44,9 +44,9 @@ export default function Patrocinadores() {
 
     return (
         <div>
-            <div className="bg_img w-full flex flex-col justify-center items-center mt-30 md:mt-50">
+            {/* <div className="bg_img w-full flex flex-col justify-center items-center mt-30 md:mt-50">
 
-                <p className="text-center text-white text-5xl font-extralight px-6 ml-12 mr-12">
+                 <p className="text-center text-white text-5xl font-extralight px-6 ml-12 mr-12">
                     A SECOMP UFSCar acontece graças ao apoio dos nossos
                     patrocinadores.
                 </p>
@@ -55,8 +55,8 @@ export default function Patrocinadores() {
                     <button className="font-bold text-3xl bg-[#234B93] py-8 px-20 mt-20 text-white shadow-mg rounded-lg">
                         SEJA UM PATROCINADOR
                     </button>
-                </div>
-            </div>
+                </div> 
+            </div> */}
 
             <div className=" mt-30 md:mt-50">
                 <div>
@@ -76,31 +76,22 @@ export default function Patrocinadores() {
                                 width="180"
                                 height="47"
                             />
-                            <div className="flex justify-center mt-12">
-                                <p className="text-white text-6xl">Magalu</p>
-                            </div>
                         </div>
                         <div className="flex-col">
                             <Image
                                 src={Tractian}
                                 alt="Logo Tractian"
-                                width="180"
+                                width="200"
                                 height="47"
                             />
-                            <div className="flex justify-center mt-12">
-                                <p className="text-white text-6xl">Tractian</p>
-                            </div>
                         </div>
                         <div className="flex-col">
                             <Image
                                 src={Rocketseat}
                                 alt="Logo Rocketseat"
-                                width="180"
+                                width="200"
                                 height="47"
                             />
-                            <div className="flex justify-center mt-12">
-                                <p className="text-white text-6xl">Rocketseat</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,23 +110,17 @@ export default function Patrocinadores() {
                             <Image
                                 src={Tempest}
                                 alt="Logo Tempest"
-                                width={180}
-                                height={180}
+                                width={200}
+                                height={200}
                             />
-                            <div className="flex justify-center mt-12">
-                                <p className="text-white text-6xl">Tempest</p>
-                            </div>
                         </div>
                         <div className="flex-col">
                             <Image
                                 src={Qitech}
                                 alt="Logo Qitech"
-                                width="180"
-                                height="180"
+                                width="200"
+                                height="200"
                             />
-                            <div className="flex justify-center mt-12">
-                                <p className="text-white text-6xl">Qi-Tech</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -154,17 +139,14 @@ export default function Patrocinadores() {
                             <Image
                                 src={Visagio}
                                 alt="Logo Visagio"
-                                width="180"
-                                height="180"
+                                width="200"
+                                height="200"
                             />
-                            <div className="flex justify-center mt-12">
-                                <p className="text-white text-6xl">Visagio</p>
-                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div>
+                {/* <div>
                     <div className="flex justify-center items-center mb-6 mt-20">
                         <p className="font-extralight text-5xl md:text-6xl text-white font-montserrat ml-8 mr-8 text-center">
                             APOIADORES
@@ -176,7 +158,7 @@ export default function Patrocinadores() {
                     <div className="mt-22 flex flex-row justify-center gap-x-[5%] max-md:flex-col max-md:gap-y-7">
                         <div className="flex flex-col items-center gap-y-12"></div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

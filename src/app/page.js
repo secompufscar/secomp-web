@@ -22,19 +22,15 @@ import FloatingButton from "@/components/FAB";
 const faqData = [
   {
     titulo: 'Como faço para me inscrever na SECOMP?',
-    texto: 'Para se inscrever na SECOMP, clique no botão "INSCREVER" na tela inicial "Home", onde será redirecionado para a página de inscrição. Após isso, basta clicar em "Nova Inscrição" e preencher o formulário com os dados solicitados.'
+    texto: 'Para se inscrever na SECOMP, realize o cadastro em https://app.secompufscar.com.br/.'
   },
   {
-    titulo: 'Como faço para acompanhar a minha inscrição?',
-    texto: 'Para acompanhar a sua inscrição na SECOMP, clique no botão "INSCREVER" na tela inicial "Home", onde será redirecionado para a página de inscrição. Após isso, basta clicar em "Acompanhar Inscrição" e digitar seu CPF e senha de acesso.'
+    titulo: 'Como faço para me inscrever em competições?',
+    texto: 'As inscrições nas competições são realizadas por forms que estão disponíveis no nosso instagram.'
   },
   {
-    titulo: 'Como faço para redefinir a minha senha?',
-    texto: 'Para redefinir a sua senha de acesso, clique no botão "INSCREVER" na tela inicial "Home", onde será redirecionado para a página de inscrição. Após isso, basta clicar em "Acompanhar Inscrição" e, logo abaixo do campo de digitar sua senha, haverá uma opção de clique "Esqueci minha senha". Após isso, basta informar seu email.'
-  },
-  {
-    titulo: 'O que fazer caso eu não receba o email?',
-    texto: 'Primeiramente, verifique a caixa de SPAM do seu provedor de email, onde pode estar. Caso não esteja, use a opção CONTATO do site informando seus dados e retornaremos assim que possível.'
+    titulo: 'Como faço para me inscrever em minicursos?',
+    texto: 'Para se inscrever em minicursos, realize o cadastro em https://app.secompufscar.com.br/ e depois clique em "Eventos" para se inscrever nos minicursos.'
   },
 ];
 

@@ -7,14 +7,14 @@ function FAQComponent({ faqData }) {
 
   const toggleClassPurple = (e) => {
     const elementClicked = e.target;
-    elementClicked.classList.toggle('bg-[#B4C5FF]')
-    elementClicked.classList.toggle('bg-deg-purple')
+    elementClicked.classList.toggle('bg-[#234B93]')
+    elementClicked.classList.toggle('bg-[#234B93]')
   }
   const toggleClassVerde= (e) => {
     console.log(e.target)
     const elementClicked = e.target;
-    elementClicked.classList.toggle('bg-[#9affdd]')
-    elementClicked.classList.toggle('bg-deg-verde')
+    elementClicked.classList.toggle('bg-[#234B93]')
+    elementClicked.classList.toggle('bg-[#234B93]')
   }
   const divFaqClasses=`  absolute top-0 mb-6 transition-height duration-300  z-0  relative rounded-3xl glow border-solid peer-checked:border-x-4 
   peer-checked:border-4  h-0   overflow-hidden peer-checked:h-min  peer-checked:py-10`
@@ -38,7 +38,7 @@ function FAQComponent({ faqData }) {
             className={`
               ${labelFaqClasses}
               ${
-                index%2==0 ? 'bg-deg-verde' : 'bg-deg-purple'
+                index%2==0 ? 'bg-[#234B93]' : 'bg-[#234B93]'
               }
               ${index%2==0 ? 'border-[#234B93]' : 'border-[#234B93]'}
               cursor-pointer
