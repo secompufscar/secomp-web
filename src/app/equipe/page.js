@@ -10,7 +10,7 @@ import './style.css'
 export default function Equipe() {
     return (
         <>
-            <NavBar />
+            <NavBar sticky/>
 
             <div id="equipe" className="pt-50 w-screen h-auto" style={{ backgroundColor: "#0a0a0a", backgroundImage: "url('/bg-membros.svg')", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
                 <div className="w-9/12 m-auto">

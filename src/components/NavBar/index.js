@@ -3,7 +3,7 @@ import { MagicMotion } from "react-magic-motion";
 import { StickyNav } from "./StickyNav";
 import MobileNav from "./MobileNav";
 
-export default function NavBar() {
+export default function NavBar({sticky = false}) {
 
     const navLinks = [
         {name: 'HOME', href: '/'},
@@ -17,7 +17,7 @@ export default function NavBar() {
 
     return (
     <>
-        <StickyNav links={navLinks}/>
+        <StickyNav links={navLinks} sticky={sticky} />
         <MagicMotion transition={{ type: "spring", stiffness: 180, damping: 20, mass: 1.1 }}>
             <MobileNav links={navLinks}/>
         </MagicMotion>

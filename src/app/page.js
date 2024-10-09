@@ -143,8 +143,8 @@ export default function Page() {
           </div>
 
           <div className="mb-50" id="patrocinadores">
-            <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">PATROCINADORES</h1>
-            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
+            <h1 className="text-white text-5xl md:text-7xl font-bold mt-4 mb-10 text-center">PATROCINADORES</h1>
+            <div className="w-full md:w-6/12 h-0.5 md:mx-auto bg-gradient-to-r from-black via-white/80 to-black" />
 
             <Patrocinadores />
           </div>

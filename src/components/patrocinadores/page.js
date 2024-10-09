@@ -58,7 +58,7 @@ export default function Patrocinadores() {
                 </div> 
             </div> */}
 
-            <div className=" mt-30 md:mt-50">
+            <div className=" mt-30 md:mt-20">
                 <div>
                     <div className="flex justify-center items-center mb-6 mt-20">
                         <p className="font-extralight text-5xl md:text-6xl text-white font-montserrat ml-8 mr-8 text-center">
@@ -105,7 +105,7 @@ export default function Patrocinadores() {
 
                     <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
-                    <div className="mt-22 flex flex-row justify-center gap-x-[5%] max-md:flex-col max-md:gap-y-7">
+                    <div className="mt-22 flex flex-row justify-center gap-x-[5%] max-md:flex-col max-md:gap-y-7 items-center">
                         <div className="flex-col">
                             <Image
                                 src={Tempest}
@@ -134,7 +134,7 @@ export default function Patrocinadores() {
 
                     <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
-                    <div className="mt-22 flex flex-row justify-center gap-x-[5%] max-md:flex-col max-md:gap-y-7">
+                    <div className="mt-22 flex flex-row justify-center gap-x-[5%] max-md:flex-col max-md:gap-y-7 items-center">
                     <div className="flex-col">
                             <Image
                                 src={Visagio}

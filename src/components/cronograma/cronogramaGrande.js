@@ -18,20 +18,8 @@ const Cronograma = () => {
     'SEGUNDA-FEIRA': [
       {
         startTime: '08:00',
-        endTime: '18:00',
+        endTime: '20:00',
         title: 'HACKATHON TRACTIAN',
-        subtitle: '',
-      },
-      {
-        startTime: '18:00',
-        endTime: '19:00',
-        title: 'INTERVALO',
-        subtitle: '',
-      },
-      {
-        startTime: '19:00',
-        endTime: '-',
-        title: 'GAMENIGHT',
         subtitle: '',
       },
     ],
@@ -226,6 +214,12 @@ const Cronograma = () => {
         startTime: '19:00',
         endTime: '20:00',
         title: 'ENCERRAMENTO',
+        subtitle: '',
+      },
+      {
+        startTime: '20:00',
+        endTime: '08:00',
+        title: 'GAMENIGHT',
         subtitle: '',
       },
     ],

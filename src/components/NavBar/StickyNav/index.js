@@ -11,7 +11,7 @@ import Logo from '/public/logo-xii.svg';
 import { MagicMotion } from "react-magic-motion";
 
 
-export function StickyNav({links}) {
+export function StickyNav({links, sticky}) {
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -33,9 +33,9 @@ export function StickyNav({links}) {
     return (
         <MagicMotion>
             <header className={`hidden sm:block top-0 ${montserrat.className} fixed z-50 top-0 w-full`} >
-                <div className={scrolled ? stickyStyle : fixedStyle}>
+                <div className={sticky || scrolled ? stickyStyle : fixedStyle}>
                         <Link href={"#home"}>
-                            <div className={`w-full ${styles[`logo-container-${scrolled ? 'sticky' : 'fixed'}`]}`}>
+                            <div className={`w-full ${styles[`logo-container-${sticky || scrolled ? 'sticky' : 'fixed'}`]}`}>
                                 <Image  
                                     src={Logo}
                                     alt={"Logo SECOMP"}

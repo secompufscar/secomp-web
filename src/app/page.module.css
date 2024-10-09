@@ -24,9 +24,9 @@
   }
 }
 
-@media only screen and (height: 600px) { 
+@media only screen and (min-width: 1024px) and (max-height: 700px) { 
   .gradient-container {
-    height: calc(100vh + 102px);
+    height: calc(100vh + 16rem);
   }
 
 }
