@@ -2,6 +2,12 @@ export  const schedule = {
     'SEGUNDA-FEIRA': [
       {
         startTime: '08:00',
+        endTime: '08:30',
+        title: 'APRESENTAÇÃO HACKATHON',
+        subtitle: '',
+      },
+      {
+        startTime: '08:30',
         endTime: '20:00',
         title: 'HACKATHON TRACTIAN',
         subtitle: '',
@@ -10,12 +16,12 @@ export  const schedule = {
     'TERÇA-FEIRA': [
       {
         startTime: '13:00',
-        endTime: '14:00',
+        endTime: '13:45',
         title: 'CREDENCIAMENTO',
         subtitle: '',
       },
       {
-        startTime: '14:00',
+        startTime: '13:45',
         endTime: '14:30',
         title: 'ABERTURA',
         subtitle: '',
@@ -83,27 +89,51 @@ export  const schedule = {
         subtitle: '',
       },
       {
-        startTime: '12:00',
-        endTime: '16:00',
+        startTime: '13:00',
+        endTime: '14:00',
         title: 'INTERVALO',
         subtitle: '',
       },
       {
-        startTime: '16:00',
-        endTime: '17:00',
+        startTime: '14:00',
+        endTime: '15:00',
         title: 'PALESTRAS',
-        subtitle: 'QITECH / VISAGIO / PÓS-GRAD / MAGALU',
+        subtitle: 'QITECH',
       },
       {
-        startTime: '17:00',
+        startTime: '15:00',
+        endTime: '16:00',
+        title: 'PALESTRAS',
+        subtitle: 'PÓS-GRADUAÇÃO',
+      },
+      {
+        startTime: '16:00',
+        endTime: '16:30',
+        title: 'COFFEE BREAK',
+        subtitle: '',
+      },
+      {
+        startTime: '16:30',
+        endTime: '17:30',
+        title: 'PALESTRA VISAGIO',
+        subtitle: '',
+      },
+      {
+        startTime: '17:30',
+        endTime: '18:30',
+        title: 'PALESTRA MAGALU CLOUD',
+        subtitle: '',
+      },
+      {
+        startTime: '18:30',
         endTime: '19:00',
         title: 'INTERVALO',
         subtitle: '',
       },
       {
         startTime: '19:00',
-        endTime: '23:00',
-        title: 'CONTEST M@U',
+        endTime: '22:30',
+        title: 'M@U CHALLENGE',
         subtitle: '',
       },
     ],
@@ -127,15 +157,27 @@ export  const schedule = {
         subtitle: '',
       },
       {
+        startTime: '10:30',
+        endTime: '11:30',
+        title: 'POMBO:',
+        subtitle: 'A história dos heróis ocultos da Comp UFSCAR',
+      },
+      {
         startTime: '11:30',
         endTime: '12:30',
-        title: 'Desenvolvimento e Finanças:',
-        subtitle: 'Onde está a Ponte?',
+        title: 'DESENVOLVIMENTO E FINAÇAS',
+        subtitle: 'Onde está a item',
+      },
+      {
+        startTime: '12:30',
+        endTime: '14:00',
+        title: 'INTERVALO',
+        subtitle: '',
       },
       {
         startTime: '14:00',
         endTime: '18:00',
-        title: 'MINICURSOS C',
+        title: 'MINUCURSOS B',
         subtitle: '',
       },
       {
@@ -146,8 +188,8 @@ export  const schedule = {
       },
       {
         startTime: '19:00',
-        endTime: '18:00',
-        title: 'HACKATHON MAGALU',
+        endTime: '05:00',
+        title: 'HACKATHON MAGALU CLOUD',
         subtitle: '',
       },
     ],
@@ -155,7 +197,7 @@ export  const schedule = {
       {
         startTime: '08:00',
         endTime: '12:00',
-        title: 'MINICURSOS D',
+        title: 'MINICURSOS C',
         subtitle: '',
       },
       {
@@ -167,13 +209,13 @@ export  const schedule = {
       {
         startTime: '14:00',
         endTime: '15:00',
-        title: 'Funcional:',
+        title: 'PROGRAMAÇÃO FUNCIONAL:',
         subtitle: 'História e Padrões de Desenvolvimento',
       },
       {
         startTime: '15:00',
         endTime: '16:00',
-        title: 'COMO ACOPLAMENTO AFETA A ESCALABILIDADE DO SISTEMA',
+        title: 'Como acoplamento afeta a escalabilidade do sistema',
         subtitle: '',
       },
       {
@@ -195,9 +237,15 @@ export  const schedule = {
         subtitle: '',
       },
       {
+        startTime: '18:30',
+        endTime: '19:00',
+        title: 'INTERVALO',
+        subtitle: '',
+      },
+      {
         startTime: '19:00',
         endTime: '20:00',
-        title: 'ENCERRAMENTO',
+        title: 'PREMIAÇÕES E ENCERRAMENTO',
         subtitle: '',
       },
       {

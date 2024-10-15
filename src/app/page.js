@@ -129,15 +129,15 @@ export default function Page() {
             <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">ACOMPANHE NOSSO CRONOGRAMA</h1>
             <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
-            <div className="w-full h-320 block lg:hidden 2xl:hidden">
+            <div className="w-full h-full block lg:hidden 2xl:hidden">
               <CronogramaPequeno />
             </div>
 
-            <div className="w-full h-320 hidden lg:block 2xl:hidden">
+            <div className="w-full h-full hidden lg:block 2xl:hidden">
               <CronogramaMedio />
             </div>
 
-            <div className="w-full h-320 hidden 2xl:block">
+            <div className="w-full h-full hidden 2xl:block">
               <Cronograma />
             </div>
           </div>
