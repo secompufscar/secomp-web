@@ -32,7 +32,7 @@ export default function CronogramaMedio() {
                     <WeekdayHeader key={3} day={'QUARTA-FEIRA'} />
                 </div>
 
-                <div className="w-full h-[95%] flex justify-around">
+                <div className="w-full h-[95%] flex justify-around gap-4">
                     <CalendarColumn key={1} events={schedule['SEGUNDA-FEIRA'] || []} />
                     <CalendarColumn key={2} events={schedule['TER\u00C7A-FEIRA'] || []} />
                     <CalendarColumn key={3} events={schedule['QUARTA-FEIRA'] || []} />
@@ -45,7 +45,7 @@ export default function CronogramaMedio() {
                     <WeekdayHeader key={3} day={'SEXTA-FEIRA'} />
                 </div>
 
-                <div className="w-full h-[95%] flex justify-around">
+                <div className="w-full h-[95%] flex justify-around gap-4">
                     <CalendarColumn key={2} events={schedule['QUINTA-FEIRA'] || []} />
                     <CalendarColumn key={3} events={schedule['SEXTA-FEIRA'] || []} />
                 </div>

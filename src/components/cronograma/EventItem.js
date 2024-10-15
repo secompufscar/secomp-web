@@ -1,14 +1,14 @@
 import React from 'react';
 
-const EventItem = ({ startTime, endTime, title, subtitle }) => {
+const EventItem = ({ startTime, endTime, title, subtitle, extend }) => {
   return (
-    <div className="w-full h-36 flex flex-row bg-gradient-to-b from-darkblue to-blue rounded-full">
+    <div className={`${extend ? 'h-screen rounded-b-[64px] rounded-t-[100px]' : 'h-36 rounded-full'} relative w-full flex flex-row bg-gradient-to-b from-darkblue to-blue`}>
       {/* Ball with time */}
-      <div className="w-36 h-36 flex flex-col items-center justify-center space-y-1 bg-gradient-to-b from-darkblue to-lightgreen rounded-full shrink-0">
-        <p className="text-lg text-white font-montserrat truncate text-center">
-          {startTime}
+      <div className={`${extend ? 'absolute w-full rounded-t-[64px] flex-row space-x-1' : 'w-36 rounded-full flex-col space-y-1'} h-36 flex items-center justify-center  bg-gradient-to-b from-darkblue to-lightgreen shrink-0`}>
+        <p className={`${extend ? 'text-2xl' : 'text-lg '} text-white font-montserrat truncate text-center`}>
+          {startTime} {extend && '-'}
         </p>
-        <p className="text-lg text-white font-montserrat truncate text-center">
+        <p className={`${extend ? 'text-2xl' : 'text-lg'} text-white font-montserrat truncate text-center`}>
           {endTime}
         </p>
       </div>

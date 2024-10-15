@@ -10,6 +10,7 @@ export  const schedule = {
         startTime: '08:30',
         endTime: '20:00',
         title: 'HACKATHON TRACTIAN',
+        extend: true,
         subtitle: '',
       },
     ],
