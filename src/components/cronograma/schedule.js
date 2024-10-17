@@ -192,6 +192,7 @@ export  const schedule = {
         endTime: '05:00',
         title: 'HACKATHON MAGALU CLOUD',
         subtitle: '',
+        extend: true,
       },
     ],
     'SEXTA-FEIRA': [
