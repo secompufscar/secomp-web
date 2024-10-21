@@ -217,7 +217,7 @@ export  const schedule = {
       {
         startTime: '15:00',
         endTime: '16:00',
-        title: 'Como acoplamento afeta a escalabilidade do sistema',
+        title: 'Escalabilidade: Uma Demonstração Prática',
         subtitle: '',
       },
       {
