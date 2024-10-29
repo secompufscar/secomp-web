@@ -81,7 +81,7 @@ export  const schedule = {
         startTime: '10:00',
         endTime: '11:00',
         title: 'PALESTRA TEMPEST',
-        subtitle: 'por Luckas Judocka',
+        subtitle: '',
       },
       {
         startTime: '11:00',
