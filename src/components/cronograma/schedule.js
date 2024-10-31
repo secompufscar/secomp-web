@@ -160,8 +160,8 @@ export  const schedule = {
       {
         startTime: '10:30',
         endTime: '11:30',
-        title: 'POMBO:',
-        subtitle: 'A história dos heróis ocultos da Comp UFSCAR',
+        title: 'Private Talk',
+        subtitle:'',
       },
       {
         startTime: '11:30',
