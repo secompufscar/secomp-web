@@ -12,6 +12,10 @@ import Tempest from "../../assets/tempest.png"
 import Tractian from "../../assets/tractian.png"
 import Visagio from "../../assets/visagio.png"
 import Qitech from "../../assets/qitech.png"
+import King from "../../assets/king.png"
+import Musica from "../../assets/musica.png"
+import Anna from "../../assets/annamery.jpeg"
+import Tatuagem from "../../assets/ink.jpeg"
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -135,7 +139,7 @@ export default function Patrocinadores() {
                     <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
                     <div className="mt-22 flex flex-row justify-center gap-x-[5%] max-md:flex-col max-md:gap-y-7 items-center">
-                    <div className="flex-col">
+                        <div className="flex-col">
                             <Image
                                 src={Visagio}
                                 alt="Logo Visagio"
@@ -146,7 +150,7 @@ export default function Patrocinadores() {
                     </div>
                 </div>
 
-                {/* <div>
+                <div>
                     <div className="flex justify-center items-center mb-6 mt-20">
                         <p className="font-extralight text-5xl md:text-6xl text-white font-montserrat ml-8 mr-8 text-center">
                             APOIADORES
@@ -156,9 +160,40 @@ export default function Patrocinadores() {
                     <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
                     <div className="mt-22 flex flex-row justify-center gap-x-[5%] max-md:flex-col max-md:gap-y-7">
-                        <div className="flex flex-col items-center gap-y-12"></div>
+                        <div className="flex-col">
+                            <Image
+                                src={King}
+                                alt="Logo king"
+                                width="180"
+                                height="47"
+                            />
+                        </div>
+                        <div className="flex-col">
+                            <Image
+                                src={Musica}
+                                alt="Logo escola de música"
+                                width="200"
+                                height="47"
+                            />
+                        </div>
+                        <div className="flex-col">
+                            <Image
+                                src={Anna}
+                                alt="Logo salão"
+                                width="200"
+                                height="47"
+                            />
+                        </div>
+                        <div className="flex-col">
+                            <Image
+                                src={Tatuagem}
+                                alt="Logo tatuagem"
+                                width="200"
+                                height="47"
+                            />
+                        </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     );
