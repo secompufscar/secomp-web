@@ -6,7 +6,7 @@ import { montserrat } from "@/utils/fonts"
 import styles from './styles.module.css'
 
 export default function Countdown() {
-    const countdown = UseCountdown(new Date('2024/10/28').getTime());
+    const countdown = UseCountdown(new Date('2025/09/29').getTime());
 
     return (
         <>
