@@ -28,7 +28,7 @@ export function StickyNav({links, sticky}) {
     }, [])
 
     const fixedStyle = "flex flex-col items-center w-full justify-between"
-    const stickyStyle = "flex items-center w-full justify-between bg-black px-12"
+    const stickyStyle = "flex items-center w-full justify-between px-12 bg-black/30 backdrop-blur-md"
 
     return (
         <MagicMotion>
