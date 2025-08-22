@@ -22,7 +22,7 @@ import FloatingButton from "@/components/FAB";
 const faqData = [
   {
     titulo: 'Como faço para me inscrever na SECOMP?',
-    texto: 'Para se inscrever na SECOMP, realize o cadastro em https://app.secompufscar.com.br/.'
+    texto: 'Para se inscrever na SECOMP, realize o cadastro em nosso aplicativo. Ao criar uma conta, basta se inscrever no evento por meio de um botão disponível na tela inicial.'
   },
   {
     titulo: 'Como faço para me inscrever em competições?',
@@ -30,7 +30,7 @@ const faqData = [
   },
   {
     titulo: 'Como faço para me inscrever em minicursos?',
-    texto: 'Para se inscrever em minicursos, realize o cadastro em https://app.secompufscar.com.br/ e depois clique em "Eventos" para se inscrever nos minicursos.'
+    texto: 'A inscrição para os minicursos é relizada diretamente pelo nosso aplicativo.'
   },
 ];
 
@@ -63,8 +63,6 @@ const faqData = [
 //     background: 'transparent', 
 //   };
   
-
-
 export default function Page() {
   return (
     <>
@@ -74,9 +72,9 @@ export default function Page() {
   
             <div className={`px-4 text-white text-[2.6rem] flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${inter.className}`}>
            
-              <h1 className="leading-tight md:mt-0 md:text-5xl font-light">Em 2024, teremos mais uma edição de sucesso da</h1>
+              <h1 className="leading-tight md:mt-0 md:text-5xl font-light">Em 2025, teremos mais uma edição de sucesso da</h1>
               <h1 className="md:mt-2 md:mb-6 leading-tight md:mt-0 md:text-5xl font-light">Semana Acadêmica da Computação da UFSCar!</h1>
-              <h6 className={`py-2 mt-12 md:text-[48px] lg:text-8xl font-semibold tracking-[.4em] ${montserrat.className}`}>28/10 à 01/11</h6>
+              <h6 className={`py-2 mt-12 md:text-[48px] lg:text-8xl font-semibold tracking-[.4em] ${montserrat.className}`}>29/09 à 03/10</h6>
               <Countdown />
             </div>
           </div>
@@ -121,11 +119,13 @@ export default function Page() {
 
           <div id="conteudo">
             <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">CONTEÚDO</h1>
-            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
+            <div className="w-full h-0.5 mb-20 bg-gradient-to-r from-black via-white/80 to-black" />
+
+            <h3 className="text-white text-3xl text-center mb-32">Em criação...</h3>
 
           </div>
 
-          <div className="my-50" id="cronograma">
+          {/* <div className="my-50" id="cronograma">
             <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">ACOMPANHE NOSSO CRONOGRAMA</h1>
             <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
@@ -147,7 +147,7 @@ export default function Page() {
             <div className="w-full md:w-6/12 h-0.5 md:mx-auto bg-gradient-to-r from-black via-white/80 to-black" />
 
             <Patrocinadores />
-          </div>
+          </div> */}
 
           <div id="faq">
             <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">FAQ</h1>
