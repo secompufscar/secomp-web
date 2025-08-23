@@ -1,6 +1,6 @@
 "use client"
 
-import { inter, montserrat } from "@/utils/fonts"
+import { inter, oswald, robotoMono } from "@/utils/fonts"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
@@ -68,16 +68,13 @@ export default function Page() {
   return (
     <>
       <NavBar />
-      
-      <div className={`gradient flex justify-center items-center `}>
-        <div id="home" className={`${styles['info-container']} md:mt-40 xl:flex-row flex-col w-full`}>
-          <div className={`px-4 text-white text-[2.6rem] flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${inter.className}`}>
 
-            <h1 className="leading-tight md:mt-0 md:text-5xl font-light">Em 2025, teremos mais uma edição de sucesso da</h1>
-            <h1 className="md:mt-2 md:mb-6 leading-tight md:mt-0 md:text-5xl font-light">Semana Acadêmica da Computação da UFSCar!</h1>
-            <h6 className={`py-2 mt-12 md:text-[48px] lg:text-8xl font-semibold tracking-[.4em] ${montserrat.className}`}>29/09 à 03/10</h6>
-            <Countdown />
-          </div>
+      <div className={`gradient flex justify-center items-center md:pt-36`}>
+        <div className={`px-4 pt-16 text-white text-[2.6rem] flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${oswald.className}`}>
+          <h1 className="text-6xl mx-6 md:text-9xl mb-4 font-bold uppercase leading-[1.5]">Vem aí a SECOMP UFSCAR 2025</h1>
+          <h6 className={`mt-24 md:text-[48px] lg:text-8xl font-light px-16 py-12 border border-[#4361ee] rounded-full leading-[1.5] ${robotoMono.className}`}>29.09 até 03.10</h6>
+
+          <Countdown />
         </div>
       </div>
 
@@ -161,7 +158,8 @@ export default function Page() {
       </div>
 
       <Footer />
-      <FloatingButton />
+
+      {/* <FloatingButton /> */}
     </>
   );
 }

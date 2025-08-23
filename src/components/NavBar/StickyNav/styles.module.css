@@ -17,14 +17,14 @@
 
 .logo-container-fixed {
     margin: 40px 0;
-    max-width: 160px;
-    opacity: 0.9;
+    max-width: 130px;
+    opacity: 0.8;
 }
 
 .logo-container-sticky {
     margin: 20px 0;
     max-width: 90px;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .link:hover {

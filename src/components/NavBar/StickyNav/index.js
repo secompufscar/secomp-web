@@ -1,14 +1,10 @@
 'use client'
 import { useState, useEffect } from "react";
-
-import { montserrat } from "@/utils/fonts"
-
+import { MagicMotion } from "react-magic-motion";
 import Image from "next/image";
-
 import Link from "next/link";
 import styles from "./styles.module.css";
 import Logo from '/public/logo-xiii.svg';
-import { MagicMotion } from "react-magic-motion";
 
 
 export function StickyNav({ links, sticky }) {
@@ -32,7 +28,7 @@ export function StickyNav({ links, sticky }) {
 
     return (
         <MagicMotion>
-            <header className={`hidden sm:block top-0 ${montserrat.className} fixed z-50 top-0 w-full`} >
+            <header className={`hidden sm:block top-0 fixed z-50 top-0 w-full`} >
                 <div className={sticky || scrolled ? stickyStyle : fixedStyle}>
                     <Link href={"#home"}>
                         <div className={`w-full ${styles[`logo-container-${sticky || scrolled ? 'sticky' : 'fixed'}`]}`}>

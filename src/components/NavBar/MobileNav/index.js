@@ -1,12 +1,9 @@
 'use client'
 import { useState } from "react";
 import Image from "next/image";
-
 import Link from "next/link";
 import styles from "./styles.module.css";
 import Logo from '/public/logo-xiii.svg';
-
-import { montserrat } from "@/utils/fonts";
 
 export default function MobileNav({ links }) {
 
@@ -17,7 +14,7 @@ export default function MobileNav({ links }) {
     }
 
     return (
-        <header className={`flex sm:hidden flex-col fixed z-50 w-full p-8 ${montserrat.className} bg-black/20 backdrop-blur-md`}>
+        <header className={`flex sm:hidden flex-col fixed z-50 w-full p-8 bg-black/20 backdrop-blur-md`}>
             <div className="flex items-center w-full justify-between py-2">
                 <Link href={"#home"}>
                     <div className={styles['logo-container']}>
