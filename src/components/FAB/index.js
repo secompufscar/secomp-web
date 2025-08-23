@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from '/public/logo_2024.png';
+import Logo from '/public/logo-simples.png';
 import styles from './styles.module.css'
 
 export default function FloatingButton(){

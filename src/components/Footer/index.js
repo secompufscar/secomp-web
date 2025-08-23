@@ -17,7 +17,7 @@ const Footer = () => {
 
             <div className='backgroundStyle pb-40'>
             <footer className='w-full h-full lg:h-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4'>
-            <img className="max-w-full md:max-w-4xl rounded-3xl" src="/logo2024.png" />
+            <img className="max-w-full md:max-w-4xl rounded-3xl" src="/logo-xiii.svg" />
 
 
                 <div className="m-auto pt-30">

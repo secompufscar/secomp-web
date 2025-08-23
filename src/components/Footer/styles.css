@@ -1,13 +1,5 @@
 .backgroundStyle {
-  background: rgb(35,75,147); /* Fallback para navegadores mais antigos */
+  background: rgb(35,75,147); 
   background: linear-gradient(90deg, rgba(35,75,147,1) 0%, rgba(35,75,147,0.7) 50%, rgba(35,75,147,1) 100%);
 }
 
-
- /* @media only screen and (max-width: 600px) {
-  .backgroundStyle  {
-    background-image: url('/mobile-onda.png'); 
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-   }
-} */
