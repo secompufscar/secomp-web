@@ -6,16 +6,10 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
   theme: {
-    fontFamily: {
-      satoshi: ["Satoshi", "sans-serif"],
-      montserrat: ["Montserrat", "sans-serif"],
-    },
     colors: {
       current: "currentColor",
       transparent: "transparent",
@@ -26,7 +20,7 @@ module.exports = {
       bodydark: "#AEB7C0",
       bodydark1: "#DEE4EE",
       bodydark2: "#8A99AF",
-      primary: "#3C50E0",
+      primary: "#4361ee",
       secondary: "#80CAEE",
       stroke: "#E2E8F0",
       gray: "#EFF4FB",

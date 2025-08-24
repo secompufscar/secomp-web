@@ -1,7 +1,7 @@
 "use client"
 
-import {  inter, montserrat } from "@/utils/fonts"
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { inter, oswald, robotoMono } from "@/utils/fonts"
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 import NavBar from "../components/NavBar"
@@ -14,6 +14,7 @@ import CronogramaPequeno from "../components/cronograma/cronogramaPequeno";
 import Countdown from '../components/Countdown'
 
 import styles from './page.module.css'
+import "./gradient.css"
 
 import products from "../data/products.json"
 import Link from "next/link";
@@ -22,7 +23,7 @@ import FloatingButton from "@/components/FAB";
 const faqData = [
   {
     titulo: 'Como faço para me inscrever na SECOMP?',
-    texto: 'Para se inscrever na SECOMP, realize o cadastro em https://app.secompufscar.com.br/.'
+    texto: 'Para se inscrever na SECOMP, realize o cadastro em nosso aplicativo. Ao criar uma conta, basta se inscrever no evento por meio de um botão disponível na tela inicial.'
   },
   {
     titulo: 'Como faço para me inscrever em competições?',
@@ -30,7 +31,7 @@ const faqData = [
   },
   {
     titulo: 'Como faço para me inscrever em minicursos?',
-    texto: 'Para se inscrever em minicursos, realize o cadastro em https://app.secompufscar.com.br/ e depois clique em "Eventos" para se inscrever nos minicursos.'
+    texto: 'A inscrição para os minicursos é relizada diretamente pelo nosso aplicativo.'
   },
 ];
 
@@ -62,25 +63,21 @@ const faqData = [
 //     justifyContent: 'between',
 //     background: 'transparent', 
 //   };
-  
-
 
 export default function Page() {
   return (
     <>
-     <NavBar />
-      <div className={`${styles['gradient-container']} flex justify-center items-center `}> 
-          <div id="home" className={`${styles['info-container']} md:mt-40 xl:flex-row flex-col w-full`}>
-  
-            <div className={`px-4 text-white text-[2.6rem] flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${inter.className}`}>
-           
-              <h1 className="leading-tight md:mt-0 md:text-5xl font-light">Em 2024, teremos mais uma edição de sucesso da</h1>
-              <h1 className="md:mt-2 md:mb-6 leading-tight md:mt-0 md:text-5xl font-light">Semana Acadêmica da Computação da UFSCar!</h1>
-              <h6 className={`py-2 mt-12 md:text-[48px] lg:text-8xl font-semibold tracking-[.4em] ${montserrat.className}`}>28/10 à 01/11</h6>
-              <Countdown />
-            </div>
-          </div>
+      <NavBar />
+
+      <div className={`gradient flex justify-center items-center md:pt-36`}>
+        <div className={`px-4 pt-28 text-white text-[2.6rem] flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${oswald.className}`}>
+          <h1 className="text-6xl mx-6 md:text-9xl mb-4 font-bold uppercase leading-[1.5]">Vem aí a SECOMP UFSCAR 2025</h1>
+          <h6 className={`mt-24 md:text-[48px] lg:text-8xl font-light px-16 py-12 border border-primary rounded-full leading-[1.5] ${robotoMono.className}`}>29.09 até 03.10</h6>
+
+          <Countdown />
+        </div>
       </div>
+
       <div className="bg-black">
         <div className="w-10/12 m-auto">
           <div id="sobre" className="py-40 h-full">
@@ -102,7 +99,7 @@ export default function Page() {
                 showStatus={false}
                 autoPlay
                 infiniteLoop
-                showThumbs={false} 
+                showThumbs={false}
                 showArrows={false}
                 statusFormatter={(currentItem, total) => `${currentItem} de ${total}`}
               >
@@ -121,11 +118,13 @@ export default function Page() {
 
           <div id="conteudo">
             <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">CONTEÚDO</h1>
-            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
+            <div className="w-full h-0.5 mb-20 bg-gradient-to-r from-black via-white/80 to-black" />
+
+            <h3 className="text-white text-3xl text-center mb-32">Em criação...</h3>
 
           </div>
 
-          <div className="my-50" id="cronograma">
+          {/* <div className="my-50" id="cronograma">
             <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">ACOMPANHE NOSSO CRONOGRAMA</h1>
             <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
@@ -147,7 +146,7 @@ export default function Page() {
             <div className="w-full md:w-6/12 h-0.5 md:mx-auto bg-gradient-to-r from-black via-white/80 to-black" />
 
             <Patrocinadores />
-          </div>
+          </div> */}
 
           <div id="faq">
             <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">FAQ</h1>
@@ -159,7 +158,8 @@ export default function Page() {
       </div>
 
       <Footer />
-      <FloatingButton/>
+
+      {/* <FloatingButton /> */}
     </>
   );
 }
