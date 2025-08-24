@@ -70,9 +70,9 @@ export default function Page() {
       <NavBar />
 
       <div className={`gradient flex justify-center items-center md:pt-36`}>
-        <div className={`px-4 pt-16 text-white text-[2.6rem] flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${oswald.className}`}>
+        <div className={`px-4 pt-28 text-white text-[2.6rem] flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${oswald.className}`}>
           <h1 className="text-6xl mx-6 md:text-9xl mb-4 font-bold uppercase leading-[1.5]">Vem aí a SECOMP UFSCAR 2025</h1>
-          <h6 className={`mt-24 md:text-[48px] lg:text-8xl font-light px-16 py-12 border border-[#4361ee] rounded-full leading-[1.5] ${robotoMono.className}`}>29.09 até 03.10</h6>
+          <h6 className={`mt-24 md:text-[48px] lg:text-8xl font-light px-16 py-12 border border-primary rounded-full leading-[1.5] ${robotoMono.className}`}>29.09 até 03.10</h6>
 
           <Countdown />
         </div>

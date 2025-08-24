@@ -14,7 +14,7 @@ export default function MobileNav({ links }) {
     }
 
     return (
-        <header className={`flex sm:hidden flex-col fixed z-50 w-full p-8 bg-black/20 backdrop-blur-md`}>
+        <header className={`flex lg:hidden flex-col fixed z-50 w-full py-[14px] px-16 bg-black/20 backdrop-blur-md`}>
             <div className="flex items-center w-full justify-between py-2">
                 <Link href={"#home"}>
                     <div className={styles['logo-container']}>

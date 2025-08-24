@@ -24,11 +24,11 @@ export function StickyNav({ links, sticky }) {
     }, [])
 
     const fixedStyle = "flex flex-col items-center mt-5 w-full justify-between"
-    const stickyStyle = "flex items-center w-full justify-between px-12 bg-black/20 backdrop-blur-md"
+    const stickyStyle = "flex items-center w-full justify-between px-16 bg-black/20 backdrop-blur-md"
 
     return (
         <MagicMotion>
-            <header className={`hidden sm:block top-0 fixed z-50 top-0 w-full`} >
+            <header className={`hidden lg:block top-0 fixed z-50 w-full`} >
                 <div className={sticky || scrolled ? stickyStyle : fixedStyle}>
                     <Link href={"#home"}>
                         <div className={`w-full ${styles[`logo-container-${sticky || scrolled ? 'sticky' : 'fixed'}`]}`}>
@@ -43,7 +43,7 @@ export function StickyNav({ links, sticky }) {
                     <div className={!scrolled && `${styles['nav-container']} mb-6 `}>
                         <div className="">
                             {links.map(nav => (
-                                <Link className={`md:mx-8 sm:mx-4 text-2xl font-light text-white uppercase ${styles.link}`} href={nav.href}>
+                                <Link className={`md:ml-16 text-2xl font-light text-white uppercase ${styles.link}`} href={nav.href}>
                                     {nav.name}
                                 </Link>
                             ))}

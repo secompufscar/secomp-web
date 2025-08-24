@@ -41,22 +41,22 @@ export const metadata = {
     alternates: {
       canonical: '/'
     },
-    title: "SECOMP UFSCar 2024",
+    title: "SECOMP UFSCar",
     description: "A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar) surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica quanto de entusiastas.",
     url: 'https://www.secompufscar.com.br',
-    siteName: 'SECOMP UFSCar 2024',
+    siteName: 'SECOMP UFSCar',
     icons: {
       icon: '/favicon.png',
     },
     keywords: keywords,
     openGraph: {
-      title: "SECOMP UFSCar 2024",
+      title: "SECOMP UFSCar",
       description: "A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar) surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica quanto de entusiastas.",
       images: ['/foto1.jpg', '/foto2.jpg', "/foto3.jpg"],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'SECOMP UFSCar 2024',
+      title: 'SECOMP UFSCar',
       description: 'A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar) surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica quanto de entusiastas.',
       creator: '@secompufscar',
       images: ['/foto1.jpg', '/foto2.jpg', "/foto3.jpg"],
