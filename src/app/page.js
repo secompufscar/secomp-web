@@ -1,9 +1,10 @@
 "use client"
 
-import { inter, oswald, robotoMono } from "@/utils/fonts"
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { oswald, robotoMono } from "@/utils/fonts"
 import { Carousel } from 'react-responsive-carousel';
-
+import TextType from "@/components/text/textType";
+import Link from "next/link";
+import products from "../data/products.json"
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 import FAQ from "../components/FAQ/FaqComponent"
@@ -12,13 +13,10 @@ import Cronograma from "../components/cronograma/cronogramaGrande";
 import CronogramaMedio from "../components/cronograma/cronogramaMedio";
 import CronogramaPequeno from "../components/cronograma/cronogramaPequeno";
 import Countdown from '../components/Countdown'
-
+import FloatingButton from "@/components/FAB";
 import styles from './page.module.css'
 import "./gradient.css"
-
-import products from "../data/products.json"
-import Link from "next/link";
-import FloatingButton from "@/components/FAB";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const faqData = [
   {
@@ -71,8 +69,15 @@ export default function Page() {
 
       <div className={`gradient flex justify-center items-center md:pt-36`}>
         <div className={`px-4 pt-28 text-white text-[2.6rem] flex flex-col text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${oswald.className}`}>
-          <h1 className="text-6xl mx-6 md:text-9xl mb-4 font-bold uppercase leading-[1.5]">Vem aí a SECOMP UFSCAR 2025</h1>
-          <h6 className={`mt-24 md:text-[48px] lg:text-8xl font-light px-16 py-12 border border-primary rounded-full leading-[1.5] ${robotoMono.className}`}>29.09 até 03.10</h6>
+          <TextType 
+            text={["Vem aí a SECOMP UFSCAR 2025"]}
+            typingSpeed={65}
+            pauseDuration={1500}
+            showCursor={true}
+            cursorCharacter="."
+            className="text-6xl mx-6 md:text-9xl mb-4 font-bold uppercase leading-[1.5]"
+          />
+          <h6 className={`mt-20 md:text-[48px] lg:text-8xl font-light px-16 py-12 border border-primary rounded-full leading-[1.5] ${robotoMono.className}`}>29.09 até 03.10</h6>
 
           <Countdown />
         </div>

@@ -46,7 +46,7 @@ export const metadata = {
     url: 'https://www.secompufscar.com.br',
     siteName: 'SECOMP UFSCar',
     icons: {
-      icon: '/favicon.png',
+      icon: '/favicon.ico',
     },
     keywords: keywords,
     openGraph: {
