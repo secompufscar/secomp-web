@@ -8,7 +8,7 @@ export default function Countdown() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 50); 
+    const timer = setTimeout(() => setShow(true), 10); 
     return () => clearTimeout(timer);
   }, []);
 

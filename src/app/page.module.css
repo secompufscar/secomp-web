@@ -6,7 +6,6 @@
   background-repeat: round;
 }
 
-
 .gradient-container::after {
   content: '';
   display: block;

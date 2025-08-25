@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react";
 import { oswald, robotoMono } from "@/utils/fonts"
 import { Carousel } from 'react-responsive-carousel';
 import TextType from "@/components/text/textType";
@@ -63,6 +64,14 @@ const faqData = [
 //   };
 
 export default function Page() {
+  const [show, setShow] = useState(false);
+  const words = ["SECOMP XIII", "•", "UFSCAR", "•"];
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShow(true), 5); 
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <NavBar />
@@ -71,21 +80,38 @@ export default function Page() {
         <div className={`px-4 pt-28 text-white flex flex-col text-[2.5rem] text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${oswald.className}`}>
           <TextType 
             text={["Vem aí a SECOMP UFSCAR 2025"]}
-            typingSpeed={65}
+            typingSpeed={60}
             pauseDuration={1500}
             showCursor={true}
             cursorCharacter="."
             className="text-7xl mx-6 md:text-9xl mb-4 font-bold uppercase leading-[1.5]"
           />
-          <h6 className={`mt-20 md:text-[48px] lg:text-8xl font-light px-16 py-12 border border-primary rounded-full leading-[1.5] ${robotoMono.className}`}>29.09 até 03.10</h6>
+
+          <h6 
+            className={`mt-20 md:text-[48px] lg:text-8xl font-light px-16 py-12 border border-primary rounded-full leading-[1.5] transition-opacity duration-1000
+            ${robotoMono.className} 
+            ${show ? "opacity-100" : "opacity-0"}`}
+          >
+              29.09 até 03.10
+          </h6>
 
           <Countdown />
         </div>
       </div>
 
       <div className="bg-black">
-        <div className="w-10/12 m-auto">
-          <div id="sobre" className="py-40 h-full">
+        <div className="flex flex-col items-center justify-center">
+          <div className="w-full overflow-hidden bg-black text-white py-8 px-4">
+            <div className={`flex whitespace-nowrap ${robotoMono.className}`}>
+              {Array(30).fill(null).map((_, i) => (
+                <span key={i} className="px-4 text-3xl text-secondary">
+                  {words[i % words.length]}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div id="sobre" className="py-40 h-full px-40">
             <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">SOBRE NÓS</h1>
             <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
 
