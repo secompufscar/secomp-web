@@ -83,7 +83,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div id="sobre" className="w-full py-24 sm:py-40 px-16 md:px-48">
+          <div id="sobre" className="w-full pt-24 sm:pt-40 px-16 md:px-48">
             <TextType 
               text={["SOBRE NÓS"]}
               typingSpeed={80}
@@ -107,12 +107,12 @@ export default function Page() {
               delay={0.1}
             >
               <div className="flex flex-col 2xl:flex-row justify-between items-start gap-20 2xl:gap-32 w-full mt-20">
-                <div className={`flex-1 flex flex-col gap-10 text-textColor text-3xl font-light leading-[1.8] text-justify ${inter.className}`}>
+                <div className={`flex-1 flex flex-col gap-10 text-textColor text-[1.8rem] font-light leading-[1.8] text-justify ${inter.className}`}>
                   <p>
                     A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar)
                     surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica
-                    quanto de entusiastas. A cada ano, alunos da graduação dos cursos do Departamento de
-                    se mobilizam para realizar este grande evento, no qual <b className="text-white font-[500]">pessoas de diferentes áreas relacionadas
+                    quanto de entusiastas. A cada ano, os alunos se mobilizam para realizar este grande evento, no qual  
+                    <b className="text-white font-[500]"> pessoas de diferentes áreas relacionadas
                     são convidadas a apresentar, discutir e debater experiências e novidades que trarão informações,
                     conhecimentos e inovação aos participantes!</b>
                   </p>
@@ -124,38 +124,16 @@ export default function Page() {
                   </p>
                 </div>
                 
-                <div class={`flex-1 w-full grid grid-cols-1 xs:grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 xl:gap-8 ${inter.className}`}>
-                  <div class="group relative flex h-60 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-                      <img src="/estande-magalu.png" loading="lazy" alt="Estande Magalu Cloud" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200" />
-
-                      <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Estande Magalu Cloud</span>
-                  </div>
-
-                  <div class="group relative flex h-60 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-                      <img src="/mesa-redonda.png" loading="lazy" alt="Mesa Redonda XII" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200" />
-
-                      <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Mesa Redonda</span>
-                  </div>
-
-                  <div class="group relative flex h-60 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-                      <img src="/hackathon.png" loading="lazy" alt="Hackathon XII" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200" />
-
-                      <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Hackathon XII</span>
-                  </div>
-
-                  <div class="group relative flex h-60 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-                      <img src="/equipe-xi.jpg" loading="lazy" alt="Equipe XI" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200" />
-
-                      <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Equipe XI</span>
-                  </div>
+                <div class={`flex-1 2xl:mt-3 ${inter.className}`}>
+                  <img src="/mesa-redonda.png" loading="lazy" alt="Mesa Redonda XII" class="h-full w-full rounded-2xl object-cover object-center" />
                 </div>
               </div>
             </AnimatedContent>
           </div>
 
-          <div id="conteudo" className="w-full py-24 sm:py-40 px-16 md:px-48">
+          <div id="conteudo" className="w-full pt-28 md:pt-40 px-16 md:px-48">
             <TextType 
-              text={["SOBRE NÓS"]}
+              text={["CONTEÚDO"]}
               typingSpeed={80}
               pauseDuration={1500}
               showCursor={true}
@@ -165,7 +143,22 @@ export default function Page() {
               className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
             />
 
-            <h3 className="text-white text-3xl text-center mb-32">Em criação...</h3>
+            <AnimatedContent
+              distance={60}
+              direction="vertical"
+              reverse={false}
+              duration={1.1}
+              initialOpacity={0.8}
+              animateOpacity
+              scale={1.01}
+              threshold={0.1}
+              delay={0.1}
+            >
+              <div className="w-full mt-20">
+
+              </div>
+            </AnimatedContent>
+
           </div>
 
           {/* <div className="my-50" id="cronograma">
@@ -192,9 +185,17 @@ export default function Page() {
             <Patrocinadores />
           </div> */}
 
-          <div id="faq">
-            <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">FAQ</h1>
-            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
+          <div id="faq" className="w-full pt-28 md:pt-40 px-16 md:px-48">
+            <TextType 
+              text={["FAQ"]}
+              typingSpeed={80}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="."
+              startOnVisible={true}
+              cursorBlinkDuration={0.8}
+              className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
+            />
 
             <FAQ faqData={faqData} />
           </div>

@@ -9,19 +9,22 @@ import Logo from '/public/logo-xiii.svg';
 
 export function StickyNav({ links, sticky }) {
     const [scrolled, setScrolled] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        const handleScrool = () => {
-            const scrollY = window.scrollY;
-            setScrolled(scrollY > 0);
-        }
-        handleScrool();
-        window.addEventListener("scroll", handleScrool)
+        setMounted(true);
 
-        return () => {
-            window.removeEventListener("scroll", handleScrool)
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 0);
         }
-    }, [])
+
+        handleScroll();
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    if (!mounted) return null;
 
     const fixedStyle = "flex flex-col items-center mt-5 w-full justify-between"
     const stickyStyle = "flex items-center w-full justify-between px-16 bg-black/20 backdrop-blur-md"
