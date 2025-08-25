@@ -50,7 +50,7 @@ function FAQComponent({ faqData }) {
               id={`faq-content-${index}`}
               className={`${divFaqClasses} ${isOpen ? 'h-min py-10' : 'h-0'}`}
             >
-              <p className='text-white text-[1.6rem] font-extralight'>{item.texto}</p>
+              <p className='text-white text-[1.6rem] leading-[1.8] font-extralight'>{item.texto}</p>
             </div>
           </div>
       )})}

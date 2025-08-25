@@ -90,7 +90,7 @@ export default function Page() {
           />
 
           <h6 
-            className={`mt-20 md:text-[48px] lg:text-8xl font-light px-16 py-12 border border-primary rounded-full leading-[1.5] transition-opacity duration-1000
+            className={`mt-16 md:mt-20 md:text-[48px] lg:text-8xl font-light px-16 py-12 border border-primary rounded-full leading-[1.5] transition-opacity duration-1000
             ${robotoMono.className} 
             ${show ? "opacity-100" : "opacity-0"}`}
           >

@@ -21,21 +21,21 @@ export default function Countdown() {
         ${robotoMono.className}
       `}
     >
-      <div className="min-w-[3ch] text-center flex flex-col gap-5">
-        <h6 className={`py-2 md:text-[48px] lg:text-5xl font-semibold`}>{countdown.days}</h6>
-        <p className={`font-light`}>D</p>
+      <div className="text-center flex flex-col gap-5">
+        <h6 className={`py-2 text-4xl md:text-5xl font-semibold`}>{countdown.days}</h6>
+        <p className={`text-4xl font-light`}>D</p>
       </div>
       <div className="flex flex-col gap-5">
-        <h6 className={`py-2 md:text-[48px] lg:text-5xl font-semibold`}>{countdown.hours}</h6>
-        <p className={`font-light`}>H</p>
+        <h6 className={`py-2 text-4xl md:text-5xl font-semibold`}>{countdown.hours}</h6>
+        <p className={`text-4xl font-light`}>H</p>
       </div>
       <div className="flex flex-col gap-5">
-        <h6 className={`py-2 md:text-[48px] lg:text-5xl font-semibold`}>{countdown.minutes}</h6>
-        <p className={`font-light`}>M</p>
+        <h6 className={`py-2 text-4xl md:text-5xl font-semibold`}>{countdown.minutes}</h6>
+        <p className={`text-4xl font-light`}>M</p>
       </div>
       <div className="flex flex-col gap-5">
-        <h6 className={`py-2 md:text-[48px] lg:text-5xl font-semibold`}>{countdown.seconds}</h6>
-        <p className={`font-light`}>S</p>
+        <h6 className={`py-2 text-4xl md:text-5xl font-semibold`}>{countdown.seconds}</h6>
+        <p className={`text-4xl font-light`}>S</p>
       </div>
     </div>
   );
