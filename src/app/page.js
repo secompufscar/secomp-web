@@ -34,6 +34,15 @@ const faqData = [
   },
 ];
 
+const conteudo = [
+  "Palestras",
+  "Minicursos",
+  "Competições",
+  "Mesa redonda",
+  "Flash Talks",
+  "Gamenight"
+];
+
 export default function Page() {
   const [show, setShow] = useState(false);
   const words = ["SECOMP XIII", "•", "UFSCAR", "•"];
@@ -112,15 +121,15 @@ export default function Page() {
                     A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar)
                     surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica
                     quanto de entusiastas. A cada ano, os alunos se mobilizam para realizar este grande evento, no qual  
-                    <b className="text-white font-[500]"> pessoas de diferentes áreas relacionadas
-                    são convidadas a apresentar, discutir e debater experiências e novidades que trarão informações,
-                    conhecimentos e inovação aos participantes!</b>
+                    <b className="text-secondary"> pessoas de diferentes áreas relacionadas
+                    são convidadas a apresentar, discutir e debater</b> experiências e novidades que trarão informações,
+                    conhecimentos e inovação aos participantes!
                   </p>
 
                   <p>
-                    Nossa programação conta com atividades para todos os gostos: aprimore seus conhecimentos com <b className="text-white font-[500]">palestras</b> e <b className="text-white font-[500]">minicursos</b> práticos, 
-                    teste suas habilidades em <b className="text-white font-[500]">competições</b> como o Hackathon, o Desafio de Programadores e o CTF, e relaxe com a galera na nossa 
-                    tradicional <b className="text-white font-[500]">Gamenight</b>. E isso é só o começo de uma experiência inesquecível, cheia de aprendizado e conexões!
+                    Nossa programação conta com atividades para todos os gostos: aprimore seus conhecimentos com <b className="text-secondary">palestras</b> e <b className="text-secondary">minicursos</b> práticos, 
+                    teste suas habilidades em <b className="text-secondary">competições</b> como o Hackathon, o Desafio de Programadores e o CTF, e relaxe com a galera na nossa 
+                    tradicional <b className="text-secondary">Gamenight</b>. E isso é só o começo de uma experiência inesquecível, cheia de aprendizado e conexões!
                   </p>
                 </div>
                 
@@ -131,7 +140,7 @@ export default function Page() {
             </AnimatedContent>
           </div>
 
-          <div id="conteudo" className="w-full pt-28 md:pt-40 px-16 md:px-48">
+          <div id="conteudo" className="w-full mt-36 md:mt-56 px-16 md:px-48">
             <TextType 
               text={["CONTEÚDO"]}
               typingSpeed={80}
@@ -154,11 +163,43 @@ export default function Page() {
               threshold={0.1}
               delay={0.1}
             >
-              <div className="w-full mt-20">
-
+              <div className="w-full mt-20 grid grid-cols-1 xsm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+                {conteudo.map((text, i) => (
+                  <div 
+                    key={i} 
+                    className={`
+                      w-full aspect-square border border-white/20 rounded-2xl flex items-end justify-start p-8 
+                      text-white text-xl ${robotoMono.className} transition-all duration-300 hover:scale-105
+                    `}
+                  >
+                    {text}
+                  </div>
+                ))}
               </div>
             </AnimatedContent>
+          </div>
 
+          <div id="patrocinadores" className="static-gradient w-full py-20 mt-36 md:mt-56 px-16 md:px-48">
+            <div className="flex flex-row flex-wrap items-center gap-12">
+              <TextType 
+                text={["PATROCINADORES"]}
+                typingSpeed={80}
+                pauseDuration={1500}
+                showCursor={true}
+                cursorCharacter="."
+                startOnVisible={true}
+                cursorBlinkDuration={0.8}
+                className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
+              />
+
+              <a href="mailto:coordenacao@secompufscar.com.br">
+                <p className={`min-w-[200px] py-7 px-10 text-white text-center border rounded-full text-xl md:text-2xl uppercase ${robotoMono.className} transition-all duration-300 hover:scale-105 ${show ? "opacity-100" : "opacity-0"}`}>
+                  Começar parceria
+                </p>
+              </a>
+            </div>
+
+            {/* <Patrocinadores /> */}
           </div>
 
           {/* <div className="my-50" id="cronograma">
@@ -177,15 +218,9 @@ export default function Page() {
               <Cronograma />
             </div>
           </div>
+          */}
 
-          <div className="mb-50" id="patrocinadores">
-            <h1 className="text-white text-5xl md:text-7xl font-bold mt-4 mb-10 text-center">PATROCINADORES</h1>
-            <div className="w-full md:w-6/12 h-0.5 md:mx-auto bg-gradient-to-r from-black via-white/80 to-black" />
-
-            <Patrocinadores />
-          </div> */}
-
-          <div id="faq" className="w-full pt-28 md:pt-40 px-16 md:px-48">
+          <div id="faq" className="w-full my-36 md:my-56 px-16 md:px-48">
             <TextType 
               text={["FAQ"]}
               typingSpeed={80}
@@ -197,7 +232,7 @@ export default function Page() {
               className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
             />
 
-            <FAQ faqData={faqData} />
+            {/* <FAQ faqData={faqData} /> */}
           </div>
         </div>
       </div>
