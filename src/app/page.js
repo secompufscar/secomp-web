@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { inter, oswald, robotoMono } from "@/utils/fonts"
+import { Presentation, BookOpen, Trophy, Users, Mic, Gamepad2 } from "lucide-react";
 import Lenis from "@studio-freight/lenis";
 import AnimatedContent from "@/components/animation/animatedContent";
 import TextType from "@/components/text/textType";
+import SpotlightCard from "@/components/animation/spotlight";
 import Link from "next/link";
 import products from "../data/products.json"
 import NavBar from "../components/NavBar"
@@ -36,12 +38,12 @@ const faqData = [
 ];
 
 const conteudo = [
-  "Palestras",
-  "Minicursos",
-  "Competições",
-  "Mesa redonda",
-  "Flash Talks",
-  "Gamenight"
+  { label: "Palestras", icon: <Presentation size={36} /> },
+  { label: "Minicursos", icon: <BookOpen size={36} /> },
+  { label: "Competições", icon: <Trophy size={36} /> },
+  { label: "Mesa redonda", icon: <Users size={36} /> },
+  { label: "Flash Talks", icon: <Mic size={36} /> },
+  { label: "Gamenight", icon: <Gamepad2 size={36} /> },
 ];
 
 export default function Page() {
@@ -175,16 +177,18 @@ export default function Page() {
               delay={0.1}
             >
               <div className="w-full mt-20 grid grid-cols-1 xsm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
-                {conteudo.map((text, i) => (
-                  <div 
+                {conteudo.map((item, i) => (            
+                  <SpotlightCard 
                     key={i} 
                     className={`
-                      w-full aspect-square border border-white/20 rounded-2xl flex items-end justify-start p-8 
-                      text-white text-xl ${robotoMono.className} transition-all duration-300 hover:scale-105
-                    `}
+                      w-full aspect-square border border-white/20 rounded-2xl flex flex-col items-start justify-end p-8 
+                      gap-6 text-white text-2xl ${robotoMono.className} transition-all duration-300 hover:scale-105 hover:border-secondary/60
+                    `} 
+                    spotlightColor="rgba(0, 170, 255, 0.3)"
                   >
-                    {text}
-                  </div>
+                    <div className="text-secondary">{item.icon}</div>
+                    <span>{item.label}</span>
+                  </SpotlightCard>
                 ))}
               </div>
             </AnimatedContent>
