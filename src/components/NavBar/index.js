@@ -18,7 +18,7 @@ export default function NavBar({ sticky = false }) {
     { name: "SOBRE", href: "/#sobre" },
     { name: "CONTEÚDO", href: "/#conteudo" },
     { name: "PATROCÍNIO", href: "/#patrocinadores" },
-    { name: "EQUIPE", href: "/equipe" },
+    // { name: "EQUIPE", href: "/equipe" },
     { name: "FAQ", href: "/#faq" },
     { name: "CONTATO", href: "/#contato" },
   ];

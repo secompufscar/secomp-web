@@ -1,63 +1,59 @@
 "use client"
 
-import { BiDownArrow } from 'react-icons/bi';
+import { useState } from "react"; 
+import { Plus, Minus } from "lucide-react";
+import { inter, robotoMono } from "@/utils/fonts"
 import "./style.css"
 
 function FAQComponent({ faqData }) {
+  const [openItems, setOpenItems] = useState({});
 
-  const toggleClassPurple = (e) => {
-    const elementClicked = e.target;
-    elementClicked.classList.toggle('bg-[#234B93]')
-    elementClicked.classList.toggle('bg-[#234B93]')
-  }
-  const toggleClassVerde= (e) => {
-    console.log(e.target)
-    const elementClicked = e.target;
-    elementClicked.classList.toggle('bg-[#234B93]')
-    elementClicked.classList.toggle('bg-[#234B93]')
-  }
-  const divFaqClasses=`  absolute top-0 mb-6 transition-height duration-300  z-0  relative rounded-3xl glow border-solid peer-checked:border-x-4 
-  peer-checked:border-4  h-0   overflow-hidden peer-checked:h-min  peer-checked:py-10`
-  const labelFaqClasses = `text-2xl z-20 translate-y-8 transition-all text-white relative rounded-full border-solid   
-  glow-2 border-4 font-bold tracking-[1px] h-[70px] flex items-center justify-center peer-checked:text-black`;
+  const handleToggle = (index) => {
+    setOpenItems(prev => ({
+      ...prev,
+      [index]: !prev[index] 
+    }));
+  };
+
+  const divFaqClasses= `absolute top-0 mb-6 transition-height duration-300 z-0 relative
+  h-0 overflow-hidden peer-checked:h-min peer-checked:py-10 ${inter.className}`
+
+  const labelFaqClasses = `text-2xl md:text-3xl z-20 translate-y-8 transition-all text-white relative   
+  h-[70px] flex items-center justify-start ${robotoMono.className}`;
 
   return (
-    <div className='flex justify-center items-center flex-col lg:w-full mt-30 pb-50 '>
-      {faqData.map((item, index) => (
-        <div className='relative w-full md:w-9/12 mb-8' key={index}>
-          {/* check */}
-          <input
-            className='absolute peer opacity-0'
-            type='checkbox'
-            id={`input${index}`}
-          />
-          <div className="z-10 translate-y-10 translate-x-2  h-[70px] w-full rounded-full absolute -left-2 -top-2  z-0 bg-black" /> {/* Adiciona uma div de fundo preta sem transparência */}
+    <div className='flex w-full justify-center items-center flex-col mt-8'>
+      {faqData.map((item, index) => {
+        const isOpen = openItems[index];
 
-          <label
-            onClick={(e) => { index%2==0 ? toggleClassVerde(e) : toggleClassPurple(e) }}
-            className={`
-              ${labelFaqClasses}
-              ${
-                index%2==0 ? 'bg-[#234B93]' : 'bg-[#234B93]'
-              }
-              ${index%2==0 ? 'border-[#234B93]' : 'border-[#234B93]'}
-              cursor-pointer
-              pr-16 pl-8
-            `}
-            htmlFor={`input${index}`}
-          >
-            {item.titulo}
-          </label>
-          {/* Arrow */}
-          <BiDownArrow
-            className={`z-20 mr-4 md:mr-8 none text-4xl xsm:text-[24px] text-white translate-y-8 absolute top-[18px] xsm:top-[21px] right-[12px] peer-checked:rotate-180 duration-200`}
-          />
-          {/* texto */}
-          <div className={divFaqClasses.concat(index%2==0?' border-[#234B93]':' border-[#234B93]')}>
-            <p className='p-[20px] text-white text-2xl'>{item.texto}</p>
+        return (
+          <div key={index} className='relative w-full'>
+            <button
+              onClick={() => handleToggle(index)}
+              className={`${labelFaqClasses} w-full text-left`} 
+              aria-expanded={isOpen} 
+              aria-controls={`faq-content-${index}`}
+            >
+              <p className="text-2xl md:text-3xl text-white/50 font-bold mr-12">
+                {(index + 1).toString().padStart(2, '0')}
+              </p>
+
+              <p className="mr-10">{item.titulo}</p>
+
+              <div className="absolute top-1/2 right-4 -translate-y-1/2 w-8 h-8 flex items-center justify-center">
+                <Plus className={`absolute w-full h-full text-white transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
+                <Minus className={`absolute w-full h-full text-white transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`} />
+              </div>
+            </button>
+            
+            <div 
+              id={`faq-content-${index}`}
+              className={`${divFaqClasses} ${isOpen ? 'h-min py-10' : 'h-0'}`}
+            >
+              <p className='text-white text-[1.6rem] font-extralight'>{item.texto}</p>
+            </div>
           </div>
-        </div>
-      ))}
+      )})}
     </div>
   );
 }

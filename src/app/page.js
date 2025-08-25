@@ -25,15 +25,23 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const faqData = [
   {
     titulo: 'Como faço para me inscrever na SECOMP?',
-    texto: 'Para se inscrever na SECOMP, realize o cadastro em nosso aplicativo. Ao criar uma conta, basta se inscrever no evento por meio de um botão disponível na tela inicial.'
+    texto: 'Para se inscrever na SECOMP, cadastre-se em nosso aplicativo. Após criar sua conta, basta acessar a tela inicial e clicar no botão de inscrição para participar do evento.'
   },
   {
     titulo: 'Como faço para me inscrever em competições?',
-    texto: 'As inscrições nas competições são realizadas por forms que estão disponíveis no nosso instagram.'
+    texto: 'As inscrições para as competições devem ser feitas por meio dos formulários disponíveis em nosso Instagram. Fique atento em nossas redes sociais!'
   },
   {
     titulo: 'Como faço para me inscrever em minicursos?',
-    texto: 'A inscrição para os minicursos é relizada diretamente pelo nosso aplicativo.'
+    texto: 'A inscrição nos minicursos deve ser feita diretamente pelo nosso aplicativo. Lembre-se de estar previamente registrado no evento e de trazer 1 kg de alimento não perecível no dia da atividade.'
+  },
+  {
+    titulo: 'Como garantir o meu certificado de participação?',
+    texto: 'Para receber o seu certificado de participação na SECOMP, é necessário estar inscrito no evento e registrar pelo menos 75% de presença nas atividades. Após o evento, o certificado será enviado para o e-mail cadastrado. Certifique-se de preencher todos os dados corretamente no momento da inscrição.'
+  },
+  {
+    titulo: 'Estou interessado em patrocinar a SECOMP! O que devo fazer?',
+    texto: 'Se você deseja se tornar um patrocinador da SECOMP, entre em contato conosco através do e-mail. Forneceremos todas as informações sobre as oportunidades de patrocínio, benefícios e como sua empresa pode apoiar o evento. Não perca a chance de fazer parte desta experiência!'
   },
 ];
 
@@ -254,10 +262,10 @@ export default function Page() {
               className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
             />
 
-            {/* <FAQ faqData={faqData} /> */}
+            <FAQ faqData={faqData} /> 
           </div>
 
-          <div id="contato" className="flex items-center justify-end py-24 w-full text-black mt-36 md:mt-64 px-8 sm:px-16 bg-[url('/estande-magalu.png')] bg-cover bg-center bg-no-repeat">
+          <div id="contato" className="flex items-center justify-end py-24 w-full text-black mt-32 md:mt-64 px-8 sm:px-16 bg-[url('/estande-magalu.png')] bg-cover bg-center bg-no-repeat">
             <div className="max-w-[480px] w-full h-full bg-white p-16 rounded-xl">
               <TextType 
                 text={["CONTATO"]}
