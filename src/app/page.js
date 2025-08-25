@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { inter, oswald, robotoMono } from "@/utils/fonts"
+import Lenis from "@studio-freight/lenis";
 import AnimatedContent from "@/components/animation/animatedContent";
 import TextType from "@/components/text/textType";
 import Link from "next/link";
@@ -46,6 +47,16 @@ const conteudo = [
 export default function Page() {
   const [show, setShow] = useState(false);
   const words = ["SECOMP XIII", "•", "UFSCAR", "•"];
+
+  useEffect(() => {
+    const lenis = new Lenis({ lerp: 0.05, wheelMultiplier: 1.2 });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    return () => lenis.destroy();
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => setShow(true), 5); 
@@ -227,7 +238,7 @@ export default function Page() {
           </div>
           */}
 
-          <div id="faq" className="w-full my-36 md:my-64 px-16 md:px-48">
+          <div id="faq" className="w-full mt-36 md:mt-64 px-16 md:px-48">
             <TextType 
               text={["FAQ"]}
               typingSpeed={80}
@@ -240,6 +251,30 @@ export default function Page() {
             />
 
             {/* <FAQ faqData={faqData} /> */}
+          </div>
+
+          <div id="contato" className="flex items-center justify-end py-24 w-full text-black mt-36 md:mt-64 px-8 sm:px-16 bg-[url('/estande-magalu.png')] bg-cover bg-center bg-no-repeat">
+            <div className="max-w-[480px] w-full h-full bg-white p-16 rounded-xl">
+              <TextType 
+                text={["CONTATO"]}
+                typingSpeed={80}
+                pauseDuration={1500}
+                cursorCharacter=""
+                startOnVisible={true}
+                cursorBlinkDuration={0.8}
+                textColors={"#0a0a0a"}
+                className={`text-4xl md:text-5xl font-bold text-start ${oswald.className}`}
+              />
+
+              <p className={`mt-8 text-black text-[1.6rem] font-extralight ${inter.className}`}>Entre em contato com a nossa equipe</p>
+              <p className={`mt-3 text-[#000] text-[1.6rem] break-words ${robotoMono.className}`}>coordenacao@secompufscar.com.br</p>
+
+              <p className={`mt-12 text-black text-[1.6rem] font-extralight ${inter.className}`}>Você pode nos encontrar aqui</p>
+              <p className={`mt-3 text-[#000] text-[1.6rem] break-words ${robotoMono.className}`}>Departamento de Computação - DC</p>
+              
+              <p className={`mt-12 text-black text-[1.6rem] font-extralight ${inter.className}`}>UFSCar</p>
+              <p className={`mt-3 text-[#000] text-[1.6rem] break-words ${robotoMono.className}`}>Rodovia Washington Luís, km 235, São Carlos - SP, CEP 13565-905</p>
+            </div>
           </div>
         </div>
       </div>

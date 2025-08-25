@@ -5,7 +5,7 @@ import "./styles.css";
 
 const Footer = () => {
     return (
-        <div className={`px-8 py-12 sm:py-8 sm:px-16 ${inter.className}`}>
+        <div className={`px-8 py-16 sm:py-12 sm:px-16 ${inter.className}`}>
             <div className="w-full h-auto flex flex-col items-center text-center gap-4 lg:h-24 lg:flex-row lg:justify-between lg:text-left">
                 <p className={`text-white text-xl text-[#EEE]`}>&copy;2025 SECOMP UFSCar. Todos os direitos reservados.</p>
 
