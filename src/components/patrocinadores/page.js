@@ -4,24 +4,18 @@ import { inter, oswald, robotoMono } from "@/utils/fonts"
 import AnimatedContent from "@/components/animation/animatedContent";
 
 const diamante = [
-  "/magalu.png",
-  "/magalu.png",
-  "/magalu.png",
-  "/magalu.png",
+  "",
+  "",
+  "",
+  "",
 ];
 
 const ouro = [
-  "/magalu.png",
-  "/magalu.png",
-  "/magalu.png",
-  "/magalu.png",
+
 ];
 
 const prata = [
-  "/magalu.png",
-  "/magalu.png",
-  "/magalu.png",
-  "/magalu.png",
+
 ];
 
 export default function Patrocinadores() {
@@ -51,7 +45,7 @@ export default function Patrocinadores() {
                                     text-white text-xl ${robotoMono.className}
                                 `}
                                 >
-                                    <img src={src} alt={`Imagem ${i + 1}`} className="w-[65%] h-full object-contain" />
+                                    <img src={src} alt={`Patrocinador ${i + 1}`} className="w-[65%] h-full object-contain" />
                                 </div>
                             ))}
                         </div>
