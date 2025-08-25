@@ -116,7 +116,7 @@ export default function Page() {
               delay={0.1}
             >
               <div className="flex flex-col 2xl:flex-row justify-between items-start gap-20 2xl:gap-32 w-full mt-20">
-                <div className={`flex-1 flex flex-col gap-10 text-textColor text-[1.8rem] font-light leading-[1.8] text-justify ${inter.className}`}>
+                <div className={`flex-1 flex flex-col gap-10 text-textColor text-[1.75rem] font-extralight leading-[1.8] text-justify ${inter.className}`}>
                   <p>
                     A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar)
                     surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica
@@ -140,7 +140,7 @@ export default function Page() {
             </AnimatedContent>
           </div>
 
-          <div id="conteudo" className="w-full mt-36 md:mt-56 px-16 md:px-48">
+          <div id="conteudo" className="w-full mt-36 md:mt-64 px-16 md:px-48">
             <TextType 
               text={["CONTEÚDO"]}
               typingSpeed={80}
@@ -179,7 +179,7 @@ export default function Page() {
             </AnimatedContent>
           </div>
 
-          <div id="patrocinadores" className="static-gradient w-full py-20 mt-36 md:mt-56 px-16 md:px-48">
+          <div id="patrocinadores" className="w-full mt-36 md:mt-64 px-16 md:px-48">
             <div className="flex flex-row flex-wrap items-center gap-12">
               <TextType 
                 text={["PATROCINADORES"]}
@@ -193,13 +193,20 @@ export default function Page() {
               />
 
               <a href="mailto:coordenacao@secompufscar.com.br">
-                <p className={`min-w-[200px] py-7 px-10 text-white text-center border rounded-full text-xl md:text-2xl uppercase ${robotoMono.className} transition-all duration-300 hover:scale-105 ${show ? "opacity-100" : "opacity-0"}`}>
+                <p 
+                  className={`
+                    min-w-[200px] py-7 px-10 text-secondary text-center border border-secondary rounded-full text-xl md:text-2xl uppercase 
+                    ${robotoMono.className} transition-all duration-300 hover:scale-105
+                  `}
+                >
                   Começar parceria
                 </p>
               </a>
             </div>
 
-            {/* <Patrocinadores /> */}
+            <p className={`mt-12 text-white text-[1.75rem] font-extralight ${inter.className}`}>Empresas que confiam em nós e fazem o evento acontecer</p>
+
+            <Patrocinadores />
           </div>
 
           {/* <div className="my-50" id="cronograma">
@@ -220,7 +227,7 @@ export default function Page() {
           </div>
           */}
 
-          <div id="faq" className="w-full my-36 md:my-56 px-16 md:px-48">
+          <div id="faq" className="w-full my-36 md:my-64 px-16 md:px-48">
             <TextType 
               text={["FAQ"]}
               typingSpeed={80}
