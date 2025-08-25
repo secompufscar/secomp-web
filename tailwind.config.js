@@ -18,6 +18,7 @@ module.exports = {
       primary: "#4361ee",
       secondary: "#80d4ffff",
       vibrantBlue: "#0022EE",
+      textColor: "#d1d1d1ff",
       danger: "#D34053",
       warning: "#FFA70B",
       lightgreen: "#69B9A1",

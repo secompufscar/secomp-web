@@ -1,8 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import { oswald, robotoMono } from "@/utils/fonts"
-import { Carousel } from 'react-responsive-carousel';
+import { inter, oswald, robotoMono } from "@/utils/fonts"
+import AnimatedContent from "@/components/animation/animatedContent";
 import TextType from "@/components/text/textType";
 import Link from "next/link";
 import products from "../data/products.json"
@@ -34,35 +34,6 @@ const faqData = [
   },
 ];
 
-// const ArrowPrev = (clickHandler, hasPrev, label) => 
-//   hasPrev ? (
-//     <button type="button" onClick={clickHandler} title={label} style={{ ...arrowStyles, left: 90}}>
-//       &lt;
-//     </button>
-//   ) : null;
-
-// const ArrowNext = (clickHandler, hasNext, label) =>
-//   hasNext ? (
-//     <button type="button" onClick={clickHandler} title={label} style={{ ...arrowStyles, right: 90 }}>
-//       &gt;
-//     </button>
-//   ) : null;
-
-//   const arrowStyles = {
-//     position: 'absolute',
-//     zIndex: 2,
-//     top: 'calc(50% - 15px)',
-//     height: 40,
-//     border: 'none',
-//     color: 'white',
-//     display: 'flex',
-//     cursor:'pointer',
-//     fontSize: '22px',
-//     alignItems: 'center',
-//     justifyContent: 'between',
-//     background: 'transparent', 
-//   };
-
 export default function Page() {
   const [show, setShow] = useState(false);
   const words = ["SECOMP XIII", "•", "UFSCAR", "•"];
@@ -84,6 +55,7 @@ export default function Page() {
             pauseDuration={1500}
             showCursor={true}
             cursorCharacter="."
+            cursorBlinkDuration={0.8}
             className="text-7xl mx-6 md:text-9xl mb-4 font-bold uppercase leading-[1.5]"
           />
 
@@ -111,48 +83,89 @@ export default function Page() {
             </div>
           </div>
 
-          <div id="sobre" className="py-40 h-full px-40">
-            <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">SOBRE NÓS</h1>
-            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
+          <div id="sobre" className="w-full py-24 sm:py-40 px-16 md:px-48">
+            <TextType 
+              text={["SOBRE NÓS"]}
+              typingSpeed={80}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="."
+              startOnVisible={true}
+              cursorBlinkDuration={0.8}
+              className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
+            />
 
-            <div className="flex flex-col xl:flex-row justify-between items-center h-full w-full mt-50">
-              <p className="text-white text-4xl xl:mr-12 max-w-6xl mb-30 font-extralight leading-snug text-justify">
-                A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar)
-                surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica
-                quanto de entusiastas. A cada ano, alunos da graduação dos cursos do Departamento de
-                se mobilizam para realizar este grande evento, no qual pessoas de diferentes áreas relacionadas
-                são convidadas a apresentar, discutir e debater experiências e novidades que trarão informações,
-                conhecimentos e inovação aos participantes!
-              </p>
+            <AnimatedContent
+              distance={60}
+              direction="vertical"
+              reverse={false}
+              duration={1.1}
+              initialOpacity={0.8}
+              animateOpacity
+              scale={1.01}
+              threshold={0.1}
+              delay={0.1}
+            >
+              <div className="flex flex-col 2xl:flex-row justify-between items-start gap-20 2xl:gap-32 w-full mt-20">
+                <div className={`flex-1 flex flex-col gap-10 text-textColor text-3xl font-light leading-[1.8] text-justify ${inter.className}`}>
+                  <p>
+                    A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar)
+                    surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica
+                    quanto de entusiastas. A cada ano, alunos da graduação dos cursos do Departamento de
+                    se mobilizam para realizar este grande evento, no qual <b className="text-white font-[500]">pessoas de diferentes áreas relacionadas
+                    são convidadas a apresentar, discutir e debater experiências e novidades que trarão informações,
+                    conhecimentos e inovação aos participantes!</b>
+                  </p>
 
+                  <p>
+                    Nossa programação conta com atividades para todos os gostos: aprimore seus conhecimentos com <b className="text-white font-[500]">palestras</b> e <b className="text-white font-[500]">minicursos</b> práticos, 
+                    teste suas habilidades em <b className="text-white font-[500]">competições</b> como o Hackathon, o Desafio de Programadores e o CTF, e relaxe com a galera na nossa 
+                    tradicional <b className="text-white font-[500]">Gamenight</b>. E isso é só o começo de uma experiência inesquecível, cheia de aprendizado e conexões!
+                  </p>
+                </div>
+                
+                <div class={`flex-1 w-full grid grid-cols-1 xs:grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 xl:gap-8 ${inter.className}`}>
+                  <div class="group relative flex h-60 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                      <img src="/estande-magalu.png" loading="lazy" alt="Estande Magalu Cloud" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200" />
 
-              <Carousel
-                showStatus={false}
-                autoPlay
-                infiniteLoop
-                showThumbs={false}
-                showArrows={false}
-                statusFormatter={(currentItem, total) => `${currentItem} de ${total}`}
-              >
-                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto1.jpg" />
-                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto2.jpg" />
-                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto3.jpg" />
-                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto4.jpg" />
-                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto5.jpg" />
-                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto6.jpg" />
-                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto7.jpg" />
-                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto8.jpg" />
-                <img className="max-w-full md:max-w-4xl rounded-3xl" src="/foto9.jpg" />
-              </Carousel>
-            </div>
+                      <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Estande Magalu Cloud</span>
+                  </div>
+
+                  <div class="group relative flex h-60 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                      <img src="/mesa-redonda.png" loading="lazy" alt="Mesa Redonda XII" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200" />
+
+                      <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Mesa Redonda</span>
+                  </div>
+
+                  <div class="group relative flex h-60 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                      <img src="/hackathon.png" loading="lazy" alt="Hackathon XII" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200" />
+
+                      <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Hackathon XII</span>
+                  </div>
+
+                  <div class="group relative flex h-60 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                      <img src="/equipe-xi.jpg" loading="lazy" alt="Equipe XI" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200" />
+
+                      <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Equipe XI</span>
+                  </div>
+                </div>
+              </div>
+            </AnimatedContent>
           </div>
 
-          <div id="conteudo">
-            <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">CONTEÚDO</h1>
-            <div className="w-full h-0.5 mb-20 bg-gradient-to-r from-black via-white/80 to-black" />
+          <div id="conteudo" className="w-full py-24 sm:py-40 px-16 md:px-48">
+            <TextType 
+              text={["SOBRE NÓS"]}
+              typingSpeed={80}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="."
+              startOnVisible={true}
+              cursorBlinkDuration={0.8}
+              className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
+            />
 
             <h3 className="text-white text-3xl text-center mb-32">Em criação...</h3>
-
           </div>
 
           {/* <div className="my-50" id="cronograma">
