@@ -46,12 +46,36 @@ const faqData = [
 ];
 
 const conteudo = [
-  { label: "Palestras", icon: <Presentation size={36} /> },
-  { label: "Minicursos", icon: <BookOpen size={36} /> },
-  { label: "Competições", icon: <Trophy size={36} /> },
-  { label: "Mesa redonda", icon: <Users size={36} /> },
-  { label: "Flash Talks", icon: <Mic size={36} /> },
-  { label: "Gamenight", icon: <Gamepad2 size={36} /> },
+  { 
+    label: "Palestras", 
+    icon: <Presentation size={36} />, 
+    text: "Aprenda com especialistas sobre tendências e inovações em computação." 
+  },
+  { 
+    label: "Minicursos", 
+    icon: <BookOpen size={36} />, 
+    text: "Atividades práticas para desenvolver novas habilidades técnicas." 
+  },
+  { 
+    label: "Competições", 
+    icon: <Trophy size={36} />, 
+    text: "Teste seus conhecimentos em desafios práticos junto com sua equipe!" 
+  },
+  { 
+    label: "Mesa redonda", 
+    icon: <Users size={36} />, 
+    text: "Discussões abertas com profissionais e pesquisadores da área." 
+  },
+  { 
+    label: "Flash Talks", 
+    icon: <Mic size={36} />, 
+    text: "Apresentações rápidas e dinâmicas sobre diversos temas da computação." 
+  },
+  { 
+    label: "Gamenight", 
+    icon: <Gamepad2 size={36} />, 
+    text: "Momento de descontração com jogos e muita interação entre os participantes." 
+  },
 ];
 
 export default function Page() {
@@ -183,18 +207,30 @@ export default function Page() {
               threshold={0.1}
               delay={0.1}
             >
-              <div className="w-full mt-16 md:mt-20 grid grid-cols-1 xsm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+              <div className="w-full mt-16 md:mt-20 grid grid-cols-1 sm8:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-6">
                 {conteudo.map((item, i) => (            
                   <SpotlightCard 
                     key={i} 
                     className={`
-                      w-full aspect-square border border-white/20 rounded-2xl flex flex-col items-start justify-end p-8 
-                      gap-6 text-white text-2xl ${robotoMono.className} transition-all duration-300 hover:scale-105 hover:border-secondary/60
+                      group w-full sm9:aspect-square border border-white/20 rounded-2xl flex flex-col items-start justify-end p-[40px] sm9:p-8 
+                      text-white text-2xl ${robotoMono.className} transition-all duration-300 hover:scale-105 hover:border-secondary/80
                     `} 
                     spotlightColor="rgba(0, 170, 255, 0.3)"
                   >
                     <div className="text-secondary">{item.icon}</div>
-                    <span>{item.label}</span>
+                    <span className="mt-6">{item.label}</span>
+                    
+                    <p
+                      className={`
+                        text-textColor font-light leading-[1.8] ${inter.className}
+                        mt-8 
+                        sm:mt-0 sm:max-h-0 sm:opacity-0 sm:translate-y-2 sm:overflow-hidden
+                        sm:transition-all sm:duration-700
+                        sm:group-hover:mt-6 sm:group-hover:max-h-40 sm:group-hover:opacity-100 sm:group-hover:translate-y-0
+                      `}
+                    >
+                      {item.text}
+                    </p>
                   </SpotlightCard>
                 ))}
               </div>

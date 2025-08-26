@@ -27,6 +27,7 @@ module.exports = {
       "2xsm": "375px",
       xsm: "425px",
       sm8: "480px",
+      sm9: "540px",
       "3xl": "2000px",
       ...defaultTheme.screens,
     },
