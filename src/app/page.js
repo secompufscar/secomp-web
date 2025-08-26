@@ -137,7 +137,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div id="sobre" className="w-full pt-24 sm:pt-40 px-16 lg:px-48">
+          <div id="sobre" className="w-full pt-24 sm:pt-40 px-8 sm8:px-16 lg:px-48">
             <TextType 
               text={["SOBRE NÓS"]}
               typingSpeed={80}
@@ -184,7 +184,7 @@ export default function Page() {
             </AnimatedContent>
           </div>
 
-          <div id="conteudo" className="w-full mt-36 md:mt-64 px-16 lg:px-48">
+          <div id="conteudo" className="w-full mt-36 md:mt-64 px-8 sm8:px-16 lg:px-48">
             <TextType 
               text={["CONTEÚDO"]}
               typingSpeed={80}
@@ -237,7 +237,7 @@ export default function Page() {
             </AnimatedContent>
           </div>
 
-          <div id="patrocinadores" className="w-full mt-36 md:mt-64 px-16 lg:px-48">
+          <div id="patrocinadores" className="w-full mt-36 md:mt-64 px-8 sm8:px-16 lg:px-48">
             <div className="flex flex-row flex-wrap items-center gap-12">
               <TextType 
                 text={["PATROCINADORES"]}
@@ -285,7 +285,7 @@ export default function Page() {
           </div>
           */}
 
-          <div id="faq" className="w-full mt-36 md:mt-64 px-16 lg:px-48">
+          <div id="faq" className="w-full mt-36 md:mt-64 px-8 sm8:px-16 lg:px-48">
             <TextType 
               text={["FAQ"]}
               typingSpeed={80}
