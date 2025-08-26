@@ -106,14 +106,14 @@ export default function Page() {
           <div className="w-full overflow-hidden bg-black text-white py-8 px-4">
             <div className={`flex whitespace-nowrap ${robotoMono.className}`}>
               {Array(30).fill(null).map((_, i) => (
-                <span key={i} className="px-4 text-3xl text-secondary">
+                <span key={i} className="px-4 text-2xl text-secondary">
                   {words[i % words.length]}
                 </span>
               ))}
             </div>
           </div>
 
-          <div id="sobre" className="w-full pt-24 sm:pt-40 px-16 md:px-48">
+          <div id="sobre" className="w-full pt-24 sm:pt-40 px-16 lg:px-48">
             <TextType 
               text={["SOBRE NÓS"]}
               typingSpeed={80}
@@ -136,32 +136,31 @@ export default function Page() {
               threshold={0.1}
               delay={0.1}
             >
-              <div className="flex flex-col 2xl:flex-row justify-between items-start gap-20 2xl:gap-32 w-full mt-20">
-                <div className={`flex-1 flex flex-col gap-10 text-textColor text-[1.75rem] font-extralight leading-[1.8] text-justify ${inter.className}`}>
+              <div className="flex flex-col 2xl:flex-row justify-between items-start gap-16 md:gap-24 2xl:gap-40 w-full mt-16 md:mt-20">
+                <div className={`flex-1 flex flex-col gap-16 text-textColor text-[1.75rem] font-extralight leading-[1.8] sm8:text-justify ${inter.className}`}>
                   <p>
-                    A Semana Acadêmica da Computação da Universidade Federal de São Carlos (SECOMP UFSCar)
-                    surgiu da necessidade de trazer assuntos que fossem de interesse tanto da comunidade acadêmica
-                    quanto de entusiastas. A cada ano, os alunos se mobilizam para realizar este grande evento, no qual  
-                    <b className="text-secondary"> pessoas de diferentes áreas relacionadas
-                    são convidadas a apresentar, discutir e debater</b> experiências e novidades que trarão informações,
-                    conhecimentos e inovação aos participantes!
+                    A Semana Acadêmica da Computação da UFSCar (SECOMP) nasceu com o <b className="text-secondary">propósito de trazer temas relevantes para a comunidade acadêmica 
+                    e para entusiastas da área</b>. Todos os anos, estudantes se mobilizam para realizar esse grande evento, que reúne convidados de diferentes 
+                    áreas para compartilhar experiências, discutir novidades e promover inovação.
                   </p>
 
-                  <p>
-                    Nossa programação conta com atividades para todos os gostos: aprimore seus conhecimentos com <b className="text-secondary">palestras</b> e <b className="text-secondary">minicursos</b> práticos, 
-                    teste suas habilidades em <b className="text-secondary">competições</b> como o Hackathon, o Desafio de Programadores e o CTF, e relaxe com a galera na nossa 
-                    tradicional <b className="text-secondary">Gamenight</b>. E isso é só o começo de uma experiência inesquecível, cheia de aprendizado e conexões!
-                  </p>
+                  <img src="/mesa-redonda.png" loading="lazy" alt="Participantes no Auditório" class="min-h-[260px] max-h-[380px] h-full w-full rounded-xl object-cover object-center" />
                 </div>
                 
-                <div class={`flex-1 2xl:mt-3 ${inter.className}`}>
-                  <img src="/mesa-redonda.png" loading="lazy" alt="Mesa Redonda XII" class="h-full w-full rounded-2xl object-cover object-center" />
+                <div className={`flex-1 flex flex-col gap-16 text-textColor text-[1.75rem] font-extralight leading-[1.8] sm8:text-justify ${inter.className}`}>
+                  <p>
+                    A programação é diversa e feita para todos os gostos: <b className="text-secondary">palestras</b> e <b className="text-secondary"> minicursos </b> 
+                    práticos para ampliar conhecimentos, <b className="text-secondary">competições</b> como Hackathon, Desafio de Programadores e CTF para testar habilidades, 
+                    além da tradicional <b className="text-secondary">Gamenight</b> para relaxar e se divertir. Uma experiência completa, cheia de aprendizado, desafios e novas conexões!
+                  </p>
+
+                  <img src="/hackathon.png" loading="lazy" alt="Participantes no Auditório" class="min-h-[260px] max-h-[380px] h-full w-full rounded-xl object-cover object-center" />
                 </div>
               </div>
             </AnimatedContent>
           </div>
 
-          <div id="conteudo" className="w-full mt-36 md:mt-64 px-16 md:px-48">
+          <div id="conteudo" className="w-full mt-36 md:mt-64 px-16 lg:px-48">
             <TextType 
               text={["CONTEÚDO"]}
               typingSpeed={80}
@@ -184,7 +183,7 @@ export default function Page() {
               threshold={0.1}
               delay={0.1}
             >
-              <div className="w-full mt-20 grid grid-cols-1 xsm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+              <div className="w-full mt-16 md:mt-20 grid grid-cols-1 xsm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
                 {conteudo.map((item, i) => (            
                   <SpotlightCard 
                     key={i} 
@@ -202,7 +201,7 @@ export default function Page() {
             </AnimatedContent>
           </div>
 
-          <div id="patrocinadores" className="w-full mt-36 md:mt-64 px-16 md:px-48">
+          <div id="patrocinadores" className="w-full mt-36 md:mt-64 px-16 lg:px-48">
             <div className="flex flex-row flex-wrap items-center gap-12">
               <TextType 
                 text={["PATROCINADORES"]}
@@ -250,7 +249,7 @@ export default function Page() {
           </div>
           */}
 
-          <div id="faq" className="w-full mt-36 md:mt-64 px-16 md:px-48">
+          <div id="faq" className="w-full mt-36 md:mt-64 px-16 lg:px-48">
             <TextType 
               text={["FAQ"]}
               typingSpeed={80}
