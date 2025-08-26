@@ -18,7 +18,7 @@ function FAQComponent({ faqData }) {
   const divFaqClasses= `absolute top-0 mb-6 transition-height duration-300 z-0 relative
   h-0 overflow-hidden peer-checked:h-min peer-checked:py-10 ${inter.className}`
 
-  const labelFaqClasses = `text-2xl md:text-3xl z-20 translate-y-8 transition-all text-white relative   
+  const labelFaqClasses = `text-2xl md:text-3xl z-20 translate-y-8 transition-all text-white font-light relative   
   h-[70px] flex items-center justify-start ${robotoMono.className}`;
 
   return (
@@ -38,7 +38,7 @@ function FAQComponent({ faqData }) {
                 {(index + 1).toString().padStart(2, '0')}
               </p>
 
-              <p className="mr-10">{item.titulo}</p>
+              <p className="mr-10 group-hover:font-normal transition-all duration-500">{item.titulo}</p>
 
               <div className="absolute top-1/2 right-4 -translate-y-1/2 w-8 h-8 flex items-center justify-center">
                 <Plus className={`absolute w-full h-full text-white transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`} />

@@ -23,11 +23,11 @@ export default function Patrocinadores() {
         <div className={`w-full flex flex-col mt-8 py-16 text-white gap-20 md:gap-36 ${robotoMono.className}`}>
             {diamante.length > 0 && 
                 <AnimatedContent
-                    distance={60}
+                    distance={70}
                     direction="vertical"
                     reverse={false}
-                    duration={1.1}
-                    initialOpacity={0.8}
+                    duration={1.5}
+                    initialOpacity={0.6}
                     animateOpacity
                     scale={1.01}
                     threshold={0.1}

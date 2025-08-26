@@ -62,7 +62,7 @@ const conteudo = [
     text: "Teste seus conhecimentos em desafios práticos junto com sua equipe!" 
   },
   { 
-    label: "Mesa redonda", 
+    label: "Mesa Redonda", 
     icon: <Users size={36} />, 
     text: "Discussões abertas com profissionais e pesquisadores da área." 
   },
@@ -149,18 +149,18 @@ export default function Page() {
               className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
             />
 
-            <AnimatedContent
-              distance={60}
-              direction="vertical"
-              reverse={false}
-              duration={1.1}
-              initialOpacity={0.8}
-              animateOpacity
-              scale={1.01}
-              threshold={0.1}
-              delay={0.1}
-            >
-              <div className="flex flex-col 2xl:flex-row justify-between items-start gap-16 md:gap-24 2xl:gap-40 w-full mt-16 md:mt-20">
+            <div className="flex flex-col 2xl:flex-row justify-between items-start gap-16 md:gap-24 2xl:gap-40 w-full mt-16 md:mt-20">
+              <AnimatedContent
+                distance={70}
+                direction="vertical"
+                reverse={false}
+                duration={1.5}
+                initialOpacity={0.6}
+                animateOpacity
+                scale={1.01}
+                threshold={0.1}
+                delay={0.1}
+              >
                 <div className={`flex-1 flex flex-col gap-16 text-textColor text-[1.75rem] font-extralight leading-[1.8] sm8:text-justify ${inter.className}`}>
                   <p>
                     A Semana Acadêmica da Computação da UFSCar (SECOMP) nasceu com o <b className="text-secondary">propósito de trazer temas relevantes para a comunidade acadêmica 
@@ -170,7 +170,19 @@ export default function Page() {
 
                   <img src="/mesa-redonda.png" loading="lazy" alt="Participantes no Auditório" class="min-h-[260px] max-h-[380px] h-full w-full rounded-xl object-cover object-center" />
                 </div>
-                
+              </AnimatedContent>
+              
+              <AnimatedContent
+                distance={70}
+                direction="vertical"
+                reverse={false}
+                duration={1.5}
+                initialOpacity={0.6}
+                animateOpacity
+                scale={1.01}
+                threshold={0.1}
+                delay={0.3}
+              >
                 <div className={`flex-1 flex flex-col gap-16 text-textColor text-[1.75rem] font-extralight leading-[1.8] sm8:text-justify ${inter.className}`}>
                   <p>
                     A programação é diversa e feita para todos os gostos: <b className="text-secondary">palestras</b> e <b className="text-secondary"> minicursos </b> 
@@ -180,8 +192,8 @@ export default function Page() {
 
                   <img src="/hackathon.png" loading="lazy" alt="Participantes no Auditório" class="min-h-[260px] max-h-[380px] h-full w-full rounded-xl object-cover object-center" />
                 </div>
-              </div>
-            </AnimatedContent>
+              </AnimatedContent>
+            </div>
           </div>
 
           <div id="conteudo" className="w-full mt-36 md:mt-64 px-8 sm8:px-16 lg:px-48">
@@ -197,11 +209,11 @@ export default function Page() {
             />
 
             <AnimatedContent
-              distance={60}
+              distance={70}
               direction="vertical"
               reverse={false}
-              duration={1.1}
-              initialOpacity={0.8}
+              duration={1.5}
+              initialOpacity={0.6}
               animateOpacity
               scale={1.01}
               threshold={0.1}
