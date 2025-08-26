@@ -30,11 +30,11 @@ function FAQComponent({ faqData }) {
           <div key={index} className='relative w-full'>
             <button
               onClick={() => handleToggle(index)}
-              className={`${labelFaqClasses} w-full text-left`} 
+              className={`${labelFaqClasses} w-full text-left group`} 
               aria-expanded={isOpen} 
               aria-controls={`faq-content-${index}`}
             >
-              <p className="text-2xl md:text-3xl text-white/50 font-bold mr-12">
+              <p className="text-2xl md:text-3xl text-white/50 font-bold mr-12 group-hover:text-secondary transition-all duration-500">
                 {(index + 1).toString().padStart(2, '0')}
               </p>
 
