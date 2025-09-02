@@ -18,7 +18,6 @@ import CronogramaMedio from "../components/cronograma/cronogramaMedio";
 import CronogramaPequeno from "../components/cronograma/cronogramaPequeno";
 import Countdown from '../components/Countdown'
 import FloatingButton from "@/components/FAB";
-import styles from './page.module.css'
 import "./gradient.css"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -168,7 +167,7 @@ export default function Page() {
                     áreas para compartilhar experiências, discutir novidades e promover inovação.
                   </p>
 
-                  <img src="/mesa-redonda.png" loading="lazy" alt="Participantes no Auditório" class="min-h-[260px] max-h-[380px] h-full w-full rounded-xl object-cover object-center" />
+                  <img src="/mesa-redonda.png" loading="lazy" alt="Participantes no Auditório" className="min-h-[260px] max-h-[380px] h-full w-full rounded-xl object-cover object-center" />
                 </div>
               </AnimatedContent>
               
@@ -190,7 +189,7 @@ export default function Page() {
                     além da tradicional <b className="text-secondary">Gamenight</b> para relaxar e se divertir. Uma experiência completa, cheia de aprendizado, desafios e novas conexões!
                   </p>
 
-                  <img src="/hackathon.png" loading="lazy" alt="Participantes no Auditório" class="min-h-[260px] max-h-[380px] h-full w-full rounded-xl object-cover object-center" />
+                  <img src="/hackathon.png" loading="lazy" alt="Participantes no Auditório" className="min-h-[260px] max-h-[380px] h-full w-full rounded-xl object-cover object-center" />
                 </div>
               </AnimatedContent>
             </div>
