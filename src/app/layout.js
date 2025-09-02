@@ -57,7 +57,7 @@ export const metadata = {
       type: "website",
       images: [
         {
-          url: "/equipe-xii.jpg",
+          url: "/equipe-xii.png",
           width: 1200,
           height: 630,
           alt: "SECOMP UFSCar - Equipe XII"
@@ -69,7 +69,7 @@ export const metadata = {
       title: "SECOMP UFSCar",
       description: description,
       creator: "@secompufscar",
-      images: ["/equipe-xii.jpg"],
+      images: ["/equipe-xii.png"],
     },
 };
 
@@ -115,7 +115,7 @@ export default function RootLayout({ children }) {
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
           />
-          
+
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
