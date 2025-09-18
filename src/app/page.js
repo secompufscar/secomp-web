@@ -264,8 +264,8 @@ export default function Page() {
               <a href="mailto:coordenacao@secompufscar.com.br">
                 <p 
                   className={`
-                    min-w-[200px] py-7 px-10 text-secondary text-center border border-secondary rounded-full text-xl md:text-2xl uppercase 
-                    ${robotoMono.className} transition-all duration-300 hover:scale-105
+                    min-w-[200px] py-6 px-8 text-secondary text-center border border-secondary rounded-full text-xl md:text-2xl uppercase 
+                    ${robotoMono.className} transition-all duration-300 hover:bg-secondary/10
                   `}
                 >
                   Começar parceria
@@ -296,7 +296,7 @@ export default function Page() {
           </div>
           */}
 
-          <div id="faq" className="w-full mt-36 md:mt-64 px-8 sm8:px-16 lg:px-48">
+          <div id="faq" className="w-full mt-36 md:mt-56 px-8 sm8:px-16 lg:px-48">
             <TextType 
               text={["FAQ"]}
               typingSpeed={80}

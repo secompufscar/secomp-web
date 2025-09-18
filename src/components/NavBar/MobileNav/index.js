@@ -41,7 +41,7 @@ export default function MobileNav({ links }) {
                 <div className={styles.mobile_menu}>
                     {links.map((nav, index) => (
                         <>
-                            <Link onClick={onClickMenu} className={`mx-2 text-2xl text-white uppercase ${!index && 'font-bold'}`} href={nav.href}>
+                            <Link key={index} onClick={onClickMenu} className={`mx-2 text-2xl text-white uppercase ${!index && 'font-bold'}`} href={nav.href}>
                                 {nav.name}
                             </Link>
                             {links.length - 1 !== index && <hr className="h-[1px] w-full bg-black" />}
