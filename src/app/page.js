@@ -163,7 +163,7 @@ export default function Page() {
                   <SpotlightCard 
                     key={i} 
                     className={`
-                      group w-full sm9:aspect-square border border-white/20 rounded-2xl flex flex-col items-start justify-end p-[40px] sm9:p-8 
+                      group w-full aspect-square border border-[#F8F8F8]/10 rounded-2xl flex flex-col items-start justify-end p-[40px] sm9:p-8 
                       text-white text-2xl ${robotoMono.className} transition-all duration-300 hover:scale-105 hover:border-secondary/80
                     `} 
                     spotlightColor="rgba(0, 170, 255, 0.3)"
@@ -173,7 +173,7 @@ export default function Page() {
                     
                     <p
                       className={`
-                        text-textColor font-light leading-[1.8] ${inter.className}
+                        text-[#F8F8F8] font-light leading-[1.8] ${inter.className}
                         mt-8 
                         sm:mt-0 sm:max-h-0 sm:opacity-0 sm:translate-y-2 sm:overflow-hidden
                         sm:transition-all sm:duration-700
