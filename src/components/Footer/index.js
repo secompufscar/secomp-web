@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link'
 import { inter } from "@/utils/fonts";
-import "./styles.css";
 
 const Footer = () => {
     return (

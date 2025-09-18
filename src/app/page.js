@@ -2,80 +2,20 @@
 
 import { useState, useEffect } from "react";
 import { inter, oswald, robotoMono } from "@/utils/fonts"
-import { Presentation, BookOpen, Trophy, Users, Mic, Gamepad2 } from "lucide-react";
 import Lenis from "@studio-freight/lenis";
 import AnimatedContent from "@/components/animation/animatedContent";
 import TextType from "@/components/text/textType";
 import SpotlightCard from "@/components/animation/spotlight";
 import Link from "next/link";
-import products from "../data/products.json"
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 import FAQ from "../components/FAQ/FaqComponent"
 import Patrocinadores from "../components/patrocinadores/page"
-import Cronograma from "../components/cronograma/cronogramaGrande";
-import CronogramaMedio from "../components/cronograma/cronogramaMedio";
-import CronogramaPequeno from "../components/cronograma/cronogramaPequeno";
 import Countdown from '../components/Countdown'
-import FloatingButton from "@/components/FAB";
 import "./gradient.css"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
-const faqData = [
-  {
-    titulo: 'Como faço para me inscrever na SECOMP?',
-    texto: 'Para se inscrever na SECOMP, cadastre-se em nosso aplicativo. Após criar sua conta, basta acessar a tela inicial e clicar no botão de inscrição para participar do evento.'
-  },
-  {
-    titulo: 'Como faço para me inscrever em competições?',
-    texto: 'As inscrições para as competições devem ser feitas por meio dos formulários disponíveis em nosso Instagram. Fique atento em nossas redes sociais!'
-  },
-  {
-    titulo: 'Como faço para me inscrever em minicursos?',
-    texto: 'A inscrição nos minicursos deve ser feita diretamente pelo nosso aplicativo. Lembre-se de estar previamente registrado no evento e de trazer 1 kg de alimento não perecível no dia da atividade.'
-  },
-  {
-    titulo: 'Como garantir o meu certificado de participação?',
-    texto: 'Para receber o seu certificado de participação na SECOMP, é necessário estar inscrito no evento e registrar pelo menos 75% de presença nas atividades. Após o evento, o certificado será enviado para o e-mail cadastrado. Certifique-se de preencher todos os dados corretamente no momento da inscrição.'
-  },
-  {
-    titulo: 'Estou interessado em patrocinar a SECOMP! O que devo fazer?',
-    texto: 'Se você deseja se tornar um patrocinador da SECOMP, entre em contato conosco através do e-mail. Forneceremos todas as informações sobre as oportunidades de patrocínio, benefícios e como sua empresa pode apoiar o evento. Não perca a chance de fazer parte desta experiência!'
-  },
-];
-
-const conteudo = [
-  { 
-    label: "Palestras", 
-    icon: <Presentation size={36} />, 
-    text: "Aprenda com especialistas sobre tendências e inovações em computação." 
-  },
-  { 
-    label: "Minicursos", 
-    icon: <BookOpen size={36} />, 
-    text: "Atividades práticas para desenvolver novas habilidades técnicas." 
-  },
-  { 
-    label: "Competições", 
-    icon: <Trophy size={36} />, 
-    text: "Teste seus conhecimentos em desafios práticos junto com sua equipe!" 
-  },
-  { 
-    label: "Mesa Redonda", 
-    icon: <Users size={36} />, 
-    text: "Discussões abertas com profissionais e pesquisadores da área." 
-  },
-  { 
-    label: "Flash Talks", 
-    icon: <Mic size={36} />, 
-    text: "Apresentações rápidas e dinâmicas sobre diversos temas da computação." 
-  },
-  { 
-    label: "Gamenight", 
-    icon: <Gamepad2 size={36} />, 
-    text: "Momento de descontração com jogos e muita interação entre os participantes." 
-  },
-];
+import { faq } from "@/data/faq";
+import { content } from "@/data/content";
 
 export default function Page() {
   const [show, setShow] = useState(false);
@@ -124,9 +64,9 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="bg-black">
+      <div className="bg-[#0A0A0A]">
         <div className="flex flex-col items-center justify-center">
-          <div className="w-full overflow-hidden bg-black text-white py-8 px-4">
+          <div className="w-full overflow-hidden text-white py-8 px-4">
             <div className={`flex whitespace-nowrap ${robotoMono.className}`}>
               {Array(30).fill(null).map((_, i) => (
                 <span key={i} className="px-4 text-2xl text-secondary">
@@ -219,7 +159,7 @@ export default function Page() {
               delay={0.1}
             >
               <div className="w-full mt-16 md:mt-20 grid grid-cols-1 sm8:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-6">
-                {conteudo.map((item, i) => (            
+                {content.map((item, i) => (            
                   <SpotlightCard 
                     key={i} 
                     className={`
@@ -308,7 +248,7 @@ export default function Page() {
               className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
             />
 
-            <FAQ faqData={faqData} /> 
+            <FAQ faqData={faq} /> 
           </div>
 
           <div id="contato" className="flex items-center justify-end py-24 w-full text-black mt-32 md:mt-64 px-8 sm:px-16 bg-[url('/estande-magalu.png')] bg-cover bg-center bg-no-repeat">
