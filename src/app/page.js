@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { inter, oswald, robotoMono } from "@/utils/fonts"
+import { faq } from "@/data/faq";
+import { content } from "@/data/content";
 import Lenis from "@studio-freight/lenis";
 import AnimatedContent from "@/components/animation/animatedContent";
 import TextType from "@/components/text/textType";
@@ -12,10 +14,10 @@ import Footer from "../components/Footer"
 import FAQ from "../components/FAQ/FaqComponent"
 import Patrocinadores from "../components/patrocinadores/page"
 import Countdown from '../components/Countdown'
+import Downloads from "@/components/download";
+import CustomButton from "@/components/buttons/buttons";
 import "./gradient.css"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { faq } from "@/data/faq";
-import { content } from "@/data/content";
 
 export default function Page() {
   const [show, setShow] = useState(false);
@@ -158,7 +160,7 @@ export default function Page() {
               threshold={0.1}
               delay={0.1}
             >
-              <div className="w-full mt-16 md:mt-20 grid grid-cols-1 sm8:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-6">
+              <div className="w-full mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-6 gap-6">
                 {content.map((item, i) => (            
                   <SpotlightCard 
                     key={i} 
@@ -175,9 +177,9 @@ export default function Page() {
                       className={`
                         text-[#F8F8F8] font-light leading-[1.8] ${inter.className}
                         mt-8 
-                        sm:mt-0 sm:max-h-0 sm:opacity-0 sm:translate-y-2 sm:overflow-hidden
-                        sm:transition-all sm:duration-700
-                        sm:group-hover:mt-6 sm:group-hover:max-h-40 sm:group-hover:opacity-100 sm:group-hover:translate-y-0
+                        md:mt-0 md:max-h-0 md:opacity-0 md:translate-y-2 md:overflow-hidden
+                        md:transition-all md:duration-700
+                        md:group-hover:mt-6 md:group-hover:max-h-40 md:group-hover:opacity-100 md:group-hover:translate-y-0
                       `}
                     >
                       {item.text}
@@ -200,17 +202,8 @@ export default function Page() {
                 cursorBlinkDuration={0.8}
                 className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
               />
-
-              <a href="mailto:coordenacao@secompufscar.com.br">
-                <p 
-                  className={`
-                    min-w-[200px] py-6 px-8 text-secondary text-center border border-secondary rounded-full text-xl md:text-2xl uppercase 
-                    ${robotoMono.className} transition-all duration-300 hover:bg-secondary/10
-                  `}
-                >
-                  Começar parceria
-                </p>
-              </a>
+              
+              <CustomButton text="Começar parceria" href="mailto:coordenacao@secompufscar.com.br" />
             </div>
 
             <p className={`mt-12 text-white text-[1.75rem] font-extralight ${inter.className}`}>Empresas que confiam em nós e fazem o evento acontecer</p>
@@ -249,6 +242,10 @@ export default function Page() {
             />
 
             <FAQ faqData={faq} /> 
+          </div>
+
+          <div id="downloads" className="w-full mt-36 md:mt-56 px-8 sm8:px-16 lg:px-48">
+            <Downloads /> 
           </div>
 
           <div id="contato" className="flex items-center justify-end py-24 w-full text-black mt-32 md:mt-64 px-8 sm:px-16 bg-[url('/estande-magalu.png')] bg-cover bg-center bg-no-repeat">

@@ -67,7 +67,7 @@ function FAQComponent({ faqData }) {
               : "opacity-0 scale-y-0 max-h-0"
           }`}
         >
-          <p className="text-[#F8F8F8] text-[1.6rem] leading-[1.8] font-extralight">
+          <p className="text-white text-[1.6rem] leading-[1.8] font-extralight">
             {item.texto}
           </p>
         </div>
