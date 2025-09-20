@@ -12,7 +12,7 @@ function Downloads() {
 
         <div className="mb-20 mt-14">
           <p className={`text-textColor text-[1.75rem] text-center font-extralight leading-[1.8] ${inter.className}`}>
-            Instale o app e tenha acesso à programação completa, ingressos, notificações e muito mais, tudo em um só lugar.
+            Instale o app e tenha acesso à programação completa, notificações e muito mais, tudo em um só lugar.
           </p>
         </div>
 
