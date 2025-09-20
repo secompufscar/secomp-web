@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link'
 import { inter } from "@/utils/fonts";
-import "./styles.css";
 
 const Footer = () => {
     return (
@@ -21,10 +20,10 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-row gap-8">
-                        <Link href={"https://www.instagram.com/secompufscar/"} class="inline-flex items-center justify-center" target='_blank'>
+                        <Link href={"https://www.instagram.com/secompufscar/"} className="inline-flex items-center justify-center" target='_blank'>
                             <button>
                                 <svg
-                                    class="h-7 w-7"
+                                    className="h-7 w-7"
                                     fill="#DDD"
                                     viewBox="0 0 24 24">
                                     <path
@@ -33,10 +32,10 @@ const Footer = () => {
                             </button>
                         </Link>
 
-                        <Link href={'https://www.facebook.com/secompufscar'} class="inline-flex items-center justify-center" target='_blank'>
+                        <Link href={'https://www.facebook.com/secompufscar'} className="inline-flex items-center justify-center" target='_blank'>
                             <button>
                                 <svg
-                                    class="h-7 w-7"
+                                    className="h-7 w-7"
                                     fill="#DDD"
                                     viewBox="0 0 24 24">
                                     <path
@@ -45,10 +44,10 @@ const Footer = () => {
                             </button>
                         </Link>
 
-                        <Link href={"https://www.linkedin.com/company/secomp-ufscar/"} class="inline-flex items-center justify-center" target='_blank'>
+                        <Link href={"https://www.linkedin.com/company/secomp-ufscar/"} className="inline-flex items-center justify-center" target='_blank'>
                             <button>
                                 <svg
-                                    class="h-7 w-7"
+                                    className="h-7 w-7"
                                     fill="#DDD"
                                     viewBox="0 0 24 24">
                                     <path

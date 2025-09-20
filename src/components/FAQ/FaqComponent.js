@@ -9,51 +9,81 @@ function FAQComponent({ faqData }) {
   const [openItems, setOpenItems] = useState({});
 
   const handleToggle = (index) => {
-    setOpenItems(prev => ({
+    setOpenItems((prev) => ({
       ...prev,
-      [index]: !prev[index] 
+      [index]: !prev[index],
     }));
   };
 
-  const divFaqClasses= `absolute top-0 mb-6 transition-height duration-300 z-0 relative
-  h-0 overflow-hidden peer-checked:h-min peer-checked:py-10 ${inter.className}`
+  const divFaqClasses = `absolute top-0 mb-6 transition-height duration-300 z-0 relative
+  h-0 overflow-hidden peer-checked:h-min peer-checked:py-10 ${inter.className}`;
 
   const labelFaqClasses = `text-2xl md:text-3xl z-20 translate-y-8 transition-all text-white font-light relative   
   h-[70px] flex items-center justify-start ${robotoMono.className}`;
 
-  return (
-    <div className='flex w-full justify-center items-center flex-col mt-8'>
-      {faqData.map((item, index) => {
-        const isOpen = openItems[index];
+  // divide array em 2 colunas
+  const middle = Math.ceil(faqData.length / 2);
+  const leftFaq = faqData.slice(0, middle);
+  const rightFaq = faqData.slice(middle);
 
-        return (
-          <div key={index} className='relative w-full'>
-            <button
-              onClick={() => handleToggle(index)}
-              className={`${labelFaqClasses} w-full text-left group`} 
-              aria-expanded={isOpen} 
-              aria-controls={`faq-content-${index}`}
-            >
-              <p className="text-2xl md:text-3xl text-white/50 font-bold mr-12 group-hover:text-secondary transition-all duration-500">
-                {(index + 1).toString().padStart(2, '0')}
-              </p>
+  const renderItem = (item, index) => {
+    const isOpen = openItems[index];
 
-              <p className="mr-10 group-hover:font-normal transition-all duration-500">{item.titulo}</p>
+    return (
+      <div key={index} className="relative w-full mb-12">
+        <button
+          onClick={() => handleToggle(index)}
+          className={`${labelFaqClasses} w-full text-left group`}
+          aria-expanded={isOpen}
+          aria-controls={`faq-content-${index}`}
+        >
+          <p className="text-2xl md:text-3xl text-white/50 font-bold mr-12 group-hover:text-white transition-all duration-500">
+            {(index + 1).toString().padStart(2, "0")}
+          </p>
 
-              <div className="absolute top-1/2 right-4 -translate-y-1/2 w-8 h-8 flex items-center justify-center">
-                <Plus className={`absolute w-full h-full text-white transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
-                <Minus className={`absolute w-full h-full text-white transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`} />
-              </div>
-            </button>
-            
-            <div 
-              id={`faq-content-${index}`}
-              className={`${divFaqClasses} ${isOpen ? 'h-min py-10' : 'h-0'}`}
-            >
-              <p className='text-white text-[1.6rem] leading-[1.8] font-extralight'>{item.texto}</p>
-            </div>
+          <p className="mr-10 text-[#F8F8F8] transition-all duration-500">
+            {item.titulo}
+          </p>
+
+          <div className="absolute top-1/2 right-4 -translate-y-1/2 w-8 h-8 flex items-center justify-center">
+            <Plus
+              className={`absolute w-full h-full text-white transition-opacity duration-300 ${
+                isOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <Minus
+              className={`absolute w-full h-full text-white transition-opacity duration-300 ${
+                isOpen ? "opacity-100" : "opacity-0"
+              }`}
+            />
           </div>
-      )})}
+        </button>
+
+        <div
+          id={`faq-content-${index}`}
+          className={`origin-top overflow-hidden transition-all duration-500 ${
+            isOpen
+              ? "opacity-100 scale-y-100 max-h-[1000px] pt-8"
+              : "opacity-0 scale-y-0 max-h-0"
+          }`}
+        >
+          <p className="text-white text-[1.6rem] leading-[1.8] font-extralight">
+            {item.texto}
+          </p>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className="flex flex-col lg:flex-row lg:gap-32 w-full mt-8">
+      <div className="flex-1 flex flex-col">
+        {leftFaq.map((item, i) => renderItem(item, i))}
+      </div>
+
+      <div className="flex-1 flex flex-col">
+        {rightFaq.map((item, i) => renderItem(item, i + middle))}
+      </div>
     </div>
   );
 }

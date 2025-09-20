@@ -46,8 +46,8 @@ export function StickyNav({ links, sticky }) {
 
                     <div className={!(sticky || scrolled) && `${styles['nav-container']} mb-6 `}>
                         <div className="">
-                            {links.map(nav => (
-                                <Link className={`md:ml-16 text-2xl font-light text-white uppercase ${styles.link}`} href={nav.href}>
+                            {links.map((nav, index) => (
+                                <Link key={index}  className={`md:ml-16 text-2xl font-light text-[#D3D3D3] uppercase hover:text-white transition-all duration-200 ${styles.link}`} href={nav.href}>
                                     {nav.name}
                                 </Link>
                             ))}
