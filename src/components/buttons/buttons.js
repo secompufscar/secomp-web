@@ -4,7 +4,7 @@ import { robotoMono } from "@/utils/fonts"
 function CustomButton({ text, href, className }) {
 
   return (
-    <a href={href}>
+    <a href={href} target="_blank">
       <p 
         className={`
           min-w-[120px] py-6 px-12 text-secondary text-center border border-secondary rounded-full text-xl md:text-2xl uppercase 

@@ -245,7 +245,19 @@ export default function Page() {
           </div>
 
           <div id="downloads" className="w-full mt-36 md:mt-56 px-8 sm8:px-16 lg:px-48">
-            <Downloads /> 
+            <AnimatedContent
+              distance={70}
+              direction="vertical"
+              reverse={false}
+              duration={1.5}
+              initialOpacity={0.6}
+              animateOpacity
+              scale={1.01}
+              threshold={0.1}
+              delay={0.1}
+            >
+              <Downloads /> 
+            </AnimatedContent>
           </div>
 
           <div id="contato" className="flex items-center justify-end py-24 w-full text-black mt-32 md:mt-64 px-8 sm:px-16 bg-[url('/estande-magalu.png')] bg-cover bg-center bg-no-repeat">
