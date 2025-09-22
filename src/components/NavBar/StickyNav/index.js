@@ -34,7 +34,7 @@ export function StickyNav({ links, sticky }) {
         <MagicMotion>
             <header className={`hidden lg:block top-0 fixed z-50 w-full`} >
                 <div className={`${baseStyle} ${sticky || scrolled ? stickyStyle : fixedStyle}`}>
-                    <Link href={"#home"}>
+                    <Link href={"/"}>
                         <div className={`w-full ${styles[`logo-container-${sticky || scrolled ? 'sticky' : 'fixed'}`]}`}>
                             <Image
                                 src={Logo}

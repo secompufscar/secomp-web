@@ -9,8 +9,6 @@ import TextType from "@/components/text/textType";
 import AnimatedContent from "@/components/animation/animatedContent";
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
-import './style.css'
-
 export default function Equipe() {
     useEffect(() => {
         const lenis = new Lenis({ lerp: 0.05, wheelMultiplier: 1.2 });

@@ -211,24 +211,6 @@ export default function Page() {
             <Patrocinadores />
           </div>
 
-          {/* <div className="my-50" id="cronograma">
-            <h1 className="text-white text-5xl md:text-6xl font-bold mt-4 mb-10 text-center">ACOMPANHE NOSSO CRONOGRAMA</h1>
-            <div className="w-full h-0.5 mb-24 bg-gradient-to-r from-black via-white/80 to-black" />
-
-            <div className="w-full h-full block lg:hidden 2xl:hidden">
-              <CronogramaPequeno />
-            </div>
-
-            <div className="w-full h-full hidden lg:block 2xl:hidden">
-              <CronogramaMedio />
-            </div>
-
-            <div className="w-full h-full hidden 2xl:block">
-              <Cronograma />
-            </div>
-          </div>
-          */}
-
           <div id="faq" className="w-full mt-36 md:mt-56 px-8 sm8:px-16 lg:px-48">
             <TextType 
               text={["FAQ"]}

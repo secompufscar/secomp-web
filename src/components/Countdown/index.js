@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import UseCountdown from "@/app/hooks/useCountdown";
+import UseCountdown from "@/hooks/useCountdown";
 import { oswald, robotoMono } from "@/utils/fonts"
 
 export default function Countdown() {
