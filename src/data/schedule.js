@@ -8,7 +8,7 @@ export const weekData = [
         time: "12:00",
         desc: "Credenciamento do evento. Retire seu crachá, seu kit e confirme sua presença na Secomp!",
         speaker: "Organização da Secomp",
-        location: "Anfiteatro Bento Prado Júnior",
+        location: "Anexo do Anfiteatro Bento Prado Júnior",
         icon: "🎟️",
       },
       {
@@ -89,14 +89,6 @@ export const weekData = [
     day: "Terça-feira",
     date: "30/09",
     activities: [
-      {
-        title: "Inteligência Artificial: Ética, Impactos e a Responsabilidade da Próxima Geração",
-        time: "09:00",
-        desc: "Ética, Impactos e a Responsabilidade da Próxima Geração no âmbito das inteligências artificiais",
-        speaker: "Pedro Arraes",
-        location: "Anfiteatro Bento Prado Júnior",
-        icon: "🎤",
-      },
       {
         title: "Coffee",
         time: "10:00",

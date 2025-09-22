@@ -38,7 +38,7 @@ export default function App() {
                             </p>
                         </div>
 
-                        <div className={`w-full sm9:w-fit flex flex-row justify-between gap-6 mt-12 sm9:mt-0 ${robotoMono.className}`}>
+                        <div className={`w-full sm9:w-fit flex flex-row ${pageIndex === 0 ? "justify-end" : "justify-between"} gap-6 mt-12 sm9:mt-0 ${robotoMono.className}`}>
                             {pageIndex !== 0 && 
                                 <button onClick={handlePrev} className="flex items-center justify-center py-3 px-6 text-secondary/80 text-lg border border-secondary/80 rounded-full uppercase tracking-wider hover:border-secondary hover:text-secondary">
                                     Anterior
