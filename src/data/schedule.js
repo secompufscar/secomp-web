@@ -20,10 +20,10 @@ export const weekData = [
         icon: "🎉",
       },
       {
-        title: "Diversidade Tech",
+        title: "Como a Comunidade de Tecnologia pode Transformar sua Carreira",
         time: "13:30",
-        desc: "Venha discutir a inclusão de mulheres e pessoas de gênero minoritários por meio da tecnologia.",
-        speaker: "PrograMaria",
+        desc: "Descubra como comunidades podem ser o ponto de virada na sua jornada em tecnologia. Nesta palestra, a PrograMaria compartilha dados, histórias reais e o impacto de um espaço de apoio, aprendizado e oportunidades, mostrando que ninguém precisa trilhar esse caminho sozinho.",
+        speaker: "Stefani Freitas, PrograMaria ",
         location: "Anfiteatro Bento Prado Júnior",
         icon: "🎤",
       },
