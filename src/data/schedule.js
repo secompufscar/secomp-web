@@ -15,7 +15,7 @@ export const weekData = [
         title: "Abertura",
         time: "13:00",
         desc: "Abertura oficial da Semana da Computação",
-        speaker: "Equipe da Secomp e reitoria do departamento da computação da UFSCAR",
+        speaker: "Equipe da Secomp, reitoria e departamento da computação da UFSCar",
         location: "Anfiteatro Bento Prado Júnior",
         icon: "🎉",
       },
