@@ -18,7 +18,7 @@ function Downloads() {
 
         <div className={`flex flex-row flex-wrap justify-center gap-8 text-2xl text-[#0A0A0A]`}>
           <CustomButton text="Acessar na web" href="https://app.secompufscar.com.br/" />
-          <CustomButton text="Baixar apk" href="https://expo.dev/accounts/secomp_ti/projects/secomp/builds/730b2dd7-3127-429c-9016-6a8e96eb659d" />
+          <CustomButton text="Baixar apk" href="https://expo.dev/accounts/secomp_ti/projects/secomp/builds/88df7881-6015-4405-bb2f-ad991d0879de" />
         </div>
     </div>
   );
