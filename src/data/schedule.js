@@ -214,11 +214,11 @@ export const weekData = [
         icon: "🎤",
       },
       {
-        title: "Blue Team",
+        title: "Defesa em Tempo Real: Quando Cada Segundo Vale",
         time: "12:30",
-        desc: "?",
-        speaker: "?",
-        location: "?",
+        desc: "Nesta palestra, vamos explorar como o Blue Team atua na linha de frente contra ataques cibernéticos, respondendo a incidentes em tempo real, monitorando ameaças e reduzindo riscos quando cada segundo faz diferença para proteger sistemas e dados.",
+        speaker: "Matheus Batista Pimentel",
+        location: "Anfiteatro Bento Prado Júnior",
         icon: "🎤",
       },
       {
