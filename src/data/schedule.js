@@ -224,7 +224,7 @@ export const weekData = [
       {
         title: "Defesa em Tempo Real: Quando Cada Segundo Vale",
         time: "12:30",
-        desc: "Nesta palestra, vamos explorar como o Blue Team atua na linha de frente contra ataques cibernéticos, respondendo a incidentes em tempo real, monitorando ameaças e reduzindo riscos quando cada segundo faz diferença para proteger sistemas e dados.",
+        desc: "Vamos explorar como o Blue Team atua na proteção ativa dos ambientes corporativos e resposta a incidentes em tempo real. Abordaremos o ciclo de resposta a incidentes, o papel do SIEM e do SOC na detecção e análise de ameaças, conceitos de defesa em camadas e privilégio mínimo como pilares de uma estratégia eficaz de segurança.",
         speaker: "Matheus Batista Pimentel",
         location: "Anfiteatro Bento Prado Júnior",
         icon: "🎤",
