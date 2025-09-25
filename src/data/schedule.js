@@ -90,20 +90,20 @@ export const weekData = [
     date: "30/09",
     activities: [
       {
-        title: "Coffee",
-        time: "10:00",
-        desc: "Pausa para um café, bater papo e fazer novas conexões de forma leve e divertida",
-        speaker: "Organização da Secomp",
-        location: "Anexo do Anfiteatro Bento Prado Júnior",
-        icon: "☕",
-      },
-      {
         title: "Do Prompt à Ação: Criando Assistentes Profissionais com GenAI, RAG e Agentes",
-        time: "10:30",
+        time: "10:00",
         desc: "Nesta palestra, vamos explorar como construir soluções profissionais de assistentes inteligentes utilizando IA Generativa.",
         speaker: "Sergio Gama",
         location: "Anfiteatro Bento Prado Junior",
         icon: "🎤",
+      },
+      {
+        title: "Coffee",
+        time: "11:00",
+        desc: "Pausa para um café, bater papo e fazer novas conexões de forma leve e divertida",
+        speaker: "Organização da Secomp",
+        location: "Anexo do Anfiteatro Bento Prado Júnior",
+        icon: "☕",
       },
       {
         title: "Desvendando a Nuvem: Sua Jornada para o Sucesso em Cloud",
