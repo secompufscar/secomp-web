@@ -128,6 +128,14 @@ export const weekData = [
     date: "01/10",
     activities: [
       {
+        title: "Pesquisa: Padrões, aprendizado e inteligência artificial",
+        time: "09:00",
+        desc: "Esta palestra explora a conexão fundamental entre a identificação de padrões, o processo de aprendizado de máquina e o avanço da inteligência artificial. Descubra como os algoritmos analisam dados para aprender e executar tarefas complexas, desde o reconhecimento de imagens até a tomada de decisões autônomas.",
+        speaker: "André Backes",
+        location: "Auditório da BCO",
+        icon: "🎤",
+      },
+      {
         title: "Palestra Magalu",
         time: "10:00",
         desc: "Venha conhecer por dentro como trabalha o time da magalu cloud",
@@ -182,10 +190,10 @@ export const weekData = [
     date: "02/10",
     activities: [
       {
-        title: "Computação Forense",
+        title: "Segurança Biométrica: Privacidade e Vigilância",
         time: "09:00",
-        desc: "Apresentar os aspectos da aplicação de técnicas de computação forense no Brasil",
-        speaker: "Mario Gazziro",
+        desc: "A biometria é uma tecnologia difundida como recurso de autenticação, mas também é utilizada para monitoramento social em eventos públicos e privados, assim como em espaços urbanos como estratégia de Segurança Pública. Nesta palestra discutiremos os riscos atrelados ao uso da biometria e suas implicações para a Privacidade na Segurança da Informação.",
+        speaker: "Alessandra OJ ",
         location: "Anfiteatro Bento Prado Júnior",
         icon: "🎤",
       },
