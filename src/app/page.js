@@ -8,7 +8,6 @@ import Lenis from "@studio-freight/lenis";
 import AnimatedContent from "@/components/animation/animatedContent";
 import TextType from "@/components/text/textType";
 import SpotlightCard from "@/components/animation/spotlight";
-import Link from "next/link";
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 import FAQ from "../components/FAQ/FaqComponent"
@@ -21,6 +20,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Page() {
   const [show, setShow] = useState(false);
+  const [mainText, setMainText] = useState("Vem aí a SECOMP UFSCAR 2025");
   const words = ["SECOMP XIII", "•", "UFSCAR", "•"];
 
   useEffect(() => {
@@ -38,6 +38,20 @@ export default function Page() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const hoje = new Date();
+    const inicioEvento = new Date("2025-09-29T00:00:00");
+    const fimEvento = new Date("2025-10-03T23:59:59");
+
+    if (hoje < inicioEvento) {
+      setMainText("Vem aí a SECOMP UFSCAR 2025");
+    } else if (hoje >= inicioEvento && hoje <= fimEvento) {
+      setMainText("Está no ar a SECOMP UFSCAR 2025");
+    } else {
+      setMainText("Preparando a SECOMP UFSCAR 2026");
+    }
+  }, []);
+
   return (
     <>
       <NavBar />
@@ -45,7 +59,7 @@ export default function Page() {
       <div className={`gradient flex justify-center items-center md:pt-36`}>
         <div className={`px-4 pt-28 text-white flex flex-col text-[2.5rem] text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${oswald.className}`}>
           <TextType 
-            text={["Vem aí a SECOMP UFSCAR 2025"]}
+            text={[mainText]}
             typingSpeed={60}
             pauseDuration={1500}
             showCursor={true}
