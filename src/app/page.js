@@ -40,8 +40,8 @@ export default function Page() {
 
   useEffect(() => {
     const hoje = new Date();
-    const inicioEvento = new Date("2025-09-29T00:00:00");
-    const fimEvento = new Date("2025-10-03T23:59:59");
+    const inicioEvento = new Date("2025-09-29T12:00:00-03:00");
+    const fimEvento = new Date("2025-10-03T23:59:59-03:00");
 
     if (hoje < inicioEvento) {
       setMainText("Vem aí a SECOMP UFSCAR 2025");
