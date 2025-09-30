@@ -168,7 +168,7 @@ export const weekData = [
         icon: "🎤",
       },
       {
-        title: "Palestra Liven",
+        title: "Arquitetura Orientada a Eventos: Desacoplando sistemas para escalar com resiliência",
         time: "16:00",
         desc: "Na Liven, somos uma equipe de mentes criativas e pessoas apaixonadas por tecnologia.",
         speaker: "Liven",
