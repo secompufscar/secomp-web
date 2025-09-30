@@ -90,10 +90,10 @@ export const weekData = [
     date: "30/09",
     activities: [
       {
-        title: "Do Prompt à Ação: Criando Assistentes Profissionais com GenAI, RAG e Agentes",
+        title: "Tecnologia centrada no humano para apoiar estudantes universitários com depressão: uma conversa sobre pesquisa multidisciplinar",
         time: "10:00",
-        desc: "Nesta palestra, vamos explorar como construir soluções profissionais de assistentes inteligentes utilizando IA Generativa.",
-        speaker: "Sergio Gama",
+        desc: "Para alguns, o período da universidade pode ser “os melhores anos da vida”. No entanto, não são poucos os desafios para ter saúde mental nesta fase. E se a tecnologia pudesse ajudar? E se nós, estudantes e profissionais em computação, pudéssemos fazer algo? Nesta palestra, te convido para conversarmos sobre saúde mental, depressão, tecnologias vestíveis, fenotipagem digital, inteligência artificial centrada no humano e pesquisa científica em computação.",
+        speaker: "Vânia Paula de Almeida Neris",
         location: "Anfiteatro Bento Prado Junior",
         icon: "🎤",
       },
