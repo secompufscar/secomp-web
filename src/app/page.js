@@ -73,7 +73,7 @@ export default function Page() {
             ${robotoMono.className} 
             ${show ? "opacity-100" : "opacity-0"}`}
           >
-              29.09 até 03.10
+              ?/? até ?/?
           </h6>
 
           <Countdown />
