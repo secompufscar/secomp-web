@@ -1,11 +1,10 @@
 'use client'
+
 import { useState, useEffect } from "react";
 import { MagicMotion } from "react-magic-motion";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./styles.module.css";
-import Logo from '/public/logo-xiii.svg';
-
+import Logo from '/public/white-logo.png';
 
 export function StickyNav({ links, sticky }) {
     const [scrolled, setScrolled] = useState(false);
@@ -16,7 +15,7 @@ export function StickyNav({ links, sticky }) {
 
         const handleScroll = () => {
             setScrolled(window.scrollY > 0);
-        }
+        };
 
         handleScroll();
 
@@ -26,35 +25,36 @@ export function StickyNav({ links, sticky }) {
 
     if (!mounted) return null;
 
-    const baseStyle = "flex w-full justify-between transition-all duration-300";
-    const fixedStyle = "flex-col items-center mt-5";
-    const stickyStyle = "items-center px-16 bg-black/20 backdrop-blur-md";
-
     return (
         <MagicMotion>
-            <header className={`hidden lg:block top-0 fixed z-50 w-full`} >
-                <div className={`${baseStyle} ${sticky || scrolled ? stickyStyle : fixedStyle}`}>
+            {/* 🔹 alterado de fixed para sticky */}
+            <header className="hidden lg:block fixed top-0 left-0 z-50 w-full bg-transparent">
+                <div className={`flex w-full py-6 justify-between transition-all duration-300 items-center px-12 bg-black/20 backdrop-blur-md`}>
                     <Link href={"/"}>
-                        <div className={`w-full ${styles[`logo-container-${sticky || scrolled ? 'sticky' : 'fixed'}`]}`}>
+                        <div className="max-w-[36px] w-full">
                             <Image
                                 src={Logo}
-                                alt={"Logo SECOMP"}
+                                alt="Logo SECOMP"
                                 priority
                             />
                         </div>
                     </Link>
 
-                    <div className={!(sticky || scrolled) && `${styles['nav-container']} mb-6 `}>
-                        <div className="">
+                    <div className="my-5 mb-6">
+                        <div>
                             {links.map((nav, index) => (
-                                <Link key={index}  className={`md:ml-16 text-2xl font-light text-[#D3D3D3] uppercase hover:text-white transition-all duration-200 ${styles.link}`} href={nav.href}>
-                                    {nav.name}
-                                </Link>
+                            <Link
+                                key={index}
+                                href={nav.href}
+                                className="md:ml-16 text-2xl font-light text-[#D3D3D3] uppercase hover:text-white transition-all duration-200"
+                            >
+                                {nav.name}
+                            </Link>
                             ))}
                         </div>
                     </div>
                 </div>
             </header>
         </MagicMotion>
-    )
+    );
 }
