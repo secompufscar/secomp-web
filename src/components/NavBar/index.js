@@ -21,14 +21,13 @@ export default function NavBar({ sticky = false }) {
     { name: "PATROCÍNIO", href: "/#patrocinadores" },
     // { name: "EQUIPE", href: "/equipe" },
     { name: "FAQ", href: "/#faq" },
-    { name: "CONTATO", href: "/#contato" },
     { name: "Download", href: "/#downloads" },
   ];
 
   return (
     <>
       {isMobile ? (
-        <MagicMotion transition={{ type: "spring", stiffness: 180, damping: 20, mass: 1.1 }}>
+        <MagicMotion transition={{ type: "spring", stiffness: 200, damping: 30, mass: 1.05 }}>
           <MobileNav links={navLinks} />
         </MagicMotion>
       ) : (

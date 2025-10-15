@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { MagicMotion } from "react-magic-motion";
+import { robotoMono } from "@/utils/fonts"
 import Image from "next/image";
 import Link from "next/link";
 import Logo from '/public/white-logo.png';
@@ -28,10 +29,10 @@ export function StickyNav({ links, sticky }) {
     return (
         <MagicMotion>
             {/* 🔹 alterado de fixed para sticky */}
-            <header className="hidden lg:block fixed top-0 left-0 z-50 w-full bg-transparent">
-                <div className={`flex w-full py-6 justify-between transition-all duration-300 items-center px-12 bg-black/20 backdrop-blur-md`}>
+            <header className={`hidden lg:block fixed top-0 left-0 z-50 w-full`}>
+                <div className={`flex w-full py-5 justify-between transition-all duration-300 items-center px-12 ${scrolled ? "bg-black/10" : ""} backdrop-blur-md`}>
                     <Link href={"/"}>
-                        <div className="max-w-[36px] w-full">
+                        <div className="max-w-[30px] w-full">
                             <Image
                                 src={Logo}
                                 alt="Logo SECOMP"
@@ -46,7 +47,7 @@ export function StickyNav({ links, sticky }) {
                             <Link
                                 key={index}
                                 href={nav.href}
-                                className="md:ml-16 text-2xl font-light text-[#D3D3D3] uppercase hover:text-white transition-all duration-200"
+                                className={`${robotoMono.className} md:ml-16 text-2xl text-[#D3D3D3] tracking-wider uppercase hover:text-white transition-all duration-200`}
                             >
                                 {nav.name}
                             </Link>
