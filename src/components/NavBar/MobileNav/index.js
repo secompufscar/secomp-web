@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { robotoMono } from "@/utils/fonts"
+import { robotoMono, inter } from "@/utils/fonts"
 import Image from "next/image";
 import Link from "next/link";
 import Logo from '/public/white-logo.png';
@@ -33,8 +33,8 @@ export default function MobileNav({ links }) {
             >
                 <div className="flex items-center w-full justify-between py-2">
                     <Link href={"#home"}>
-                        <div className="w-full max-w-[30px] opacity-90">
-                            <Image src={Logo} alt={"Logo SECOMP"} priority />
+                        <div className="w-full opacity-90">
+                            <h2 className={`text-white text-[18px] font-semibold uppercase ${inter.className}`}>Secomp UFSCar</h2>
                         </div>
                     </Link>
 
@@ -58,7 +58,7 @@ export default function MobileNav({ links }) {
                             <Link
                                 key={index}
                                 onClick={onClickMenu}
-                                className={`${robotoMono.className} w-full tracking-wider mx-2 py-2 text-2xl text-white uppercase`}
+                                className={`${robotoMono.className} w-full tracking-wider mx-2 py-2 text-xl text-white uppercase`}
                                 href={nav.href}
                             >
                                 {nav.name}
