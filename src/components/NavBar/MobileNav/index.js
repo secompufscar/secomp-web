@@ -34,7 +34,7 @@ export default function MobileNav({ links }) {
                 <div className="flex items-center w-full justify-between py-2">
                     <Link href={"#home"}>
                         <div className="w-full opacity-90">
-                            <h2 className={`text-white text-[18px] font-semibold uppercase ${inter.className}`}>Secomp UFSCar</h2>
+                            <h2 className={`text-white text-[16px] font-semibold uppercase tracking-wider ${inter.className}`}>Secomp UFSCar</h2>
                         </div>
                     </Link>
 
@@ -42,8 +42,8 @@ export default function MobileNav({ links }) {
                         <Image
                             src={`/assets/icons/${mobileMenuOpen ? "close_icon" : "menu_icon"}.svg`}
                             alt={"toggle menu icon"}
-                            width={32}
-                            height={32}
+                            width={30}
+                            height={30}
                         />
                     </button>
                 </div>
@@ -58,7 +58,7 @@ export default function MobileNav({ links }) {
                             <Link
                                 key={index}
                                 onClick={onClickMenu}
-                                className={`${robotoMono.className} w-full tracking-wider mx-2 py-2 text-xl text-white uppercase`}
+                                className={`${robotoMono.className} w-full tracking-wider py-2 text-xl text-white uppercase`}
                                 href={nav.href}
                             >
                                 {nav.name}
