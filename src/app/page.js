@@ -16,7 +16,6 @@ import Countdown from '../components/Countdown'
 import Downloads from "@/components/download";
 import CustomButton from "@/components/buttons/buttons";
 import "./gradient.css"
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Page() {
   const [show, setShow] = useState(false);
