@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { MagicMotion } from "react-magic-motion";
-import { robotoMono } from "@/utils/fonts"
+import { robotoMono, inter } from "@/utils/fonts"
 import Image from "next/image";
 import Link from "next/link";
 import Logo from '/public/white-logo.png';
@@ -30,15 +30,9 @@ export function StickyNav({ links, sticky }) {
         <MagicMotion>
             {/* 🔹 alterado de fixed para sticky */}
             <header className={`hidden lg:block fixed top-0 left-0 z-50 w-full`}>
-                <div className={`flex w-full py-5 justify-between transition-all duration-300 items-center px-12 ${scrolled ? "bg-black/10" : ""} backdrop-blur-md`}>
-                    <Link href={"/"}>
-                        <div className="max-w-[30px] w-full">
-                            <Image
-                                src={Logo}
-                                alt="Logo SECOMP"
-                                priority
-                            />
-                        </div>
+                <div className={`flex w-full py-3 justify-between transition-all duration-300 items-center px-12 ${scrolled ? "bg-black/5" : ""} backdrop-blur-md`}>
+                    <Link className={`text-white text-[16px] font-bold uppercase tracking-wider ${inter.className} hover:opacity-80 transition-opacity duration-300 `} href={"/"}>
+                        Secomp UFSCar
                     </Link>
 
                     <div className="my-5 mb-6">
@@ -47,7 +41,7 @@ export function StickyNav({ links, sticky }) {
                             <Link
                                 key={index}
                                 href={nav.href}
-                                className={`${robotoMono.className} md:ml-16 text-2xl text-[#D3D3D3] tracking-wider uppercase hover:text-white transition-all duration-200`}
+                                className={`${robotoMono.className} md:ml-16 text-[15px] text-[#D3D3D3] tracking-widest uppercase hover:text-white transition-color duration-300`}
                             >
                                 {nav.name}
                             </Link>
