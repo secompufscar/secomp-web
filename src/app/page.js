@@ -79,7 +79,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="bg-[#0A0A0A]">
+      <div className="bg-black">
         <div className="flex flex-col items-center justify-center">
           <div className="w-full overflow-hidden text-white py-8 px-4">
             <div className={`flex whitespace-nowrap ${robotoMono.className}`}>
@@ -115,7 +115,7 @@ export default function Page() {
                 threshold={0.1}
                 delay={0.1}
               >
-                <div className={`flex-1 flex flex-col gap-16 text-textColor text-[1.75rem] font-extralight leading-[1.8] sm8:text-justify ${inter.className}`}>
+                <div className={`flex-1 flex flex-col gap-16 text-gray text-[1.5rem] font-light leading-[1.8] tracking-wider sm8:text-justify ${robotoMono.className}`}>
                   <p>
                     A Semana Acadêmica da Computação da UFSCar (SECOMP) nasceu com o <b className="text-secondary">propósito de trazer temas relevantes para a comunidade acadêmica 
                     e para entusiastas da área</b>. Todos os anos, estudantes se mobilizam para realizar esse grande evento, que reúne convidados de diferentes 
@@ -137,7 +137,7 @@ export default function Page() {
                 threshold={0.1}
                 delay={0.3}
               >
-                <div className={`flex-1 flex flex-col gap-16 text-textColor text-[1.75rem] font-extralight leading-[1.8] sm8:text-justify ${inter.className}`}>
+                <div className={`flex-1 flex flex-col gap-16 text-gray text-[1.5rem] font-light leading-[1.8] tracking-wider sm8:text-justify ${robotoMono.className}`}>
                   <p>
                     A programação é diversa e feita para todos os gostos: <b className="text-secondary">palestras</b> e <b className="text-secondary"> minicursos </b> 
                     práticos para ampliar conhecimentos, <b className="text-secondary">competições</b> como Hackathon, Desafio de Programadores e CTF para testar habilidades, 
@@ -264,7 +264,7 @@ export default function Page() {
                 cursorCharacter=""
                 startOnVisible={true}
                 cursorBlinkDuration={0.8}
-                textColors={"#0a0a0a"}
+                textColors={"#000000"}
                 className={`text-4xl md:text-5xl font-bold text-start ${oswald.className}`}
               />
 

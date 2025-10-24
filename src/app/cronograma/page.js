@@ -21,7 +21,7 @@ export default function App() {
     };
 
     return (
-        <div className="flex flex-col min-h-screen bg-[#0A0A0A]">
+        <div className="flex flex-col min-h-screen bg-black">
             <NavBar sticky={true}/>
 
             <div className="w-full flex flex-col flex-grow my-24 items-center px-8 sm8:px-16 lg:px-48">
