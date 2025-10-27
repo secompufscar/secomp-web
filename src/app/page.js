@@ -55,8 +55,8 @@ export default function Page() {
     <>
       <NavBar />
 
-      <div className={`gradient flex justify-center items-center md:pt-36`}>
-        <div className={`px-4 pt-28 text-white flex flex-col text-[2.5rem] text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${oswald.className}`}>
+      <div className={`gradient flex justify-center items-start min-h-screen pt-[250px]`}>
+        <div className={`px-24 pt-28 max-w-[1200px] text-white flex flex-col text-[2.5rem] text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${oswald.className}`}>
           <TextType 
             text={[mainText]}
             typingSpeed={60}
@@ -64,16 +64,16 @@ export default function Page() {
             showCursor={true}
             cursorCharacter="."
             cursorBlinkDuration={0.8}
-            className="text-7xl mx-6 md:text-9xl mb-4 font-bold uppercase leading-[1.5]"
+            className="text-[#ededed] text-7xl/[1.5] sm:text-9xl/[1.5] xl:text-[10rem]/[1.5] mb-4 font-bold uppercase tracking-wide"
           />
 
-          <h6 
+          {/* <h6 
             className={`mt-16 md:mt-20 md:text-[48px] lg:text-8xl font-light px-16 py-12 border border-primary rounded-full leading-[1.5] transition-opacity duration-1000
             ${robotoMono.className} 
             ${show ? "opacity-100" : "opacity-0"}`}
           >
               ?/? até ?/?
-          </h6>
+          </h6> */}
 
           <Countdown />
         </div>
@@ -92,61 +92,61 @@ export default function Page() {
           </div>
 
           <div id="sobre" className="w-full pt-24 sm:pt-40 px-8 sm8:px-16 lg:px-48">
-            <TextType 
-              text={["SOBRE NÓS"]}
-              typingSpeed={80}
-              pauseDuration={1500}
-              showCursor={true}
-              cursorCharacter="."
-              startOnVisible={true}
-              cursorBlinkDuration={0.8}
-              className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
-            />
+            <div className="flex flex-col 2xl:flex-row justify-between items-start gap-16 md:gap-24 2xl:gap-32 w-full mt-16">
+              <div className="flex-1">
+                <AnimatedContent
+                  distance={70}
+                  direction="vertical"
+                  reverse={false}
+                  duration={1.5}
+                  initialOpacity={0.6}
+                  animateOpacity
+                  scale={1.01}
+                  threshold={0.1}
+                  delay={0.1}
+                >
+                  <img src="/mesa-redonda.png" loading="lazy" alt="Participantes no Auditório" className="min-h-[260px] max-h-[380px] h-full w-full rounded-lg object-cover object-center" />
+                </AnimatedContent>
+              </div>
 
-            <div className="flex flex-col 2xl:flex-row justify-between items-start gap-16 md:gap-24 2xl:gap-40 w-full mt-16 md:mt-20">
-              <AnimatedContent
-                distance={70}
-                direction="vertical"
-                reverse={false}
-                duration={1.5}
-                initialOpacity={0.6}
-                animateOpacity
-                scale={1.01}
-                threshold={0.1}
-                delay={0.1}
-              >
-                <div className={`flex-1 flex flex-col gap-16 text-gray text-[1.5rem] font-light leading-[1.8] tracking-wider sm8:text-justify ${robotoMono.className}`}>
-                  <p>
-                    A Semana Acadêmica da Computação da UFSCar (SECOMP) nasceu com o <b className="text-secondary">propósito de trazer temas relevantes para a comunidade acadêmica 
-                    e para entusiastas da área</b>. Todos os anos, estudantes se mobilizam para realizar esse grande evento, que reúne convidados de diferentes 
-                    áreas para compartilhar experiências, discutir novidades e promover inovação.
-                  </p>
+              <div className="flex-1">
+                <AnimatedContent
+                  distance={70}
+                  direction="vertical"
+                  reverse={false}
+                  duration={1.5}
+                  initialOpacity={0.6}
+                  animateOpacity
+                  scale={1.01}
+                  threshold={0.1}
+                  delay={0.1}
+                >                
+                  <div className={`flex flex-col justify-between text-gray text-[1.5rem] font-light leading-[1.8] tracking-wide sm8:text-justify ${robotoMono.className}`}>
+                    <TextType 
+                      text={["O QUE É A SECOMP?"]}
+                      typingSpeed={80}
+                      pauseDuration={1500}
+                      showCursor={true}
+                      cursorCharacter="."
+                      startOnVisible={true}
+                      cursorBlinkDuration={0.8}
+                      className={`text-[#ededed] text-5xl md:text-7xl font-bold text-start leading-none mb-16 ${oswald.className}`}
+                    />
 
-                  <img src="/mesa-redonda.png" loading="lazy" alt="Participantes no Auditório" className="min-h-[260px] max-h-[380px] h-full w-full rounded-xl object-cover object-center" />
-                </div>
-              </AnimatedContent>
-              
-              <AnimatedContent
-                distance={70}
-                direction="vertical"
-                reverse={false}
-                duration={1.5}
-                initialOpacity={0.6}
-                animateOpacity
-                scale={1.01}
-                threshold={0.1}
-                delay={0.3}
-              >
-                <div className={`flex-1 flex flex-col gap-16 text-gray text-[1.5rem] font-light leading-[1.8] tracking-wider sm8:text-justify ${robotoMono.className}`}>
-                  <p>
-                    A programação é diversa e feita para todos os gostos: <b className="text-secondary">palestras</b> e <b className="text-secondary"> minicursos </b> 
-                    práticos para ampliar conhecimentos, <b className="text-secondary">competições</b> como Hackathon, Desafio de Programadores e CTF para testar habilidades, 
-                    além da tradicional <b className="text-secondary">Gamenight</b> para relaxar e se divertir. Uma experiência completa, cheia de aprendizado, desafios e novas conexões!
-                  </p>
+                    <p className="mb-8">
+                      A Semana Acadêmica da Computação da UFSCar (SECOMP) nasceu com o <b className="text-white">propósito de trazer temas relevantes para a comunidade acadêmica 
+                      e para entusiastas da área</b>. Todos os anos, estudantes se mobilizam para realizar esse grande evento, que reúne convidados de diferentes 
+                      áreas para compartilhar experiências, discutir novidades e promover inovação.
+                    </p>
 
-                  <img src="/hackathon.png" loading="lazy" alt="Participantes no Auditório" className="min-h-[260px] max-h-[380px] h-full w-full rounded-xl object-cover object-center" />
-                </div>
-              </AnimatedContent>
+                    <p>
+                      A programação é diversa e feita para todos os gostos: <b className="text-white">palestras</b> e <b className="text-white"> minicursos </b> 
+                      práticos para ampliar conhecimentos, <b className="text-white">competições</b> como Hackathon, Desafio de Programadores e CTF para testar habilidades, 
+                      além da tradicional <b className="text-white">Gamenight</b> para relaxar e se divertir. Uma experiência completa, cheia de aprendizado, desafios e novas conexões!
+                    </p>
+                  </div>
+                </AnimatedContent>
+              </div>
             </div>
           </div>
 
