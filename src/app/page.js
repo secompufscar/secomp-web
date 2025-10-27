@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import { inter, oswald, robotoMono } from "@/utils/fonts"
+import { inter, oswald, robotoMono, poppins } from "@/utils/fonts"
 import { faq } from "@/data/faq";
 import { content } from "@/data/content";
 import Lenis from "@studio-freight/lenis";
@@ -56,7 +56,7 @@ export default function Page() {
       <NavBar />
 
       <div className={`gradient flex justify-center items-start min-h-screen pt-[250px]`}>
-        <div className={`px-24 pt-28 max-w-[1200px] text-white flex flex-col text-[2.5rem] text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${oswald.className}`}>
+        <div className={`px-24 pt-28 max-w-[1200px] text-white flex flex-col text-[2rem] text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${poppins.className}`}>
           <TextType 
             text={[mainText]}
             typingSpeed={60}
@@ -64,7 +64,7 @@ export default function Page() {
             showCursor={true}
             cursorCharacter="."
             cursorBlinkDuration={0.8}
-            className="text-[#ededed] text-7xl/[1.5] sm:text-9xl/[1.5] xl:text-[10rem]/[1.5] mb-4 font-bold uppercase tracking-wide"
+            className="text-[#ededed] text-7xl/[1.5] sm:text-9xl/[1.5] xl:text-[9rem]/[1.5] mb-4 font-bold uppercase tracking-wide"
           />
 
           {/* <h6 
@@ -130,7 +130,7 @@ export default function Page() {
                       cursorCharacter="."
                       startOnVisible={true}
                       cursorBlinkDuration={0.8}
-                      className={`text-[#ededed] text-5xl md:text-7xl font-bold text-start leading-none mb-16 ${oswald.className}`}
+                      className={`text-[#ededed] text-5xl md:text-7xl font-bold text-start leading-none mb-16 ${poppins.className}`}
                     />
 
                     <p className="mb-8">
