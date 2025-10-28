@@ -16,10 +16,10 @@ function FAQComponent({ faqData }) {
   };
 
   const divFaqClasses = `absolute top-0 mb-6 transition-height duration-300 z-0 relative
-  h-0 overflow-hidden peer-checked:h-min peer-checked:py-10 ${inter.className}`;
+  h-0 overflow-hidden peer-checked:h-min peer-checked:py-10 ${robotoMono.className}`;
 
   const labelFaqClasses = `text-2xl md:text-3xl z-20 translate-y-8 transition-all text-white font-light relative   
-  h-[70px] flex items-center justify-start ${robotoMono.className}`;
+  h-[70px] flex items-center justify-start ${inter.className}`;
 
   // divide array em 2 colunas
   const middle = Math.ceil(faqData.length / 2);
@@ -67,7 +67,7 @@ function FAQComponent({ faqData }) {
               : "opacity-0 scale-y-0 max-h-0"
           }`}
         >
-          <p className="text-white text-[1.6rem] leading-[1.8] font-extralight">
+          <p className={`text-gray text-[1.5rem] font-light leading-[1.8] tracking-wide ${robotoMono.className}`}>
             {item.texto}
           </p>
         </div>

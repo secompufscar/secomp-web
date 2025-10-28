@@ -123,14 +123,14 @@ export default function Page() {
                 >                
                   <div className={`flex flex-col justify-between text-gray text-[1.5rem] font-light leading-[1.8] tracking-wide sm8:text-justify ${robotoMono.className}`}>
                     <TextType 
-                      text={["O QUE É A SECOMP?"]}
+                      text={["O QUE É A SECOMP"]}
                       typingSpeed={80}
                       pauseDuration={1500}
                       showCursor={true}
-                      cursorCharacter="."
+                      cursorCharacter="?"
                       startOnVisible={true}
                       cursorBlinkDuration={0.8}
-                      className={`text-[#ededed] text-5xl md:text-7xl font-bold text-start leading-none mb-16 ${poppins.className}`}
+                      className={`text-[#ededed] text-5xl md:text-7xl font-bold text-start leading-none mb-16 ${oswald.className}`}
                     />
 
                     <p className="mb-8">
@@ -179,7 +179,7 @@ export default function Page() {
                     key={i} 
                     className={`
                       group w-full aspect-square border border-[#F8F8F8]/10 rounded-2xl flex flex-col items-start justify-end p-[40px] sm9:p-8 
-                      text-white text-2xl ${robotoMono.className} transition-all duration-300 hover:scale-105 hover:border-secondary/80
+                      text-white text-[1.5rem] font-medium ${inter.className} transition-all duration-300 hover:scale-105 hover:border-secondary/80
                     `} 
                     spotlightColor="rgba(0, 170, 255, 0.3)"
                   >
@@ -188,7 +188,7 @@ export default function Page() {
                     
                     <p
                       className={`
-                        text-[#F8F8F8] font-light leading-[1.8] ${inter.className}
+                        text-gray font-light leading-[1.8] tracking-wide leading-[1.6] ${robotoMono.className}
                         mt-8 
                         md:mt-0 md:max-h-0 md:opacity-0 md:translate-y-2 md:overflow-hidden
                         md:transition-all md:duration-700
@@ -219,7 +219,7 @@ export default function Page() {
               <CustomButton text="Começar parceria" href="mailto:coordenacao@secompufscar.com.br" />
             </div>
 
-            <p className={`mt-12 text-white text-[1.75rem] font-extralight ${inter.className}`}>Empresas que confiam em nós e fazem o evento acontecer</p>
+            <p className={`mt-12 text-gray text-[1.5rem] font-light leading-[1.8] tracking-wide ${robotoMono.className}`}>Empresas que confiam em nós e fazem o evento acontecer</p>
 
             <Patrocinadores />
           </div>
