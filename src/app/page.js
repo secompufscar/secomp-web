@@ -56,7 +56,7 @@ export default function Page() {
       <NavBar />
 
       <div className={`gradient flex justify-center items-start min-h-screen pt-[250px]`}>
-        <div className={`px-24 pt-28 max-w-[1200px] text-white flex flex-col text-[2rem] text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${poppins.className}`}>
+        <div className={`px-16 pt-28 max-w-[1200px] text-white flex flex-col text-[2rem] text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${oswald.className}`}>
           <TextType 
             text={[mainText]}
             typingSpeed={60}
