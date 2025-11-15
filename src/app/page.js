@@ -238,8 +238,8 @@ export default function Page() {
 
             <FAQ faqData={faq} /> 
           </div>
-
-          <div id="downloads" className="w-full mt-36 md:mt-56 px-8 sm8:px-16 lg:px-48">
+              
+          {/* <div id="downloads" className="w-full mt-36 md:mt-56 px-8 sm8:px-16 lg:px-48">
             <AnimatedContent
               distance={70}
               direction="vertical"
@@ -253,7 +253,7 @@ export default function Page() {
             >
               <Downloads /> 
             </AnimatedContent>
-          </div>
+          </div> */}
 
           <div id="contato" className="flex items-center justify-end py-24 w-full text-black mt-32 md:mt-64 px-8 sm:px-16 bg-[url('/estande-magalu.png')] bg-cover bg-center bg-no-repeat">
             <div className="max-w-[460px] w-full h-full bg-[#F8F8F8] p-[3.7rem] sm:p-20 rounded-xl">
