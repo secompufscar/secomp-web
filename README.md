@@ -13,7 +13,7 @@ Ele oferece aos visitantes uma forma fácil de acompanhar o cronograma, conhecer
 - Patrocinadores
 - FAQ
 - Contato
-- Membros da organização
+- Fotos dos eventos
 
 <br>
 
