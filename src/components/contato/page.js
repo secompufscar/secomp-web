@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import SweetAlert from "sweetalert2"
 import { useRouter } from 'next/navigation'
 
-import FAQComponent from '../../components/FAQ/FaqComponent';
-import NavBar from '../../components/NavBar';
-import Footer from '../../components/Footer';
+import FAQComponent from '../faq/FaqComponent';
+import NavBar from '../navbar';
+import Footer from '../footer';
 import emailjs from '@emailjs/browser';
 
 export default function Desconto() {
@@ -51,7 +51,7 @@ export default function Desconto() {
         Email: ${email},
         Mensagem: ${mensagem}
       `
-   };
+    };
 
     try {
       const response = await emailjs.send('service_8ktmui8', 'template_qew553j', templateParams, 'C15_EcUVTGOfq-b6n')
@@ -68,7 +68,7 @@ export default function Desconto() {
       setMensagem("")
 
       router.push("/#home")
-    } catch(error) {
+    } catch (error) {
       await SweetAlert.fire({
         title: "Erro!",
         text: `Não foi possível enviar seu email, ${nome}!`,

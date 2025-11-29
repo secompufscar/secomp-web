@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { inter, oswald, robotoMono } from "@/utils/fonts"
 import { weekData } from "@/data/schedule";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import NavBar from "@/components/navbar";
+import Footer from "@/components/footer";
 import SpotlightCard from "@/components/animation/spotlight";
 
 export default function App() {
@@ -22,7 +22,7 @@ export default function App() {
 
     return (
         <div className="flex flex-col min-h-screen bg-black">
-            <NavBar sticky={true}/>
+            <NavBar sticky={true} />
 
             <div className="w-full flex flex-col flex-grow my-24 items-center px-8 sm8:px-16 lg:px-48">
                 <div className="w-full lg:w-[80%] 2xl:w-[60%] pt-20 lg:pt-40">
@@ -39,16 +39,16 @@ export default function App() {
                         </div>
 
                         <div className={`w-full sm9:w-fit flex flex-row ${pageIndex === 0 ? "justify-end" : "justify-between"} gap-6 mt-12 sm9:mt-0 ${robotoMono.className}`}>
-                            {pageIndex !== 0 && 
+                            {pageIndex !== 0 &&
                                 <button onClick={handlePrev} className="flex items-center justify-center py-3 px-6 text-secondary/80 text-lg border border-secondary/80 rounded-full uppercase tracking-wider hover:border-secondary hover:text-secondary">
                                     Anterior
                                 </button>
-                            }           
-                            
+                            }
+
                             {pageIndex !== 4 &&
                                 <button onClick={handleNext} className="flex items-center justify-center py-3 px-6 text-secondary/80 text-lg border border-secondary/80 rounded-full uppercase tracking-wider hover:border-secondary hover:text-secondary" >
                                     Próximo
-                                </button>   
+                                </button>
                             }
                         </div>
                     </div>
@@ -66,14 +66,14 @@ export default function App() {
                                     onAnimationStart={() => setIsAnimating(true)}
                                     onAnimationComplete={() => setIsAnimating(false)}
                                 >
-                                    <SpotlightCard 
-                                        key={index} 
+                                    <SpotlightCard
+                                        key={index}
                                         className={`
                                         group w-full border border-[#F8F8F8]/10 rounded-2xl flex flex-col sm8:flex-row items-start justify-start p-10 
                                         text-white text-2xl transition-transform duration-300 hover:scale-[1.01] hover:border-secondary/80
-                                        `} 
+                                        `}
                                         spotlightColor="rgba(0, 170, 255, 0.3)"
-                                    >      
+                                    >
                                         <div className="
                                             flex flex-row items-center justify-start pb-8 mb-8 border-b border-[#F8F8F8]/10 self-stretch
                                             sm8:flex-col sm8:pr-10 sm8:pb-0 sm8:mr-8 sm8:mb-0 sm8:border-r sm8:border-b-0
@@ -110,26 +110,25 @@ export default function App() {
 
                     {/* Paginação (bolinhas) */}
                     <div className="flex justify-between items-center mt-10">
-                        <button 
-                            onClick={handlePrev} 
+                        <button
+                            onClick={handlePrev}
                             className={`${pageIndex !== 0 ? "opacity-100" : "opacity-0 pointer-events-none"} flex items-center justify-center py-3 px-6 text-[#F8F8F8]/70 text-lg border border-[#F8F8F8]/70 rounded-full uppercase tracking-wider hover:border-[#F8F8F8] hover:text-[#F8F8F8]`}>
                             Anterior
                         </button>
 
                         <div className="flex justify-between space-x-4">
                             {weekData.map((_, i) => (
-                            <button
-                                key={i}
-                                onClick={() => setPageIndex(i)}
-                                className={`w-3 h-3 rounded-full ${
-                                i === pageIndex ? "bg-white" : "bg-white/30"
-                                }`}
-                            />
+                                <button
+                                    key={i}
+                                    onClick={() => setPageIndex(i)}
+                                    className={`w-3 h-3 rounded-full ${i === pageIndex ? "bg-white" : "bg-white/30"
+                                        }`}
+                                />
                             ))}
                         </div>
 
-                        <button 
-                            onClick={handleNext} 
+                        <button
+                            onClick={handleNext}
                             className={`${pageIndex !== 4 ? "opacity-100" : "opacity-0 pointer-events-none"} flex items-center justify-center py-3 px-6 text-[#F8F8F8]/70 text-lg border border-[#F8F8F8]/70 rounded-full uppercase tracking-wider hover:border-[#F8F8F8] hover:text-[#F8F8F8]`} >
                             Próximo
                         </button>

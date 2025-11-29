@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { MagicMotion } from "react-magic-motion";
-import { StickyNav } from "./StickyNav";
-import MobileNav from "./MobileNav";
+import { StickyNav } from "./stickyNav";
+import MobileNav from "./mobileNav";
 
 export default function NavBar({ sticky = false }) {
   const [isMobile, setIsMobile] = useState(false);

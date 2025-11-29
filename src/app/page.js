@@ -8,11 +8,11 @@ import Lenis from "@studio-freight/lenis";
 import AnimatedContent from "@/components/animation/animatedContent";
 import TextType from "@/components/text/textType";
 import SpotlightCard from "@/components/animation/spotlight";
-import NavBar from "../components/NavBar"
-import Footer from "../components/Footer"
-import FAQ from "../components/FAQ/FaqComponent"
+import NavBar from "../components/navbar"
+import Footer from "../components/footer"
+import FAQ from "../components/faq/FaqComponent"
 import Patrocinadores from "../components/patrocinadores/page"
-import Countdown from '../components/Countdown'
+import Countdown from '../components/countdown'
 import Downloads from "@/components/download";
 import CustomButton from "@/components/buttons/buttons";
 import "./gradient.css"
@@ -33,7 +33,7 @@ export default function Page() {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 5); 
+    const timer = setTimeout(() => setShow(true), 5);
     return () => clearTimeout(timer);
   }, []);
 
@@ -57,7 +57,7 @@ export default function Page() {
 
       <div className={`gradient flex justify-center items-start min-h-screen pt-[250px]`}>
         <div className={`px-16 pt-28 max-w-[1200px] text-white flex flex-col text-[2rem] text-center justify-center items-center flex-1 flex-grow flex-shrink-4 ${oswald.className}`}>
-          <TextType 
+          <TextType
             text={[mainText]}
             typingSpeed={60}
             pauseDuration={1500}
@@ -120,9 +120,9 @@ export default function Page() {
                   scale={1.01}
                   threshold={0.1}
                   delay={0.1}
-                >                
+                >
                   <div className={`flex flex-col justify-between text-gray text-[1.5rem] font-light leading-[1.8] tracking-wide sm8:text-justify ${robotoMono.className}`}>
-                    <TextType 
+                    <TextType
                       text={["O QUE É A SECOMP"]}
                       typingSpeed={80}
                       pauseDuration={1500}
@@ -134,14 +134,14 @@ export default function Page() {
                     />
 
                     <p className="mb-8">
-                      A Semana Acadêmica da Computação da UFSCar (SECOMP) nasceu com o <b className="text-white">propósito de trazer temas relevantes para a comunidade acadêmica 
-                      e para entusiastas da área</b>. Todos os anos, estudantes se mobilizam para realizar esse grande evento, que reúne convidados de diferentes 
+                      A Semana Acadêmica da Computação da UFSCar (SECOMP) nasceu com o <b className="text-white">propósito de trazer temas relevantes para a comunidade acadêmica
+                        e para entusiastas da área</b>. Todos os anos, estudantes se mobilizam para realizar esse grande evento, que reúne convidados de diferentes
                       áreas para compartilhar experiências, discutir novidades e promover inovação.
                     </p>
 
                     <p>
-                      A programação é diversa e feita para todos os gostos: <b className="text-white">palestras</b> e <b className="text-white"> minicursos </b> 
-                      práticos para ampliar conhecimentos, <b className="text-white">competições</b> como Hackathon, Desafio de Programadores e CTF para testar habilidades, 
+                      A programação é diversa e feita para todos os gostos: <b className="text-white">palestras</b> e <b className="text-white"> minicursos </b>
+                      práticos para ampliar conhecimentos, <b className="text-white">competições</b> como Hackathon, Desafio de Programadores e CTF para testar habilidades,
                       além da tradicional <b className="text-white">Gamenight</b> para relaxar e se divertir. Uma experiência completa, cheia de aprendizado, desafios e novas conexões!
                     </p>
                   </div>
@@ -151,7 +151,7 @@ export default function Page() {
           </div>
 
           <div id="conteudo" className="w-full mt-36 md:mt-64 px-8 sm8:px-16 lg:px-48">
-            <TextType 
+            <TextType
               text={["CONTEÚDO"]}
               typingSpeed={80}
               pauseDuration={1500}
@@ -174,18 +174,18 @@ export default function Page() {
               delay={0.1}
             >
               <div className="w-full mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-6 gap-6">
-                {content.map((item, i) => (            
-                  <SpotlightCard 
-                    key={i} 
+                {content.map((item, i) => (
+                  <SpotlightCard
+                    key={i}
                     className={`
                       group w-full aspect-square border border-[#F8F8F8]/10 rounded-2xl flex flex-col items-start justify-end p-[40px] sm9:p-8 
                       text-white text-[1.5rem] font-medium ${inter.className} transition-all duration-300 hover:scale-105 hover:border-secondary/80
-                    `} 
+                    `}
                     spotlightColor="rgba(0, 170, 255, 0.3)"
                   >
                     <div className="text-secondary">{item.icon}</div>
                     <span className="mt-6">{item.label}</span>
-                    
+
                     <p
                       className={`
                         text-gray font-light leading-[1.8] tracking-wide leading-[1.6] ${robotoMono.className}
@@ -205,7 +205,7 @@ export default function Page() {
 
           <div id="patrocinadores" className="w-full mt-36 md:mt-64 px-8 sm8:px-16 lg:px-48">
             <div className="flex flex-row flex-wrap items-center gap-12">
-              <TextType 
+              <TextType
                 text={["PATROCINADORES"]}
                 typingSpeed={80}
                 pauseDuration={1500}
@@ -215,7 +215,7 @@ export default function Page() {
                 cursorBlinkDuration={0.8}
                 className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
               />
-              
+
               <CustomButton text="Começar parceria" href="mailto:coordenacao@secompufscar.com.br" />
             </div>
 
@@ -225,7 +225,7 @@ export default function Page() {
           </div>
 
           <div id="faq" className="w-full mt-36 md:mt-56 px-8 sm8:px-16 lg:px-48">
-            <TextType 
+            <TextType
               text={["FAQ"]}
               typingSpeed={80}
               pauseDuration={1500}
@@ -236,9 +236,9 @@ export default function Page() {
               className={`text-white text-5xl md:text-7xl font-bold text-start ${oswald.className}`}
             />
 
-            <FAQ faqData={faq} /> 
+            <FAQ faqData={faq} />
           </div>
-              
+
           {/* <div id="downloads" className="w-full mt-36 md:mt-56 px-8 sm8:px-16 lg:px-48">
             <AnimatedContent
               distance={70}
@@ -257,7 +257,7 @@ export default function Page() {
 
           <div id="contato" className="flex items-center justify-end py-24 w-full text-black mt-32 md:mt-64 px-8 sm:px-16 bg-[url('/estande-magalu.png')] bg-cover bg-center bg-no-repeat">
             <div className="max-w-[460px] w-full h-full bg-[#F8F8F8] p-[3.7rem] sm:p-20 rounded-xl">
-              <TextType 
+              <TextType
                 text={["CONTATO"]}
                 typingSpeed={80}
                 pauseDuration={1500}
@@ -273,7 +273,7 @@ export default function Page() {
 
               <p className={`mt-12 text-black text-[1.6rem] font-extralight ${inter.className}`}>Você pode nos encontrar aqui</p>
               <p className={`mt-3 text-[#000] text-[1.6rem] break-words ${robotoMono.className}`}>Departamento de Computação - DC</p>
-              
+
               <p className={`mt-12 text-black text-[1.6rem] font-extralight ${inter.className}`}>UFSCar</p>
               <p className={`mt-3 text-[#000] text-[1.6rem] break-words ${robotoMono.className}`}>Rodovia Washington Luís, km 235, São Carlos - SP, CEP 13565-905</p>
             </div>
