@@ -1,4 +1,4 @@
-import { Inter, Oswald, Roboto_Mono, Bebas_Neue, Archivo_Black, Montserrat, Poppins } from "next/font/google";
+import { Inter, Oswald, Roboto_Mono, Poppins } from "next/font/google";
 
 export const oswald = Oswald({ subsets: ["latin"] });
 export const inter = Inter({ subsets: ["latin"] });
